@@ -1,6 +1,6 @@
 import React from 'react'
 import { TagLink } from 'state/types'
-import { Text } from '@apeswapfinance/uikit'
+import { Text } from '@ape.swap/uikit'
 import styled from 'styled-components'
 
 export interface TooltipProps {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Flex, useModal } from '@apeswapfinance/uikit'
+import { Button, Flex, useModal } from '@ape.swap/uikit'
 import Page from 'components/layout/Page'
 import useTopup from 'hooks/useTopup'
 import MoonPayIframe from './MoonFrame'

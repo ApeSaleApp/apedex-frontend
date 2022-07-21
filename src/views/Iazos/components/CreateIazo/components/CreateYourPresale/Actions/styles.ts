@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button } from '@apeswapfinance/uikit'
+import { Button } from '@ape.swap/uikit'
 
 const StyledButton = styled(Button)`
   background-color: ${({ theme }) => theme.colors.white4} !important;

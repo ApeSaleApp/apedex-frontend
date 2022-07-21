@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Toggle } from '@apeswapfinance/uikit'
+import { Toggle } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { TabOption } from '../types'
 

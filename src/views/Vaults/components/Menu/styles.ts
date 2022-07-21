@@ -1,5 +1,4 @@
-import { Text, Flex } from '@apeswapfinance/uikit'
-import { Button } from '@ape.swap/uikit'
+import { Text, Flex, Button } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 export const ControlContainer = styled(Flex)`
@@ -73,7 +72,7 @@ export const ToggleWrapper = styled.div`
   justify-content: center;
   cursor: pointer;
 
-  ${Text} {
+  div {
     margin-left: 4px;
     ${({ theme }) => theme.mediaQueries.md} {
       margin-left: 8px;

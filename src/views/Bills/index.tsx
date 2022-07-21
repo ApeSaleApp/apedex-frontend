@@ -1,4 +1,4 @@
-import { Flex } from '@apeswapfinance/uikit'
+import { Flex } from '@ape.swap/uikit'
 import { useLocation } from 'react-router-dom'
 import React, { useState } from 'react'
 import { usePollBills, useBills, usePollUserBills } from 'state/bills/hooks'

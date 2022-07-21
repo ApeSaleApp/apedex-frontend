@@ -1,10 +1,9 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
-import { Button, Modal, AutoRenewIcon, ModalFooter } from '@apeswapfinance/uikit'
+import { Button, Modal, AutoRenewIcon, ModalFooter, Flex, Text } from '@ape.swap/uikit'
 import ModalInput from 'components/ModalInput'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import { useTranslation } from 'contexts/Localization'
-import { Flex, Text } from '@ape.swap/uikit'
 
 interface WithdrawModalProps {
   max: string

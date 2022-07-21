@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { Pair } from '@apeswapfinance/sdk'
-import { Text, Flex, AddIcon, Button, Card } from '@apeswapfinance/uikit'
+import { Text, Flex, AddIcon, Button, Card } from '@ape.swap/uikit'
 import { Wrapper } from 'views/LegacySwap/components/styled'
 import CurrencyInputHeader from 'views/LegacySwap/components/CurrencyInputHeader'
 import { Link } from 'react-router-dom'

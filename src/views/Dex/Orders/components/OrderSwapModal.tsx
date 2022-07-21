@@ -1,8 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React, { useCallback, useMemo } from 'react'
 import { Currency, currencyEquals, Trade } from '@apeswapfinance/sdk'
-import { ModalProps } from '@apeswapfinance/uikit'
-import { Flex } from '@ape.swap/uikit'
+import { ModalProps, Flex } from '@ape.swap/uikit'
 import { RouterTypeParams } from 'state/swap/actions'
 import TransactionConfirmationModal, { TransactionErrorContent } from 'components/TransactionConfirmationModal'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'

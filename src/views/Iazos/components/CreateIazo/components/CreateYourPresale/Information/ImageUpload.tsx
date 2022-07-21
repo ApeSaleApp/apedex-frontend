@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
-import { Text } from '@apeswapfinance/uikit'
+import { Text } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 
 interface FileProps {

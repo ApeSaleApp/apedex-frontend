@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ArrowDropDownIcon } from '@apeswapfinance/uikit'
+import { ArrowDropDownIcon } from '@ape.swap/uikit'
 
 interface DetailsProps {
   actionPanelToggled: boolean

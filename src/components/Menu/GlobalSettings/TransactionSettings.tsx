@@ -1,8 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react'
 import { escapeRegExp } from 'utils'
-import { Text, Flex, Input as NewInput } from '@ape.swap/uikit'
-import { Input } from '@apeswapfinance/uikit'
+import { Text, Flex, Input as NewInput, Input } from '@ape.swap/uikit'
 import { useUserSlippageTolerance, useUserTransactionTTL } from 'state/user/hooks'
 import { useTranslation } from 'contexts/Localization'
 import styled from '@emotion/styled'
@@ -131,7 +130,7 @@ const SlippageTabs = () => {
                     parseCustomSlippage(event.target.value.replace(/,/g, '.'))
                   }
                 }}
-                isWarning={!slippageInputIsValid}
+                // isWarning={!slippageInputIsValid}
               />
               <Text color="yellow" weight={700} style={{ position: 'absolute', right: '10px' }}>
                 %

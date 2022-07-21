@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { InfoIcon, TooltipBubble } from '@apeswapfinance/uikit'
-import { Flex } from '@ape.swap/uikit'
+import { InfoIcon, TooltipBubble, Flex } from '@ape.swap/uikit'
 import React, { useState } from 'react'
 import { ContentContainer, DropDownIcon, ListCardContainer, ListExpandedContainer, styles } from './styles'
 import { ListCardProps } from './types'

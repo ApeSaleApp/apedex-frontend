@@ -1,4 +1,4 @@
-import { Skeleton, Text, useMatchBreakpoints } from '@apeswapfinance/uikit'
+import { Skeleton, Text, useMatchBreakpoints } from '@ape.swap/uikit'
 import ListViewContent from 'components/ListViewContent'
 import { useTranslation } from 'contexts/Localization'
 import useCurrentTime from 'hooks/useTimer'

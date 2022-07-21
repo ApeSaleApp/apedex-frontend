@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text } from '@apeswapfinance/uikit'
+import { Heading, Text } from '@ape.swap/uikit'
 import { ifosConfig } from 'config/constants'
 import ApeZone from 'config/constants/apezone'
 import { useTranslation } from 'contexts/Localization'

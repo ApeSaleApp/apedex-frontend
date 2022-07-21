@@ -1,6 +1,7 @@
 import { ThunkAction } from 'redux-thunk'
 import { AnyAction } from '@reduxjs/toolkit'
-import { Toast } from '@apeswapfinance/uikit'
+// import { Toast } from '@ape.swap/uikit'
+
 import BigNumber from 'bignumber.js'
 import {
   Address,
@@ -19,6 +20,9 @@ import {
 
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, State, unknown, AnyAction>
 
+export interface Toast {
+  id: BigNumber
+}
 export interface Farm extends FarmConfig {
   tokenAmount?: BigNumber
   totalInQuoteToken?: BigNumber

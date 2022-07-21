@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import useInterval from 'hooks/useInterval'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import { Flex, Text, Skeleton } from '@apeswapfinance/uikit'
+import { Flex, Text, Skeleton } from '@ape.swap/uikit'
 import useIntersectionObserver from 'hooks/useIntersectionObserver'
 import { CHAIN_ID } from 'config/constants/chains'
 import { Link } from 'react-router-dom'
@@ -107,7 +107,7 @@ const TrendingTokens: React.FC = () => {
                           style={{ width: '100%', height: '50%' }}
                         >
                           <Text fontSize="12px">{token?.tokenTicker}</Text>
-                          <Text fontSize="12px" color={token?.percentChange < 0 ? 'red' : 'green'}>
+                          <Text fontSize="12px" color={token?.percentChange < 0 ? 'black' : 'yellow'}>
                             {token?.percentChange > 0 && '+'}
                             <CountUp end={token?.percentChange * 100} decimals={2} duration={1.5} />%
                           </Text>

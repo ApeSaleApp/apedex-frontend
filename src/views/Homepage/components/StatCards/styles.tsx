@@ -1,4 +1,4 @@
-import { Card } from '@apeswapfinance/uikit'
+import { Card } from '@ape.swap/uikit'
 import styled from 'styled-components'
 
 export const StyledCard = styled(Card)`

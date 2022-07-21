@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex, Text } from '@apeswapfinance/uikit'
+import { Flex, Text } from '@ape.swap/uikit'
 
 export const StyledIfoCardHeader = styled(Flex)`
   & > div {

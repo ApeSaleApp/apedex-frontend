@@ -1,4 +1,4 @@
-import { Button, Text } from '@apeswapfinance/uikit'
+import { Button, Text } from '@ape.swap/uikit'
 import styled from 'styled-components'
 
 export const ContentContainer = styled.div`

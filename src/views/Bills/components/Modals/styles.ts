@@ -1,4 +1,4 @@
-import { Flex, Skeleton, Text } from '@apeswapfinance/uikit'
+import { Flex, Skeleton, Text } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 export const ModalBodyContainer = styled(Flex)`

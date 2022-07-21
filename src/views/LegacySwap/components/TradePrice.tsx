@@ -1,6 +1,6 @@
 import React from 'react'
 import { Price } from '@apeswapfinance/sdk'
-import { Text, AutoRenewIcon } from '@apeswapfinance/uikit'
+import { Text, AutoRenewIcon } from '@ape.swap/uikit'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
 import { StyledBalanceMaxMini } from './styled'

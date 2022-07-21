@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Input } from '@apeswapfinance/uikit'
+import { Input } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 const StyledInput = styled(Input)`

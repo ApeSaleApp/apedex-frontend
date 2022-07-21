@@ -1,6 +1,5 @@
 import React from 'react'
-import { Flex, Text, LinkExternal, Svg, useModal } from '@apeswapfinance/uikit'
-import { TagVariants } from '@ape.swap/uikit'
+import {TagVariants,  Flex, Text, LinkExternal, Svg, useModal } from '@ape.swap/uikit'
 import { Box } from 'theme-ui'
 import ListView from 'components/ListView'
 import { ExtendedListViewProps } from 'components/ListView/types'
@@ -139,7 +138,7 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
             value2={`${farm?.lpApr}%`}
             value2Icon={
               <span style={{ marginRight: '7px' }}>
-                <Svg icon="swap" width={13} color="text" />
+                <Svg icon="swapArrows" width={13} color="text" />
               </span>
             }
             valueIcon={

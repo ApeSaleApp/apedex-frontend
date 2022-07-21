@@ -2,8 +2,7 @@ import React, { useState, useEffect, Suspense, lazy, useCallback } from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import useEagerConnect from 'hooks/useEagerConnect'
-import { ResetCSS, ApeSwapTheme } from '@apeswapfinance/uikit'
-import { ScrollToTop } from '@ape.swap/uikit'
+import { ResetCSS, ApeSwapTheme, ScrollToTop } from '@ape.swap/uikit'
 import BigNumber from 'bignumber.js'
 import MarketingModalCheck from 'components/MarketingModalCheck'
 import { CHAIN_ID } from 'config/constants/chains'
@@ -40,18 +39,12 @@ const JungleFarms = lazy(() => import('./views/JungleFarms'))
 const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
 const DualFarms = lazy(() => import('./views/DualFarms'))
-const Nft = lazy(() => import('./views/Nft'))
-const Nfa = lazy(() => import('./views/Nft/Nfa'))
 const ApeZone = lazy(() => import('./views/ApeZone'))
-const Stats = lazy(() => import('./views/Stats'))
-const Auction = lazy(() => import('./views/Auction'))
-const BurningGames = lazy(() => import('./views/BurningGames'))
 const Iazos = lazy(() => import('./views/Iazos'))
 const CreateIazo = lazy(() => import('./views/Iazos/components/CreateIazo'))
 const IazoPage = lazy(() => import('./views/Iazos/components/IazoPage'))
 const AdminPools = lazy(() => import('./views/AdminPools'))
 const Vaults = lazy(() => import('./views/Vaults'))
-const NfaStaking = lazy(() => import('./views/NfaStaking'))
 const Bills = lazy(() => import('./views/Bills'))
 const Orders = lazy(() => import('./views/Dex/Orders'))
 // const Topup = lazy(() => import('./views/Topup'))
@@ -173,15 +166,6 @@ const App: React.FC = () => {
               <Route path="/iao">
                 <Redirect to="/" />
               </Route>
-              <Route path="/auction">
-                <Redirect to="/" />
-              </Route>
-              <Route exact path="/nft">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/nft/:id">
-                <Redirect to="/" />
-              </Route>
               <Route path="/gnana">
                 <Redirect to="/" />
               </Route>
@@ -246,9 +230,6 @@ const App: React.FC = () => {
               <Route path="/treasury-bills">
                 <Redirect to="/" />
               </Route>
-              <Route exact path="/nft">
-                <Redirect to="/" />
-              </Route>
               <Route path="/pools">
                 <Redirect to="/" />
               </Route>
@@ -259,9 +240,6 @@ const App: React.FC = () => {
                 <Redirect to="/" />
               </Route>
               <Route path="/iao">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/auction">
                 <Redirect to="/" />
               </Route>
               <Route exact path="/nft">
@@ -310,9 +288,6 @@ const App: React.FC = () => {
       <Menu>
         <Suspense fallback={<PageLoader />}>
           <Switch>
-            <Route exact path="/nft">
-              <Nft />
-            </Route>
             <Route path="/" exact component={Home} />
             <Route path="/farms">
               <Farms />
@@ -335,9 +310,6 @@ const App: React.FC = () => {
             <Route path="/iao">
               <Ifos />
             </Route>
-            <Route path="/auction">
-              <Auction />
-            </Route>
             <Route exact path="/ss-iao">
               <Iazos />
             </Route>
@@ -347,23 +319,8 @@ const App: React.FC = () => {
             <Route path="/ss-iao/:id">
               <IazoPage />
             </Route>
-            <Route exact path="/nft">
-              <Nft />
-            </Route>
-            <Route path="/nft/:id">
-              <Nfa />
-            </Route>
-            <Route path="/staking">
-              <NfaStaking />
-            </Route>
             <Route path="/gnana">
               <ApeZone />
-            </Route>
-            <Route path="/stats">
-              <Stats />
-            </Route>
-            <Route path="/burn">
-              <BurningGames />
             </Route>
             <Route path="/spinner">
               <PageLoader />

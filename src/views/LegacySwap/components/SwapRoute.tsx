@@ -1,6 +1,6 @@
 import React, { Fragment, memo } from 'react'
 import { Trade } from '@apeswapfinance/sdk'
-import { Text, Flex, ChevronRightIcon } from '@apeswapfinance/uikit'
+import { Text, Flex, ChevronRightIcon } from '@ape.swap/uikit'
 import { unwrappedToken } from 'utils/wrappedCurrency'
 
 export default memo(function SwapRoute({ trade }: { trade: Trade }) {

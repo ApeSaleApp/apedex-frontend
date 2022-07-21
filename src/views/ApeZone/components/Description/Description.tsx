@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Heading } from '@apeswapfinance/uikit'
+import { Text, Heading } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import Title from './Title'
 
@@ -28,8 +28,8 @@ const Description = () => {
             {t('Passive Farming')}
           </Title>
           <List>
-            <Text color="white">{t('GNANA is a reflect token with a 2% transfer fee')}</Text>
-            <Text color="white">
+            <Text color="white1">{t('GNANA is a reflect token with a 2% transfer fee')}</Text>
+            <Text color="white1">
               {t(
                 'GNANA holders get a share of the fee proportional to their holdings just by having it in their wallets',
               )}
@@ -39,16 +39,16 @@ const Description = () => {
             {t('Exclusive perks')}
           </Title>
           <List>
-            <Text color="white">{t('Gain access to GNANA only IAO allocation')}</Text>
-            <Text color="white">{t('A new array of pools will be made available only to GNANA holders')}</Text>
+            <Text color="white1">{t('Gain access to GNANA only IAO allocation')}</Text>
+            <Text color="white1">{t('A new array of pools will be made available only to GNANA holders')}</Text>
           </List>
           <Title color="white" mb="12px" mt="12px" fontWeight={500}>
             {t('Governance')}
           </Title>
           <List>
-            <Text color="white">{t('GNANA is being lined up to be the official governance token of ApeSwap')}</Text>
+            <Text color="white1">{t('GNANA is being lined up to be the official governance token of ApeSwap')}</Text>
           </List>
-          <Text as="div" pt="16px" mt="22px" mb="16px" color="white">
+          <Text as="div" pt="16px" mt="22px" mb="16px" color="white1">
             <StyledButton
               as="a"
               href="https://apeswap.gitbook.io/apeswap-finance/tokens-and-economics/the-usdgnana-token"

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text } from '@apeswapfinance/uikit'
+import { Text } from '@ape.swap/uikit'
 
 export const StyledIfoCardDetails = styled.div`
   margin: 12px 0 auto 0;

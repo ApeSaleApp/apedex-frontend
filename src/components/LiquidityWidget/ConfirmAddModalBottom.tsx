@@ -1,6 +1,6 @@
 import React from 'react'
 import { Currency, CurrencyAmount, Fraction, Percent } from '@apeswapfinance/sdk'
-import { Button, Text } from '@apeswapfinance/uikit'
+import { Button, Text } from '@ape.swap/uikit'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
 import { RowBetween, RowFixed } from '../layout/Row'

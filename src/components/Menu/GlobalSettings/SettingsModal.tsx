@@ -1,8 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, Flex, ModalProps, LinkExternal } from '@ape.swap/uikit'
-import { Modal } from '@apeswapfinance/uikit'
+import { Text, Flex, ModalProps, LinkExternal, Modal } from '@ape.swap/uikit'
 import { Link, Switch } from 'theme-ui'
 
 import {

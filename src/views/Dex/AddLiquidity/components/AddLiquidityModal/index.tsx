@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Button, Flex, Text } from '@ape.swap/uikit'
-import { Modal } from '@apeswapfinance/uikit'
+import { Modal, Button, Flex, Text } from '@ape.swap/uikit'
 import { CurrencyLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'

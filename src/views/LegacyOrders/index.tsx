@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { CurrencyAmount, JSBI, Token, Trade } from '@apeswapfinance/sdk'
-import { Button, Text, ArrowDownIcon, useModal, Flex, Card, Link } from '@apeswapfinance/uikit'
+import { Button, Text, ArrowDownIcon, useModal, Flex, Card, Link } from '@ape.swap/uikit'
 import Page from 'components/layout/Page'
 import SwapBanner from 'components/SwapBanner'
 import { getTokenUsdPrice } from 'utils/getTokenUsdPrice'
@@ -457,7 +457,7 @@ export default function Orders({ history }: RouteComponentProps) {
                                 })}
                                 :
                               </Label>
-                              <Text color="#FFB300">{orderMarketStatus.toFixed(2)}%</Text>
+                              <Text color="yellow">{orderMarketStatus.toFixed(2)}%</Text>
                             </RowBetween>
                           </AutoColumn>
                         </OrderInfoPanel>

@@ -1,4 +1,4 @@
-import { Text } from '@apeswapfinance/uikit'
+import { Text } from '@ape.swap/uikit'
 import BillsDiagram from 'components/MarketingModalContent/Bills/BillsDiagram'
 import ReactPlayer from 'react-player'
 import React from 'react'

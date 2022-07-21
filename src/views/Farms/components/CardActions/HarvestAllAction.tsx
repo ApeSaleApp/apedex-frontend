@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useAllHarvest } from 'hooks/useHarvest'
-import { AutoRenewIcon, Button } from '@apeswapfinance/uikit'
+import { AutoRenewIcon, Button } from '@ape.swap/uikit'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { updateFarmUserEarnings } from 'state/farms'
 import { useAppDispatch } from 'state'
@@ -22,7 +22,7 @@ const HarvestAllAction: React.FC<HarvestActionsProps> = ({ pids, disabled }) => 
   return (
     <ActionContainer>
       <Button
-        size="mds"
+        size="md"
         className="noClick"
         disabled={disabled || pendingTrx}
         onClick={async () => {

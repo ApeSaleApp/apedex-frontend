@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import useApproveIazoFactory from 'views/Iazos/hooks/useApproveIazoFactory'
-import { AutoRenewIcon } from '@apeswapfinance/uikit'
+import { AutoRenewIcon } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import StyledButton from './styles'
 

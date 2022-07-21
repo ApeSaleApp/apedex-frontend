@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '@apeswapfinance/uikit'
+import { Card } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 export const BodyWrapper = styled(Card)`

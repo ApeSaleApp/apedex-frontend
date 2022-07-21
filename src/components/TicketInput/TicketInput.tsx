@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '@apeswapfinance/uikit'
+import { Button } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import Input, { InputProps } from '../Input'
 

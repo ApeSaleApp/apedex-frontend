@@ -1,5 +1,5 @@
 import React from 'react'
-import { ApeSwapRoundIcon, Flex, Text, useMatchBreakpoints } from '@apeswapfinance/uikit'
+import { ApeSwapRoundIcon, Flex, Text, useMatchBreakpoints } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { BuyBanana, ContentContainer, HeadingText, LearnMore } from './styles'
 

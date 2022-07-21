@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, Text, Card, Checkbox, ArrowDropDownIcon } from '@apeswapfinance/uikit'
+import { Heading, Text, Card, Checkbox, ArrowDropDownIcon } from '@ape.swap/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 
@@ -60,7 +60,7 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   margin-left: 0px;
   cursor: pointer;
-  ${Text} {
+  {
     margin-left: 4px;
     ${({ theme }) => theme.mediaQueries.md} {
       margin-left: 8px;
@@ -100,7 +100,7 @@ const LabelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  > ${Text} {
+  > {
     font-size: 12px;
   }
 

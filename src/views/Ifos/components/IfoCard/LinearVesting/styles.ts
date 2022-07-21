@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button, Text } from '@apeswapfinance/uikit'
+import { Button, Text } from '@ape.swap/uikit'
 import BaseUnlockButton from 'components/UnlockButton'
 
 export const Container = styled.div`

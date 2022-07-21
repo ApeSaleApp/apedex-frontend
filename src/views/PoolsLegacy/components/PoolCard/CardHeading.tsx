@@ -2,7 +2,7 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
 import styled from '@emotion/styled'
-import { Flex, Skeleton, Text, Image, useMatchBreakpoints } from '@apeswapfinance/uikit'
+import { Flex, Skeleton, Text, Image, useMatchBreakpoints } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { useWeb3React } from '@web3-react/core'
 import { Pool } from 'state/types'
@@ -391,10 +391,10 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
             </Text>
           )}
           <StyledFlexEarnedSmall>
-            <StyledText4 color="primary" pr="3px">
+            <StyledText4 color="yellow" pr="3px">
               {earnToken}
             </StyledText4>
-            <StyledText2 color="primary" pr="3px">
+            <StyledText2 color="yellow" pr="3px">
               {t('Earned')}
             </StyledText2>
             <StyledText3>{displayBalance}</StyledText3>
@@ -403,10 +403,10 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
         <LabelContainer2>
           <StyledFlexEarned>
             <Flex>
-              <StyledText4 color="primary" pr="3px">
+              <StyledText4 color="yellow" pr="3px">
                 {earnToken}
               </StyledText4>
-              <StyledText2 color="primary" pr="3px">
+              <StyledText2 color="yellow" pr="3px">
                 {t('Earned')}
               </StyledText2>
             </Flex>

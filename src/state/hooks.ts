@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import BigNumber from 'bignumber.js'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import { Toast, toastTypes } from '@apeswapfinance/uikit'
+// import { Toast } from '@ape.swap/uikit'
 import { useSelector } from 'react-redux'
 import useRefresh from 'hooks/useRefresh'
 import { useLiquidityData } from 'hooks/api'
@@ -10,12 +10,13 @@ import { CHAIN_ID } from 'config/constants/chains'
 import { useBananaAddress, useTreasuryAddress } from 'hooks/useAddress'
 import { useAppDispatch } from 'state'
 import useSwitchNetwork from 'hooks/useSelectNetwork'
+
 import {
   fetchPoolsPublicDataAsync,
   fetchPoolsUserDataAsync,
-  push as pushToast,
-  remove as removeToast,
-  clear as clearToast,
+  // push as pushToast,
+  // remove as removeToast,
+  // clear as clearToast,
 } from './actions'
 import {
   State,
@@ -59,6 +60,13 @@ import { fetchLpTokenPrices } from './lpPrices'
 import { fetchAllNfas } from './nfas'
 
 const ZERO = new BigNumber(0)
+
+var toastTypes = {
+  SUCCESS: "success",
+  DANGER: "danger",
+  ERROR: "error",
+  INFO: "info",
+};
 
 // Network
 
@@ -227,50 +235,52 @@ export const usePriceGnanaBusd = (): BigNumber => {
 export const useToast = () => {
   const dispatch = useAppDispatch()
   const helpers = useMemo(() => {
-    const push = (toast: Toast) => dispatch(pushToast(toast))
+    // const push = (toast) => dispatch(pushToast(toast))
 
+    const push = (toast) => {console.log("push")}
     return {
       toastError: (description: string, action?: any) => {
-        return push({
-          id: description,
-          title: description,
-          description,
-          action,
-          type: toastTypes.ERROR,
-        })
+        // return push({
+        //   id: description,
+        //   title: description,
+        //   description,
+        //   action,
+        //   type: toastTypes.ERROR,
+        // })
       },
       toastInfo: (description: string, action?: any) => {
-        return push({
-          id: description,
-          title: description,
-          description,
-          action,
-          type: toastTypes.INFO,
-        })
+        // return push({
+        //   id: description,
+        //   title: description,
+        //   description,
+        //   action,
+        //   type: toastTypes.INFO,
+        // })
       },
       toastSuccess: (description: string, action?: any) => {
-        return push({
-          id: description,
-          title: description,
-          description,
-          action,
-          type: toastTypes.SUCCESS,
-        })
+        // return push({
+        //   id: description,
+        //   title: description,
+        //   description,
+        //   action,
+        //   type: toastTypes.SUCCESS,
+        // })
       },
       toastWarning: (description: string, action?: any) => {
-        return push({
-          id: description,
-          title: description,
-          description,
-          action,
-          type: toastTypes.DANGER,
-        })
+        // return push({
+        //   id: description,
+        //   title: description,
+        //   description,
+        //   action,
+        //   type: toastTypes.DANGER,
+        // })
       },
       push,
-      remove: (id: string) => dispatch(removeToast(id)),
-      clear: () => dispatch(clearToast()),
+      // remove: (id: string) => dispatch(removeToast(id)),
+      remove: (id: string) => {console.log("remove")},
+      clear: () => function(){console.log('abc')},
     }
-  }, [dispatch])
+  }, [])
 
   return helpers
 }

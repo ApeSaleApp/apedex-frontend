@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { Currency } from '@apeswapfinance/sdk'
-import { Text, Flex } from '@apeswapfinance/uikit'
+import { Text, Flex } from '@ape.swap/uikit'
 import styled from 'styled-components'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'

@@ -1,5 +1,4 @@
-import { Text, Flex } from '@apeswapfinance/uikit'
-import { Button } from '@ape.swap/uikit'
+import { Text, Flex, Button } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 export const ControlContainer = styled(Flex)`

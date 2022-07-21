@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@apeswapfinance/uikit'
+import { Button } from '@ape.swap/uikit'
 import useTheme from 'hooks/useTheme'
 import { useHistory } from 'react-router-dom'
 

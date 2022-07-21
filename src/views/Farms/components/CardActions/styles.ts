@@ -1,5 +1,4 @@
-import { Button, Flex } from '@apeswapfinance/uikit'
-import { Tag } from '@ape.swap/uikit'
+import {Tag,  Button, Flex } from '@ape.swap/uikit'
 import styled from 'styled-components'
 
 export const StyledButton = styled(Button)`

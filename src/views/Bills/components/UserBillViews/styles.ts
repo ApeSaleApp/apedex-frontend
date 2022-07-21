@@ -1,4 +1,4 @@
-import { Card, Flex } from '@apeswapfinance/uikit'
+import { Card, Flex } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 export const CardContainer = styled(Card)`

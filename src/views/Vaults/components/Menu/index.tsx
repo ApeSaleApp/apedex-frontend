@@ -1,6 +1,5 @@
 import React from 'react'
-import { Flex, Select, SelectItem, Text } from '@apeswapfinance/uikit'
-import { Checkbox } from '@ape.swap/uikit'
+import { Flex, Select, SelectItem, Text, Checkbox } from '@ape.swap/uikit'
 import { ToggleWrapper } from 'components/ListViewMenu/styles'
 import MenuTabButtons from 'components/ListViewMenu/MenuTabButtons'
 import { ListViewProps } from './types'

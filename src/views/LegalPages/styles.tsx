@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text } from '@apeswapfinance/uikit'
+import { Text } from '@ape.swap/uikit'
 import { ThemeUIStyleObject } from 'theme-ui'
 
 export const FlexContainer = styled.div`

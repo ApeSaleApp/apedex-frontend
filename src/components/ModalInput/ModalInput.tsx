@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Text, Button, Input, InputProps, Flex } from '@apeswapfinance/uikit'
+import { Text, Button, Input, InputProps, Flex } from '@ape.swap/uikit'
 import { useTranslation } from '../../contexts/Localization'
 
 interface ModalInputProps {
@@ -67,7 +67,9 @@ const ModalInput: React.FC<ModalInputProps> = ({
 
   return (
     <div style={{ position: 'relative' }}>
-      <StyledTokenInput isWarning={isBalanceZero}>
+      <StyledTokenInput 
+      // isWarning={isBalanceZero}
+      >
         <Flex justifyContent="space-between" pl="16px">
           <Text fontSize="14px" fontWeight={800}>
             {inputTitle}

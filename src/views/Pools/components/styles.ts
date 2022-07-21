@@ -1,5 +1,4 @@
-import { ArrowDropUpIcon } from '@apeswapfinance/uikit'
-import { Button, Flex, Tag } from '@ape.swap/uikit'
+import { ArrowDropUpIcon, Button, Flex, Tag } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 export const StyledButton = styled(Button)`

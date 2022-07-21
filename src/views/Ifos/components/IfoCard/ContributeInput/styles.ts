@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button, Text, Flex, Input } from '@apeswapfinance/uikit'
+import { Button, Text, Flex, Input } from '@ape.swap/uikit'
 
 export const Label = styled(Text)`
   font-size: 12px;

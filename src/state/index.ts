@@ -3,7 +3,7 @@ import { load, save } from 'redux-localstorage-simple'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { updateVersion } from './global/actions'
 import farmsReducer from './farms'
-import toastsReducer from './toasts'
+// import toastsReducer from './toasts'
 import poolsReducer from './pools'
 import profileReducer from './profile'
 import statsReducer from './stats'
@@ -35,7 +35,7 @@ const store = configureStore({
   reducer: {
     farms: farmsReducer,
     block: blockReducer,
-    toasts: toastsReducer,
+    // toasts: toastsReducer,
     pools: poolsReducer,
     profile: profileReducer,
     stats: statsReducer,

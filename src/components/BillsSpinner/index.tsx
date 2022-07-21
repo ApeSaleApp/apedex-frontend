@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spinner } from '@apeswapfinance/uikit'
+import { Spinner } from '@ape.swap/uikit'
 import useWindowSize from 'hooks/useDimensions'
 
 const BillsSpinner: React.FC = () => {

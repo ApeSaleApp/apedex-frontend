@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParticleBurst } from '@apeswapfinance/uikit'
+import { useParticleBurst } from '@ape.swap/uikit'
 import { useLocation } from 'react-router-dom'
 
 const disableWhenNotChristmas = () => {

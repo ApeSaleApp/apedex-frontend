@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme } from 'styled-components'
-import { Flex, Select, SelectItem, Text } from '@apeswapfinance/uikit'
+import { Flex, Select, SelectItem, Text } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { ListViewProps } from './types'
 import MenuTabButtons from './MenuTabButtons'

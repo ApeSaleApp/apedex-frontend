@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
 import { PoolCategory } from 'config/constants/types'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, Text, Card, Checkbox, ArrowDropDownIcon } from '@apeswapfinance/uikit'
+import { Heading, Text, Card, Checkbox, ArrowDropDownIcon } from '@ape.swap/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import MenuTabButtons from 'components/ListViewMenu/MenuTabButtons'
@@ -63,7 +63,7 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   margin-left: 0px;
   cursor: pointer;
-  ${Text} {
+  div {
     margin-left: 4px;
     ${({ theme }) => theme.mediaQueries.md} {
       margin-left: 8px;
@@ -103,7 +103,7 @@ const LabelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  > ${Text} {
+  > div {
     font-size: 12px;
   }
 
@@ -696,7 +696,7 @@ const Pools: React.FC = () => {
             {t('Staking Pools')}
           </StyledHeading>
           {size.width > 968 && (
-            <Text fontSize="22px" fontWeight={400} color="white">
+            <Text fontSize="22px" fontWeight={400} color="white1">
               {t}
               <br />
               {t}

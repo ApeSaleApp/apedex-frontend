@@ -1,4 +1,4 @@
-import { Flex } from '@apeswapfinance/uikit'
+import { Flex } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
 
 const ListViewLayout = styled(Flex)`

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text, Checkbox, Heading, Flex } from '@apeswapfinance/uikit'
+import { Text, Checkbox, Heading, Flex } from '@ape.swap/uikit'
 
 export const ControlContainer = styled(Flex)`
   position: relative;
@@ -46,7 +46,7 @@ export const ToggleWrapper = styled.div`
   justify-content: center;
   cursor: pointer;
 
-  ${Text} {
+  {
     margin-left: 4px;
     ${({ theme }) => theme.mediaQueries.md} {
       margin-left: 8px;

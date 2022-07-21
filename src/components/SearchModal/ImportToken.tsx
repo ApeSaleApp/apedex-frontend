@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Token, Currency } from '@apeswapfinance/sdk'
-import { Button, Text, ErrorIcon, Flex, Checkbox, Link, Tag } from '@apeswapfinance/uikit'
+import { Button, Text, ErrorIcon, Flex, Checkbox, Link, Tag } from '@ape.swap/uikit'
 import { AutoColumn } from 'components/layout/Column'
 import { useAddUserToken } from 'state/user/hooks'
 import { getEtherscanLink } from 'utils'
@@ -77,7 +77,9 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
                   via {extendedName || list.name}
                 </Tag>
               ) : (
-                <Tag variant="danger" outline startIcon={<ErrorIcon color="error" />}>
+                <Tag 
+                // variant="danger"
+                 outline startIcon={<ErrorIcon color="error" />}>
                   {t('Unknown Source')}
                 </Tag>
               )}

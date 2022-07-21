@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, useMatchBreakpoints, Skeleton } from '@apeswapfinance/uikit'
+import { Text, useMatchBreakpoints, Skeleton } from '@ape.swap/uikit'
 import { BLOCK_EXPLORER } from 'config/constants/chains'
 import { useNetworkChainId } from 'state/hooks'
 import { useTranslation } from 'contexts/Localization'
@@ -48,21 +48,21 @@ const TokenInfoCard: React.FC<TokenInfoCardProps> = ({
         <TokenButtonsWrapper>
           <TokenInfoButton opacity="1">
             <a href={contractLink} target="_blank" rel="noopener noreferrer">
-              <Text fontSize={isMobile ? '11px' : '15px'} color="white">
+              <Text fontSize={isMobile ? '11px' : '15px'} color="white1">
                 {t('BscScan')}
               </Text>
             </a>
           </TokenInfoButton>
           <TokenInfoButton opacity=".1">
             <a href={tokenLink} target="_blank" rel="noopener noreferrer">
-              <Text fontSize={isMobile ? '11px' : '15px'} color="white">
+              <Text fontSize={isMobile ? '11px' : '15px'} color="white1">
                 {formatTokenAddress}
               </Text>
             </a>
           </TokenInfoButton>
           <TokenInfoButton opacity=".1">
             <a href={tokenWebsite} target="_blank" rel="noopener noreferrer">
-              <Text fontSize={isMobile ? '11px' : '15px'} color="white">
+              <Text fontSize={isMobile ? '11px' : '15px'} color="white1">
                 {t('Website')}
               </Text>
             </a>

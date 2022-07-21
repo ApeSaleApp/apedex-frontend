@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { Trade, TradeType } from '@apeswapfinance/sdk'
-import { Text, ErrorIcon, ArrowDownIcon, Button } from '@apeswapfinance/uikit'
+import { Text, ErrorIcon, ArrowDownIcon, Button } from '@ape.swap/uikit'
 import { Field } from 'state/swap/actions'
 import { computeSlippageAdjustedAmounts, computeLegacyPriceBreakdown, warningSeverity } from 'utils/prices'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'

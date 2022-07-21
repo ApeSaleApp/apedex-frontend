@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text, Button } from '@apeswapfinance/uikit'
+import { Text, Button } from '@ape.swap/uikit'
 
 export const PageWrapper = styled.div`
   display: flex;

@@ -1,4 +1,4 @@
-import { Flex, Skeleton } from '@apeswapfinance/uikit'
+import { Flex, Skeleton } from '@ape.swap/uikit'
 import BigNumber from 'bignumber.js'
 import ListViewContent from 'components/ListViewContent'
 import ReactPlayer from 'react-player'

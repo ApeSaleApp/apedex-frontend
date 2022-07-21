@@ -6,7 +6,7 @@ import { ETHER, JSBI, Percent, Token, ROUTER_ADDRESS } from '@apeswapfinance/sdk
 import { LargeStyledButton } from 'views/LegacySwap/styles'
 import track from 'utils/track'
 import Page from 'components/layout/Page'
-import { Text, AddIcon, Flex, Card, useModal, useMatchBreakpoints, Button, AutoRenewIcon } from '@apeswapfinance/uikit'
+import { Text, AddIcon, Flex, Card, useModal, useMatchBreakpoints, Button, AutoRenewIcon } from '@ape.swap/uikit'
 import { getTokenUsdPrice } from 'utils/getTokenUsdPrice'
 import { RouteComponentProps } from 'react-router'
 import { BigNumber } from '@ethersproject/bignumber'

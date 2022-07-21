@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Button, useMatchBreakpoints, Tabs, Tab } from '@apeswapfinance/uikit'
+import { Flex, Button, useMatchBreakpoints, Tabs, Tab } from '@ape.swap/uikit'
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import { useTranslation } from 'contexts/Localization'
 import { useLocation, useHistory } from 'react-router-dom'
@@ -42,7 +42,7 @@ const CurrencyInputHeader: React.FC<Props> = () => {
           index={0}
           label={t('SWAP')}
           onClick={() => history.push('/swap')}
-          size={isMobile ? 'xsm' : 'md'}
+          size={isMobile ? 'sm' : 'md'}
           variant="centered"
           activeTab={getActiveTab()}
         />
@@ -50,7 +50,7 @@ const CurrencyInputHeader: React.FC<Props> = () => {
           index={1}
           label={t('ORDERS')}
           onClick={() => history.push('/orders')}
-          size={isMobile ? 'xsm' : 'md'}
+          size={isMobile ? 'sm' : 'md'}
           variant="centered"
           activeTab={getActiveTab()}
         />
@@ -58,7 +58,7 @@ const CurrencyInputHeader: React.FC<Props> = () => {
           index={2}
           label={t('LIQUIDITY')}
           onClick={() => history.push('/pool')}
-          size={isMobile ? 'xsm' : 'md'}
+          size={isMobile ? 'sm' : 'md'}
           variant="centered"
           activeTab={getActiveTab()}
         />

@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@apeswapfinance/uikit'
+import { Flex, Heading } from '@ape.swap/uikit'
 import styled from 'styled-components'
 
 export const Container = styled(Flex)``

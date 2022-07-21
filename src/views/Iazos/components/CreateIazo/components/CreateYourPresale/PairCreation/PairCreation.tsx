@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { useMatchBreakpoints, Text } from '@apeswapfinance/uikit'
+import { useMatchBreakpoints, Text } from '@ape.swap/uikit'
 import useTheme from 'hooks/useTheme'
 import TextInput from 'components/TextInput'
 import useERC20Details from 'hooks/useERC20Details'
@@ -86,7 +86,7 @@ const PairCreation: React.FC<PairCreationProps> = ({ onChange }) => {
         <>
           <PairContainer>
             <Text fontSize="18px">{t('Apeswap pair to be created')}</Text>
-            <Text color="rgba(255, 179, 0, 1)" fontSize="20px" fontWeight={600}>
+            <Text color="yellow" fontSize="20px" fontWeight={600}>
               {selectedToken?.quoteToken} / {selectedToken?.tokenSymbol}
             </Text>
           </PairContainer>

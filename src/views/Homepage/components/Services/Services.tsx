@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Flex, Skeleton, Text } from '@apeswapfinance/uikit'
+import { Flex, Skeleton, Text } from '@ape.swap/uikit'
 import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import useSwiper from 'hooks/useSwiper'
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
         </Flex>
         <a href={link} rel="noopener noreferrer">
           <Flex alignItems="center" justifyContent="center" style={{ textAlign: 'center' }}>
-            <Text color="white" fontSize="16px" bold>
+            <Text color="white1" fontSize="16px" bold>
               {t('See All')} {'>'}
             </Text>
           </Flex>
@@ -177,12 +177,12 @@ const Services: React.FC = () => {
                         <Flex flexDirection="column" justifyContent="space-between" style={{ height: '100%' }}>
                           <Flex flexDirection="column">
                             <Flex>
-                              <Text color="white" fontSize="23px" bold>
+                              <Text color="white1" fontSize="23px" bold>
                                 {service.title}
                               </Text>
                             </Flex>
                             <Flex padding="0px 40px 0px 0px">
-                              <Text color="white" bold fontSize="15px">
+                              <Text color="white1" bold fontSize="15px">
                                 {service.description}
                               </Text>
                             </Flex>
@@ -201,12 +201,12 @@ const Services: React.FC = () => {
                     <Flex flexDirection="column" justifyContent="space-between" style={{ height: '100%' }}>
                       <Flex flexDirection="column">
                         <Flex>
-                          <Text color="white" fontSize="23px" bold>
+                          <Text color="white1" fontSize="23px" bold>
                             {service.title}
                           </Text>
                         </Flex>
                         <Flex padding="0px 40px 0px 0px">
-                          <Text color="white" bold fontSize="15px">
+                          <Text color="white1" bold fontSize="15px">
                             {service.description}
                           </Text>
                         </Flex>

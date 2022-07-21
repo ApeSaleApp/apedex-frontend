@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, Image, ArrowDropDownIcon, ArrowDropUpIcon } from '@apeswapfinance/uikit'
+import { Text, Image, ArrowDropDownIcon, ArrowDropUpIcon } from '@ape.swap/uikit'
 
 interface TokenDropdown {
   tokens: string[]
