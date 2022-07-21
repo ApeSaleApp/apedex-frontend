@@ -8,7 +8,7 @@ export const HOME: (t: ContextApi['t']) => MenuEntry = (t) => ({
 
 export const EXCHANGE: (t: ContextApi['t']) => MenuEntry = (t) => ({
   label: t('Exchange'),
-  href: '/swap',
+  href: '/exchange',
 })
 
 export const MORE_INFO: (t: ContextApi['t']) => MenuEntry = (t) => ({

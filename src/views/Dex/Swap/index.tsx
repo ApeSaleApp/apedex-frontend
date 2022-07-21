@@ -74,7 +74,7 @@ const Swap: React.FC = () => {
     })
 
   const [onPresentImportTokenWarningModal] = useModal(
-    <ImportTokenWarningModal tokens={importTokensNotInDefault} onCancel={() => history.push('/swap/')} />,
+    <ImportTokenWarningModal tokens={importTokensNotInDefault} onCancel={() => history.push('/exchange/')} />,
   )
 
   useEffect(() => {

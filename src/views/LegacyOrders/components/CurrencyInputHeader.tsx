@@ -41,7 +41,7 @@ const CurrencyInputHeader: React.FC<Props> = () => {
         <Tab
           index={0}
           label={t('SWAP')}
-          onClick={() => history.push('/swap')}
+          onClick={() => history.push('/exchange')}
           size={isMobile ? 'xsm' : 'md'}
           variant="centered"
           activeTab={getActiveTab()}
@@ -57,7 +57,7 @@ const CurrencyInputHeader: React.FC<Props> = () => {
         <Tab
           index={2}
           label={t('LIQUIDITY')}
-          onClick={() => history.push('/pool')}
+          onClick={() => history.push('/liquidity')}
           size={isMobile ? 'xsm' : 'md'}
           variant="centered"
           activeTab={getActiveTab()}
