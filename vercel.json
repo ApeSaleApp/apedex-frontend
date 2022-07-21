@@ -4,6 +4,8 @@
     { "source": "/about", "destination": "https://apeswap.gitbook.io/apeswap-finance/" },
     { "source": "/about-us", "destination": "https://apeswap.gitbook.io/apeswap-finance/" },
     { "source": "/farm", "destination": "/farms", "permanent": true },
+    { "source": "/swap", "destination": "/exchange", "permanent": true },
+    { "source": "/pool", "destination": "/liquidity", "permanent": true },
     { "source": "/yield", "destination": "/farms", "permanent": true },
     { "source": "/yields", "destination": "/farms", "permanent": true },
     { "source": "/apezone", "destination": "/gnana" },
