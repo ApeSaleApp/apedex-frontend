@@ -84,7 +84,7 @@
     "yalc": "^1.0.0-pre.53"
   },
   "devDependencies": {
-    "@apeswapfinance/sdk": "file:../apeswap-sdk",
+    "@apeswapfinance/sdk": "file:../apedex-sdk",
     "@apeswapfinance/eslint-config-apeswap": "file:../eslint-config-apeswap",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
