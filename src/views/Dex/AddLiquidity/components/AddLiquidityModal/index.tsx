@@ -55,7 +55,7 @@ const AddLiquidityModal: React.FC<AddLiquidityModalProps> = ({
             <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
               <Flex sx={styles.outerLogoCircle}>
                 <Flex sx={styles.innerLogoCircle}>
-                  <Text weight={700} color="primaryBright" sx={{ lineHeight: '0px' }}>
+                  <Text weight={700} color="textPrimary" sx={{ lineHeight: '0px' }}>
                     +
                   </Text>
                 </Flex>

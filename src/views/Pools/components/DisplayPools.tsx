@@ -75,10 +75,10 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
             {!isMobile && (
               <>
                 <a href={pool.projectLink} target="_blank" rel="noreferrer">
-                  <IconButton icon="website" color="primaryBright" width={20} style={{ padding: '8.5px 10px' }} />
+                  <IconButton icon="website" color="textPrimary" width={20} style={{ padding: '8.5px 10px' }} />
                 </a>
                 <a href={pool?.twitter} target="_blank" rel="noreferrer">
-                  <IconButton icon="twitter" color="primaryBright" width={20} />
+                  <IconButton icon="twitter" color="textPrimary" width={20} />
                 </a>
               </>
             )}

@@ -22,7 +22,7 @@ const StyledInput = styled.input`
   width: 100%;
   background: none;
   border: 0;
-  color: ${({ theme }) => (theme.isDark ? theme.colors.primaryBright : theme.colors.primary)};
+  color: ${({ theme }) => (theme.isDark ? theme.colors.textPrimary : theme.colors.primary)};
   flex: 1;
   height: 56px;
   margin: 0;

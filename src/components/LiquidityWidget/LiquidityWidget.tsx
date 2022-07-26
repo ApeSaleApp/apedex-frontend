@@ -337,7 +337,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
               fontSize: '16px',
               fontWeight: 700,
               lineHeight: '24px',
-              color: isDark ? 'primaryBright' : 'brown',
+              color: isDark ? 'textPrimary' : 'brown',
             }}
           >
             Token 1
@@ -350,7 +350,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
               fontWeight: 500,
               lineHeight: '14px',
               marginRight: '10px',
-              color: isDark ? 'primaryBright' : 'brown',
+              color: isDark ? 'textPrimary' : 'brown',
             }}
           >
             <Box>
@@ -398,7 +398,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
             height: '29px',
           }}
         >
-          <AddIcon width="25px" color="primaryBright" />
+          <AddIcon width="25px" color="textPrimary" />
         </Flex>
       </Flex>
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
@@ -408,7 +408,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
               fontSize: '16px',
               fontWeight: 700,
               lineHeight: '24px',
-              color: isDark ? 'primaryBright' : 'brown',
+              color: isDark ? 'textPrimary' : 'brown',
             }}
           >
             {t('Token 2')}
@@ -421,7 +421,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
               fontWeight: 500,
               lineHeight: '14px',
               marginRight: '10px',
-              color: isDark ? 'primaryBright' : 'brown',
+              color: isDark ? 'textPrimary' : 'brown',
             }}
           >
             {t('Balance')}:&nbsp;&nbsp;

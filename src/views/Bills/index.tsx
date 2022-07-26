@@ -66,7 +66,7 @@ const Bills: React.FC = () => {
             link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/raise/treasury-bills"
             listViewBreak
             maxWidth={1130}
-            titleColor="primaryBright"
+            titleColor="textPrimary"
           />
           <BillMenu
             bills={bills}

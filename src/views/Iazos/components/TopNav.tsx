@@ -12,7 +12,7 @@ const TopNav: React.FC = () => {
       <Link to="/ss-iao">
         <BackWrapper>
           <BackArrow src="/images/left-arrow.svg" />
-          <StyledText color="primaryBright">{t('Back to Self-Serve Launchpad')}</StyledText>
+          <StyledText color="textPrimary">{t('Back to Self-Serve Launchpad')}</StyledText>
         </BackWrapper>
       </Link>
     </TopNavWrapper>

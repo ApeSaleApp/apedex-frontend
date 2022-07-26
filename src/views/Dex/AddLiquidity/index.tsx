@@ -132,10 +132,10 @@ function AddLiquidity({
           <MyPositions />
           {noLiquidity && (
             <Flex sx={{ ...styles.warningMessageContainer }}>
-              <Text size="14px" weight={700} mb="10px" color="primaryBright">
+              <Text size="14px" weight={700} mb="10px" color="textPrimary">
                 {t('You are the first liquidity provider.')}
               </Text>
-              <Text size="12px" weight={500} color="primaryBright" sx={{ textAlign: 'center' }}>
+              <Text size="12px" weight={500} color="textPrimary" sx={{ textAlign: 'center' }}>
                 {t(
                   'The ratio of tokens you add will set the price of this pool. Once you are happy with the rate click supply to review.',
                 )}

@@ -45,7 +45,7 @@ const StyledInput = styled(Input)`
 
 const StyledButton = styled(Button)`
   border-radius: 6px;
-  color: ${({ theme }) => theme.colors.primaryBright};
+  color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: 500;
   font-size: 16px;
   padding: 3px 10px;

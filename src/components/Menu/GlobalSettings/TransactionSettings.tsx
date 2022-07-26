@@ -191,7 +191,7 @@ const SelectButton = styled(Flex)`
   min-width: 57px;
   height: 36px;
   radius: 10px;
-  color: primaryBright;
+  color: textPrimary;
   border-radius: 10px;
   cursor: pointer;
   align-items: center;

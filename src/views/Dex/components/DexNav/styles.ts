@@ -28,7 +28,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   underline: {
     display: 'inline-block',
     position: 'relative',
-    background: 'primaryBright',
+    background: 'textPrimary',
     height: '1px',
     width: '100%',
     borderRadius: '10px',

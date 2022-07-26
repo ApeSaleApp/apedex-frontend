@@ -61,7 +61,7 @@ export default function SwapModalHeader({
       <Flex sx={{ justifyContent: 'center' }}>
         <Flex sx={styles.outerLogoCircle}>
           <Flex sx={styles.innerLogoCircle}>
-            <Svg icon="arrow" width="6px" color="primaryBright" />
+            <Svg icon="arrow" width="6px" color="textPrimary" />
           </Flex>
         </Flex>
       </Flex>

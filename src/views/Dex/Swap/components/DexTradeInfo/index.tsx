@@ -59,7 +59,7 @@ const DexTradeInfo: React.FC<{
           >
             <Text
               size="8px"
-              color={isBonusRouter ? 'primaryBright' : 'text'}
+              color={isBonusRouter ? 'textPrimary' : 'text'}
               weight={700}
               sx={{ ...dexStyles.textWrap, lineHeight: isBonusRouter ? '10px' : '10px' }}
             >
@@ -122,7 +122,7 @@ const DexTradeInfo: React.FC<{
               }}
             >
               <Flex sx={{ justifyContent: 'space-between', margin: '4px 0px' }}>
-                <Text color={isBonusRouter ? 'primaryBright' : 'text'} size="12px" weight={700} sx={dexStyles.textWrap}>
+                <Text color={isBonusRouter ? 'textPrimary' : 'text'} size="12px" weight={700} sx={dexStyles.textWrap}>
                   {isBonusRouter ? t('Bonus Router') : isSmartRouter ? t('Smart Router') : t('ApeSwap Router')}
                 </Text>
                 <Flex sx={{ alignSelf: 'flex-end' }}>
@@ -146,7 +146,7 @@ const DexTradeInfo: React.FC<{
                   >
                     <HelpIcon
                       width="12px"
-                      color={isBonusRouter ? 'primaryBright' : 'text'}
+                      color={isBonusRouter ? 'textPrimary' : 'text'}
                       sx={{ alignSelf: 'flex-end' }}
                     />
                   </TooltipBubble>
@@ -155,10 +155,10 @@ const DexTradeInfo: React.FC<{
               {isBonusRouter && (
                 <>
                   <Flex sx={{ justifyContent: 'space-between', margin: '2px 0px' }}>
-                    <Text color="primaryBright" size="10px" sx={dexStyles.textWrap} mr="10px">
+                    <Text color="textPrimary" size="10px" sx={dexStyles.textWrap} mr="10px">
                       {t('Estimated swap bonus')}
                     </Text>
-                    <Text color="primaryBright" size="10px" sx={dexStyles.textWrap}>
+                    <Text color="textPrimary" size="10px" sx={dexStyles.textWrap}>
                       ~ {(bestRoute?.bonusRouter?.summary?.searchSummary?.expectedKickbackProfit * 0.3).toFixed(6)}{' '}
                       {CHAIN_PARAMS[chainId].nativeCurrency.symbol}{' '}
                       {`(~$${(bestRoute?.bonusRouter?.summary?.searchSummary?.expectedUsdProfit * 0.3).toFixed(2)})`}
@@ -167,10 +167,10 @@ const DexTradeInfo: React.FC<{
                 </>
               )}
               <Flex sx={{ justifyContent: 'space-between', margin: '4px 0px' }}>
-                <Text color={isBonusRouter ? 'primaryBright' : 'text'} size="10px" sx={dexStyles.textWrap}>
+                <Text color={isBonusRouter ? 'textPrimary' : 'text'} size="10px" sx={dexStyles.textWrap}>
                   {t('Route')}
                 </Text>
-                <Text color={isBonusRouter ? 'primaryBright' : 'text'} size="10px" sx={dexStyles.textWrap}>
+                <Text color={isBonusRouter ? 'textPrimary' : 'text'} size="10px" sx={dexStyles.textWrap}>
                   {route}
                 </Text>
               </Flex>

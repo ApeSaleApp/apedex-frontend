@@ -99,7 +99,7 @@ export const TopCon = styled.div`
   width: 100%;
 `
 export const WarningHeader = styled(Heading)`
-  color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.primaryBright)};
+  color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textPrimary)};
   font-size: 30px;
   font-weight: 700;
 `
@@ -114,7 +114,7 @@ export const ReadMore = styled(Button)`
   text-decoration-line: underline;
   font-size: 16px;
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.primaryBright};
+  color: ${({ theme }) => theme.colors.textPrimary};
   border-radius: 0;
   box-shadow: unset;
   height: 20px;
@@ -143,7 +143,7 @@ export const InnerContentText = styled(Text)`
   letter-spacing: 5%;
   font-size: 12px;
   font-weight: 400;
-  color: ${({ theme }) => theme.colors.primaryBright};
+  color: ${({ theme }) => theme.colors.textPrimary};
   text-align: center;
   max-width: 800px;
 

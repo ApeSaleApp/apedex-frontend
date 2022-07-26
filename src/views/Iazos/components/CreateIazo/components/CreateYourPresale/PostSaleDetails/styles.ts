@@ -65,7 +65,7 @@ export const LiquidityButton = styled.div<{ active: boolean }>`
   background: ${(props) => (props.active ? props.theme.colors.yellow : 'transparent')};
   border: 2px solid ${({ theme }) => theme.colors.yellow};
   border-radius: 5px;
-  color: ${(props) => (props.active ? props.theme.colors.primaryBright : props.theme.colors.gray)};
+  color: ${(props) => (props.active ? props.theme.colors.textPrimary : props.theme.colors.gray)};
   font-weight: 700;
 
   align-items: center;

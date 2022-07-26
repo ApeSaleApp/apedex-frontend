@@ -1,3 +1,4 @@
+// Should remove
 import React, { useEffect, useState } from 'react'
 import { Flex, Text, useMatchBreakpoints, Skeleton } from '@ape.swap/uikit'
 import SwiperCore, { Autoplay } from 'swiper'

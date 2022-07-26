@@ -12,28 +12,29 @@ import WelcomeContent from './components/WelcomeContent/WelcomeContent'
 import { Banner } from './styles'
 
 const Home: React.FC = () => {
-  const { chainId } = useActiveWeb3React()
+//   const { chainId } = useActiveWeb3React()
 
   return (
     <>
-      <Banner />
-      <WelcomeContent />
-      <StatCards />
+        <p>Home</p>
+      {/* <Banner /> */}
+      {/* <WelcomeContent /> */}
+      {/* <StatCards />
       <TrendingTokens />
       <SwiperProvider>
         <News />
-      </SwiperProvider>
-      {chainId === CHAIN_ID.BSC && (
+      </SwiperProvider> */}
+      {/* {chainId === CHAIN_ID.BSC && (
         <SwiperProvider>
           <Services />
         </SwiperProvider>
-      )}
-      <SwiperProvider>
+      )} */}
+      {/* <SwiperProvider>
         <Values />
       </SwiperProvider>
       <SwiperProvider>
         <LaunchCalendar />
-      </SwiperProvider>
+      </SwiperProvider> */}
     </>
   )
 }
