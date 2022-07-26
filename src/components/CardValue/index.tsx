@@ -27,7 +27,8 @@ const CardValue: React.FC<CardValueProps> = ({
   top,
   differentFontSize,
 }) => {
-  const { countUp, update } = useCountUp({
+  const { update } = useCountUp({
+    ref: "counter",
     start: 0,
     end: value,
     duration: 1,
@@ -53,7 +54,7 @@ const CardValue: React.FC<CardValueProps> = ({
 
   return (
     <StyledText fontSize={fontSize} color={color} fontWeight={fontWeight} fontFamily={fontFamily}>
-      {prefix} {countUp}
+      {prefix} <span id="counter" />
     </StyledText>
   )
 }

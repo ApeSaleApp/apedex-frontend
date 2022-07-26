@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Flex, Button, useMatchBreakpoints, Tabs, Tab } from '@ape.swap/uikit'
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import { useTranslation } from 'contexts/Localization'
-import { useLocation, useHistory } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 interface Props {
   title?: string
@@ -23,7 +23,7 @@ const CurrencyInputContainer = styled(Flex)`
 
 const CurrencyInputHeader: React.FC<Props> = () => {
   const { isMd, isSm, isXs } = useMatchBreakpoints()
-  const history = useHistory()
+  const history = useNavigate()
   const isMobile = isMd || isSm || isXs
   const path = useLocation()
   const { t } = useTranslation()

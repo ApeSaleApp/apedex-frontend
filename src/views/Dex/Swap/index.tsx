@@ -6,7 +6,7 @@ import { Flex, useModal } from '@ape.swap/uikit'
 import { useSwapCallback } from 'hooks/useSwapCallback'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { computeTradePriceBreakdown } from 'utils/prices'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'contexts/Localization'
 import track from 'utils/track'
 import { CurrencyAmount, JSBI, Token, Trade } from '@apeswapfinance/sdk'
@@ -43,7 +43,7 @@ const Swap: React.FC = () => {
 
   const loadedUrlParams = useDefaultsFromURLSearch()
 
-  const history = useHistory()
+  const history = useNavigate()
 
   const [tradeValueUsd, setTradeValueUsd] = useState(0)
 

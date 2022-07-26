@@ -43,7 +43,7 @@ const PageMeta = () => {
   )
 }
 
-const Page: React.FC<SizeProps> = ({ children, ...props }) => {
+const Page = ({ children, ...props }) => {
   return (
     <>
       <PageMeta />

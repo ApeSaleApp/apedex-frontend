@@ -1,8 +1,11 @@
 import React from 'react'
 import { Text } from '@ape.swap/uikit'
+import { Currency} from '@apeswapfinance/sdk'
 import { Container, FlexContainer, Heading, Title, styles } from './styles'
 
+
 const PrivacyPolicy: React.FC = () => {
+  console.log("ahihi",Currency.AVAX,typeof Currency)
   return (
     <Container>
       <FlexContainer>

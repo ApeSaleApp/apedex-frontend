@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AutoRenewIcon } from '@ape.swap/uikit'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import useCreateIazo from 'views/Iazos/hooks/useCreateIazo'
 import tokens from 'config/constants/tokens'
 import BigNumber from 'bignumber.js'
@@ -21,7 +21,7 @@ interface CreatePresaleProps {
 
 const CreatePresale: React.FC<CreatePresaleProps> = ({ presaleData, disabled, creationFee, iazoFee }) => {
   const { chainId, account } = useWeb3React()
-  const history = useHistory()
+  const history = useNavigate()
   const { toastSuccess, toastError } = useToast()
   const { datesSelected, pairCreation, postsaleDetails, presaleTokenDetails, information } = presaleData
   const { tokenAddress, quoteToken, tokenDecimals, tokenSymbol } = pairCreation

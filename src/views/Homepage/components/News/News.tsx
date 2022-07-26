@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Box } from 'theme-ui'
 import useIntersectionObserver from 'hooks/useIntersectionObserver'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -19,7 +19,7 @@ const SLIDE_DELAY = 5000
 SwiperCore.use([Autoplay])
 
 const News: React.FC = () => {
-  const history = useHistory()
+  const history = useNavigate()
   const { chainId } = useActiveWeb3React()
   const [loadImages, setLoadImages] = useState(false)
   useFetchHomepageNews(loadImages)

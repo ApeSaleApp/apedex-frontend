@@ -7,7 +7,7 @@ import GlobalSettings from 'components/Menu/GlobalSettings'
 import { CHAIN_ID } from 'config/constants/chains'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import useTopup from 'hooks/useTopup'
-import { useLocation, useHistory } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'contexts/Localization'
 
 interface Props {
@@ -42,7 +42,7 @@ export const StyledDiv = styled.div`
 const CurrencyInputHeader: React.FC<Props> = () => {
   const { isMd, isSm, isXs } = useMatchBreakpoints()
   const { chainId } = useActiveWeb3React()
-  const history = useHistory()
+  const history = useNavigate()
   const isMobile = isMd || isSm || isXs
   const path = useLocation()
   const { t } = useTranslation()

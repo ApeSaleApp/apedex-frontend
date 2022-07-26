@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@ape.swap/uikit'
 import useTheme from 'hooks/useTheme'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { useTranslation } from 'contexts/Localization'
 import {
@@ -31,7 +31,7 @@ const Icon = ({ name }: Props) => {
 }
 
 const HowItWorks = () => {
-  const history = useHistory()
+  const history = useNavigate()
   const { t } = useTranslation()
 
   const handleDoOwnClick = () => {

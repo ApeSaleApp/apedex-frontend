@@ -4,7 +4,8 @@ import { useAllTokens, useCurrency } from 'hooks/Tokens'
 import { Field } from 'state/orders/actions'
 import { Link, Flex, Text, useModal } from '@ape.swap/uikit'
 import { computeLegacyPriceBreakdown } from 'utils/prices'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+// https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
 import { useTranslation } from 'contexts/Localization'
 import { CurrencyAmount, JSBI, Token, Trade } from '@apeswapfinance/sdk'
 import { useExpertModeManager, useUserSlippageTolerance } from 'state/user/hooks'
@@ -43,7 +44,7 @@ const Orders: React.FC = () => {
 
   const [allowedSlippage] = useUserSlippageTolerance()
 
-  const history = useHistory()
+  const history = useNavigate()
 
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
@@ -64,7 +65,7 @@ const Orders: React.FC = () => {
     })
 
   const [onPresentImportTokenWarningModal] = useModal(
-    <ImportTokenWarningModal tokens={importTokensNotInDefault} onCancel={() => history.push('/orders')} />,
+    <ImportTokenWarningModal tokens={importTokensNotInDefault} onCancel={() => history('/orders')} />,
   )
 
   useEffect(() => {

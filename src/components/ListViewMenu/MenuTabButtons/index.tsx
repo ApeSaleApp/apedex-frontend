@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRouteMatch, useHistory } from 'react-router-dom'
+//https://reactrouter.com/docs/en/v6/upgrading/v5#replace-useroutematch-with-usematch
+import { useMatch, useNavigate } from 'react-router-dom'
 import { Toggle } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 
@@ -23,8 +24,8 @@ const Wrapper = styled.div`
 `
 
 const MenuTabButton: React.FC = () => {
-  const { url, isExact } = useRouteMatch()
-  const history = useHistory()
+  const { url, isExact } = useMatch({path: "./"})
+  const history = useNavigate()
   const { t } = useTranslation()
 
   const handleClick = () => {

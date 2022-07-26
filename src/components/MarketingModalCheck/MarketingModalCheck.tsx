@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, useHistory } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { MarketingModal } from '@ape.swap/uikit'
 import { LendingBodies } from 'components/MarketingModalContent/Lending/'
 import { FarmsBodies } from 'components/MarketingModalContent/Farms/'
@@ -11,7 +11,7 @@ import QuestModal from '../MarketingModalContent/Quests/QuestModal'
 
 const MarketingModalCheck = () => {
   const location = useLocation()
-  const history = useHistory()
+  const history = useNavigate()
   const { t } = useTranslation()
 
   const farmsRoute = location.search.includes('modal=1')
@@ -26,7 +26,7 @@ const MarketingModalCheck = () => {
   const { BillsBody1 } = BillsBodies
 
   const onDismiss = () => {
-    history.push({
+    history({
       pathname: location.pathname,
     })
   }

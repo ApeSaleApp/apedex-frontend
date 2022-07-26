@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRouteMatch, Link } from 'react-router-dom'
+import { useMatch, Link } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 
 const PoolTabButtons = () => {
-  const { url, isExact } = useRouteMatch()
+  const { url, isExact } = useMatch()
   const { t } = useTranslation()
 
   return (
