@@ -84,8 +84,8 @@
     "yalc": "^1.0.0-pre.53"
   },
   "devDependencies": {
-    "@apeswapfinance/sdk": "file:../apeswap-sdk",
-    "@apeswapfinance/eslint-config-apeswap": "file:../eslint-config-apeswap",
+    "@apeswapfinance/sdk": "file:/Users/haihuynh/Documents/Wordspace/repo/freelance/ApeSaleApp/apedex-sdk",
+    "@apeswapfinance/eslint-config-apeswap": "file:/Users/haihuynh/Documents/Wordspace/repo/freelance/ApeSaleApp/eslint-config-apeswap",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@typechain/ethers-v5": "^8.0.5",

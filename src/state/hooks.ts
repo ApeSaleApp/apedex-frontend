@@ -61,12 +61,12 @@ import { fetchAllNfas } from './nfas'
 
 const ZERO = new BigNumber(0)
 
-var toastTypes = {
-  SUCCESS: "success",
-  DANGER: "danger",
-  ERROR: "error",
-  INFO: "info",
-};
+// var toastTypes = {
+//   SUCCESS: "success",
+//   DANGER: "danger",
+//   ERROR: "error",
+//   INFO: "info",
+// };
 
 // Network
 
