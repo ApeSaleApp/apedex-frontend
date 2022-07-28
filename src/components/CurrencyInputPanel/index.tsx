@@ -7,7 +7,6 @@ import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { getTokenUsdPrice } from 'utils/getTokenUsdPrice'
 import { useCurrencyBalance } from '../../state/wallet/hooks'
 import CurrencySearchModal from '../SearchModal/CurrencySearchModal'
-import { CurrencyLogo, DoubleCurrencyLogo } from '../Logo'
 import { registerToken } from '../../utils/wallet'
 
 import { RowBetween } from '../layout/Row'
@@ -17,13 +16,13 @@ import { WrappedTokenInfo } from '../../state/lists/hooks'
 const CurrencySelectButton = styled(Button).attrs({ variant: 'text', scale: 'sm' })<{ removeLiquidity: boolean }>`
   display: flex;
   justify-content: flex-start;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
   height: 75px;
   width: 310px;
   padding: 0;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.white2} !important;
+    background-color: ${({ theme }) => theme.colors.white} !important;
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
@@ -45,7 +44,7 @@ const Container = styled.div<{ removeLiquidity: boolean }>`
   border-radius: 16px;
   width: 310px;
   height: 75px;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mediaQueries.md} {
     width: ${({ removeLiquidity }) => (removeLiquidity ? '300px' : '340px')};
@@ -53,7 +52,7 @@ const Container = styled.div<{ removeLiquidity: boolean }>`
 `
 
 const CurrencyInputContainer = styled.div<{ removeLiquidity: boolean; orders: boolean }>`
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ orders }) => (orders ? '0px' : '20px')};
   display: flex;
   flex-direction: column;
@@ -185,13 +184,7 @@ export default function CurrencyInputPanel({
           }}
         >
           <Flex alignItems="center" justifyContent="flex-start" style={{ width: '100%' }}>
-            {pair ? (
-              <div style={{ paddingLeft: '10px' }}>
-                <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={30} margin />
-              </div>
-            ) : currency ? (
-              <CurrencyLogo currency={currency} size="50px" style={{ margin: '0 0px 0 10px' }} />
-            ) : null}
+            
             {pair ? (
               <Text id="pair" bold fontSize="19px">
                 {pair?.token0.getSymbol(chainId)}-{pair?.token1.getSymbol(chainId)}

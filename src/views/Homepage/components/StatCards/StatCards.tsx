@@ -37,7 +37,7 @@ const StatCards: React.FC = () => {
               <StyledCard key={stat.id}>
                 {!isMobile && (
                   <Flex mb="20px" justifyContent="center" alignItems="center" style={{ height: '10px' }}>
-                    <stat.logo fill={theme.colors.text} color={theme.colors.background} />
+                    <stat.logo fill={theme.colors.textSecondary} color={theme.colors.bgSecondary} />
                   </Flex>
                 )}
                 <Flex justifyContent="center" alignItems="center" style={{ width: '100%' }}>

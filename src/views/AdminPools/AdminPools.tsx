@@ -218,7 +218,7 @@ const StyledCheckbox = styled(Checkbox)<CheckboxProps>`
 `
 
 const ContainerLabels = styled.div`
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 16px;
   margin-top: 24px;
   height: 32px;
@@ -416,7 +416,7 @@ const StyledPage = styled(Page)`
 
 const StyledLabel = styled.div<LabelProps>`
   display: flex;
-  color: ${({ theme, active }) => (active ? '#FFFFFF' : theme.colors.primary)};
+  color: ${({ theme, active }) => (active ? '#FFFFFF' : theme.colors.textPrimary)};
 
   padding: 4px 12px;
   font-weight: 600;

@@ -4,7 +4,6 @@ import { Currency, ETHER, JSBI, TokenAmount } from '@apeswapfinance/sdk'
 import { Text, useModal, Flex, Svg } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { AutoColumn, ColumnCenter } from '../../../components/layout/Column'
-import { CurrencyLogo } from '../../../components/Logo'
 import { MinimalPositionCard } from '../../../components/PositionCard'
 import Row from '../../../components/layout/Row'
 import CurrencySearchModal from '../../../components/SearchModal/CurrencySearchModal'
@@ -103,7 +102,6 @@ export default function PoolFinder() {
               <>
                 {currency0 ? (
                   <Row>
-                    <CurrencyLogo currency={currency0} size="30px" />
                     <Text sx={{ ...styles.tokenText }}>{currency0.getSymbol(chainId)}</Text>
                   </Row>
                 ) : (
@@ -136,7 +134,6 @@ export default function PoolFinder() {
               <>
                 {currency1 ? (
                   <Row>
-                    <CurrencyLogo currency={currency1} size="30px" />
                     <Text sx={{ ...styles.tokenText }}>{currency1.getSymbol(chainId)}</Text>
                   </Row>
                 ) : (

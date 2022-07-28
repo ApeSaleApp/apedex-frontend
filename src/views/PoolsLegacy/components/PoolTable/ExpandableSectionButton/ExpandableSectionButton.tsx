@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 
   svg {
-    fill: ${({ theme }) => theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.textPrimary};
   }
 `
 

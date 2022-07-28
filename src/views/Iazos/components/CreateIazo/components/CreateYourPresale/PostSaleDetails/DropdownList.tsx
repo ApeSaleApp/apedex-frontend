@@ -42,7 +42,7 @@ const DropdownWrapper = styled.div`
   position: relative;
   width: 318px;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +97,7 @@ const DropDownWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 10px 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
 `
 
 const HeaderWrapper = styled.div`

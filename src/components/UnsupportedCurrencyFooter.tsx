@@ -4,7 +4,6 @@ import { Button, Text, Modal, useModal, ModalProps, Link } from '@ape.swap/uikit
 import styled from 'styled-components'
 import { AutoRow } from 'components/layout/Row'
 import { AutoColumn } from 'components/layout/Column'
-import { CurrencyLogo } from 'components/Logo'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { getEtherscanLink } from 'utils'
 import { wrappedCurrency } from 'utils/wrappedCurrency'
@@ -21,8 +20,8 @@ const DetailsFooter = styled.div`
   max-width: 400px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.white4};
+  color: ${({ theme }) => theme.colors.textSecondary};
+  background-color: ${({ theme }) => theme.colors.white};
   text-align: center;
 `
 
@@ -48,7 +47,6 @@ const UnsupportedModal: React.FC<Props> = ({ currencies, onDismiss }) => {
             Object.keys(unsupportedTokens).includes(token.address) && (
               <AutoColumn key={token.address?.concat('not-supported')} gap="10px">
                 <AutoRow gap="5px" align="center">
-                  <CurrencyLogo currency={token} size="24px" />
                   <Text>{token.symbol}</Text>
                 </AutoRow>
                 {chainId && (

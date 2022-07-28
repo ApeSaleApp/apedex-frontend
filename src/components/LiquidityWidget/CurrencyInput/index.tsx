@@ -5,18 +5,17 @@ import styled from 'styled-components'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
 import CurrencySearchModal from '../../SearchModal/CurrencySearchModal'
-import { CurrencyLogo, DoubleCurrencyLogo } from '../../Logo'
 import { RowBetween } from '../../layout/Row'
 import NumericalInput from './NumericalInput'
 
 const CurrencySelectButton = styled(Button).attrs({ variant: 'text', scale: 'sm' })<{ removeLiquidity: boolean }>`
   display: flex;
   justify-content: flex-start;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 0;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.white4} !important;
+    background-color: ${({ theme }) => theme.colors.white} !important;
   }
 `
 const InputPanel = styled.div`
@@ -32,11 +31,11 @@ const Container = styled.div<{ removeLiquidity: boolean }>`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 const CurrencyInputContainer = styled.div<{ removeLiquidity: boolean }>`
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -99,13 +98,7 @@ export default function CurrencyInputPanelLiquidity({
           }}
         >
           <Flex alignItems="center" justifyContent="flex-start" style={{ width: '100%' }}>
-            {pair ? (
-              <div style={{ paddingLeft: '10px' }}>
-                <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={30} margin />
-              </div>
-            ) : currency ? (
-              <CurrencyLogo currency={currency} size="36px" style={{ margin: '0 0px 0 10px' }} />
-            ) : null}
+            
             {pair ? (
               <Text id="pair" bold fontSize="19px">
                 {pair?.token0.getSymbol(chainId)}-{pair?.token1.getSymbol(chainId)}

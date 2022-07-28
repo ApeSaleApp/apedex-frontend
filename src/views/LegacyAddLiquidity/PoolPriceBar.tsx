@@ -101,7 +101,7 @@ const StyledCard = styled(Card)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   height: 110px;
   width: 200px;
   margin-top: 20px;

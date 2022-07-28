@@ -13,7 +13,7 @@ export const LaunchCalendarWrapper = styled.div`
 
 export const ColorWrap = styled.div`
   display: flex;
-  background: ${({ theme }) => theme.colors.white2};
+  background: ${({ theme }) => theme.colors.white};
   align-items: center;
   justify-content: center;
 `
@@ -23,7 +23,7 @@ export const LaunchCard = styled.div`
   height: 263px;
   border-radius: 10px;
   padding: 10px 5px 10px 5px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
 `
 
 export const CalendarImg = styled.div<{ image: string }>`
@@ -38,7 +38,7 @@ export const CalendarImg = styled.div<{ image: string }>`
 
 export const Bubble = styled.div<{ isActive?: boolean }>`
   background: ${({ isActive, theme }) =>
-    isActive ? 'linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)' : theme.colors.white4};
+    isActive ? 'linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)' : theme.colors.white};
   height: 14px;
   width: 14px;
   border-radius: 50px;

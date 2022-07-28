@@ -14,8 +14,8 @@ const SwapModalFooterContainer = styled(AutoColumn)`
   margin-top: 24px;
   padding: 16px;
   border-radius: ${({ theme }) => theme.radii.default};
-  border: 1px solid ${({ theme }) => theme.colors.background};
-  background-color: ${({ theme }) => theme.colors.white3};
+  border: 1px solid ${({ theme }) => theme.colors.bgSecondary};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 export default function SwapModalFooter({

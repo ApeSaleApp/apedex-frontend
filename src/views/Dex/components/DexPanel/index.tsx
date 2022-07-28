@@ -110,7 +110,7 @@ const DexPanel: React.FC<DexPanelProps> = ({
               isRemoveLiquidity) &&
               parseFloat(currencyBalance) > 0 && (
                 <Flex sx={styles.maxButton} size="sm" onClick={() => handleMaxInput(fieldType)}>
-                  <Text color="textPrimary" sx={{ lineHeight: '0px' }}>
+                  <Text sx={{ lineHeight: '0px' }}>
                     {t('MAX')}
                   </Text>
                 </Flex>

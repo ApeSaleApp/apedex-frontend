@@ -40,7 +40,7 @@ const IconButton: React.FC<IconButtonProps> = ({ icon, text, onClick, active }) 
 const StyledButton = styled(Button)<{ active?: boolean }>`
   height: 44px;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 7.5px;
@@ -50,7 +50,7 @@ const StyledButton = styled(Button)<{ active?: boolean }>`
   justify-content: center;
   align-items: center;
   &:hover {
-    background-color: ${({ theme }) => theme.colors.white3};
+    background-color: ${({ theme }) => theme.colors.white};
   }
   margin-top: 25px;
   ${({ theme }) => theme.mediaQueries.md} {

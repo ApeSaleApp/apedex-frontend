@@ -25,7 +25,6 @@ import { AppDispatch } from '../../state'
 import { AutoColumn, ColumnCenter } from '../../components/layout/Column'
 import TransactionConfirmationModal, { ConfirmationModalContent } from '../../components/TransactionConfirmationModal'
 import CurrencyInputPanel from '../../components/CurrencyInputPanel'
-import { DoubleCurrencyLogo } from '../../components/Logo'
 import { AppBody } from '../../components/App'
 import Row, { RowBetween } from '../../components/layout/Row'
 import UnlockButton from '../../components/UnlockButton'
@@ -264,11 +263,7 @@ export default function AddLiquidity({
         <Text bold fontSize="24px" marginRight="10px">
           {`${currencies[Field.CURRENCY_A]?.getSymbol(chainId)}/${currencies[Field.CURRENCY_B]?.getSymbol(chainId)}`}
         </Text>
-        <DoubleCurrencyLogo
-          currency0={currencies[Field.CURRENCY_A]}
-          currency1={currencies[Field.CURRENCY_B]}
-          size={30}
-        />
+        
       </Flex>
     ) : (
       <AutoColumn>
@@ -276,11 +271,7 @@ export default function AddLiquidity({
           <Text bold fontSize="24px" marginRight="10px">
             {liquidityMinted?.toSignificant(6)}
           </Text>
-          <DoubleCurrencyLogo
-            currency0={currencies[Field.CURRENCY_A]}
-            currency1={currencies[Field.CURRENCY_B]}
-            size={30}
-          />
+         
         </Flex>
         <Row>
           <Text fontSize="20px">

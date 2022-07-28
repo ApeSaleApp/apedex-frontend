@@ -61,7 +61,7 @@ const Input = styled.input<{
   text-align: left;
   margin: ${(props) => props.margin};
   background: ${(props) => props.backgroundColor || '#333333'};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.textSecondary};
   border: none;
   z-index: 0;
   :focus {

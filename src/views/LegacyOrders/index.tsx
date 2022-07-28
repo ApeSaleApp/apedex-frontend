@@ -48,7 +48,7 @@ const Label = styled(Text)`
 `
 
 const OrderPanel = styled.div`
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 20px;
   overflow: hidden;
   ${({ theme }) => theme.mediaQueries.md} {
@@ -57,7 +57,7 @@ const OrderPanel = styled.div`
 `
 
 const OrderInfoPanel = styled.div`
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 20px;
   margin-top: 10px;
   padding: 20px;

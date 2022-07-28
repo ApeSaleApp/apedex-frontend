@@ -14,9 +14,9 @@ const SInput = styled.input<{ error?: boolean }>`
   border: none;
   flex: 1 1 auto;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   transition: color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')};
-  color: ${({ error, theme }) => (error ? theme.colors.error : theme.colors.text)};
+  color: ${({ error, theme }) => (error ? theme.colors.error : theme.colors.textSecondary)};
   overflow: hidden;
   font-size: 16px;
   padding: 10px;
@@ -24,7 +24,7 @@ const SInput = styled.input<{ error?: boolean }>`
   text-overflow: ellipsis;
   font-weight: 500;
   ::placeholder {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textSecondary};
     text-align: center;
   }
   padding: 0px;
@@ -40,7 +40,7 @@ const SInput = styled.input<{ error?: boolean }>`
   }
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.lightGray};
   }
 `
 

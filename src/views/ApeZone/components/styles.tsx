@@ -4,7 +4,6 @@ import { Heading, Text, Button, Flex, Checkbox } from '@ape.swap/uikit'
 export const StyledCard = styled.div`
   overflow: visible;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.navbar};
   padding: 10px;
   margin-top: 20px;
 
@@ -20,7 +19,7 @@ export const HeaderCard = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   padding-top: 10px;
   padding-bottom: 5px;
 `
@@ -45,7 +44,7 @@ export const ContentCard = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   margin-top: 10px;
   padding: 10px;
 
@@ -79,7 +78,7 @@ export const CheckBoxCon = styled.div`
 `
 
 export const StyledCheckbox = styled(Checkbox)`
-  background-color: ${({ theme }) => theme.colors.white2};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 export const FlexSection = styled(Flex)`

@@ -18,9 +18,9 @@ interface ModalInputProps {
 const StyledTokenInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 16px;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   padding: 8px 16px 8px 0;
   width: 100%;
 `
@@ -32,7 +32,7 @@ const StyledInput = styled(Input)`
   margin: 0 8px;
   padding: 0 8px;
   font-weight: 800;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 80px;

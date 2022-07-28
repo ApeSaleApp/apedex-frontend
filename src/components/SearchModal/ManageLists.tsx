@@ -16,7 +16,6 @@ import { useIsListActive, useAllLists, useActiveListUrls } from '../../state/lis
 
 import uriToHttp from '../../utils/uriToHttp'
 import Column, { AutoColumn } from '../layout/Column'
-import { ListLogo } from '../Logo'
 import Row, { RowFixed, RowBetween } from '../layout/Row'
 import { CurrencyModalView } from './types'
 
@@ -28,7 +27,7 @@ const Wrapper = styled(Column)`
 const RowWrapper = styled(Row)<{ active: boolean }>`
   background-color: ${({ active, theme }) => (active ? `${theme.colors.success}19` : 'transparent')};
   border: solid 1px;
-  border-color: ${({ active, theme }) => (active ? theme.colors.success : theme.colors.white2)};
+  border-color: ${({ active, theme }) => (active ? theme.colors.success : theme.colors.white)};
   transition: 200ms;
   align-items: center;
   padding: 1rem;
@@ -95,16 +94,7 @@ const ListRow = memo(function ListRow({
     <></>
   ) : (
     <RowWrapper active={isActive} key={listUrl} id={listUrlRowHTMLId(listUrl)}>
-      {extendedLogo || list.logoURI ? (
-        <ListLogo
-          size="40px"
-          style={{ marginRight: '1rem', borderRadius: '20px' }}
-          logoURI={extendedLogo || list.logoURI}
-          alt={`${extendedName || list.name} list logo`}
-        />
-      ) : (
-        <div style={{ width: '24px', height: '24px', marginRight: '1rem' }} />
-      )}
+
       <Column style={{ flex: '1' }}>
         <Row>
           <Text bold>{extendedName || list.name}</Text>
@@ -289,7 +279,6 @@ function ManageLists({
           <Card padding="12px 20px">
             <RowBetween>
               <RowFixed>
-                {tempList.logoURI && <ListLogo logoURI={tempList.logoURI} size="40px" />}
                 <AutoColumn gap="4px" style={{ marginLeft: '20px' }}>
                   <Text bold>{tempList.name}</Text>
                   <Text color="gray" small textTransform="lowercase">

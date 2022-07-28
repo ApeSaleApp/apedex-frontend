@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   position: relative;
   width: 285px;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white4};
+  background: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   cursor: pointer;

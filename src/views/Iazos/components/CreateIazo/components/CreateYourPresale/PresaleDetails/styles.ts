@@ -8,7 +8,7 @@ export const LaunchPadInfoWrapper = styled.div`
   height: 800px;
   width: 280px;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
   margin-bottom: 30px;
   align-items: space-between;
   justify-content: center;

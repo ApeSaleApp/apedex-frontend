@@ -33,7 +33,6 @@ const StyledTr = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.navbar};
 `
 
 const APRContainer = styled.div`

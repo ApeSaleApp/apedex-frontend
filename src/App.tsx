@@ -14,9 +14,8 @@ import {
   useFetchLiveTags,
 } from 'state/hooks'
 import { usePollBlockNumber } from 'state/block/hooks'
-import GlobalStyle from './style/Global'
-import Menu from './components/Menu'
-import ToastListener from './components/ToastListener'
+import GlobalStyle, { ApeTheme } from './style/Global'
+import Menu from './components/Menu' // delete component
 import PageLoader from './components/PageLoader'
 import Pool from './views/Dex/Pool'
 import Swap from './views/Dex/Swap'
@@ -25,9 +24,6 @@ import RemoveLiquidity from './views/Dex/RemoveLiquidity'
 import PoolFinder from './views/Dex/PoolFinder'
 import ResetScroll from './utils/resetScroll'
 
-declare module '@emotion/react' {
-  export interface Theme extends ApeSwapTheme {}
-}
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
@@ -44,13 +40,9 @@ const Iazos = lazy(() => import('./views/Iazos'))
 const CreateIazo = lazy(() => import('./views/Iazos/components/CreateIazo'))
 const IazoPage = lazy(() => import('./views/Iazos/components/IazoPage'))
 const AdminPools = lazy(() => import('./views/AdminPools'))
-const Vaults = lazy(() => import('./views/Vaults'))
-const Bills = lazy(() => import('./views/Bills'))
 const Orders = lazy(() => import('./views/Dex/Orders'))
 // const Topup = lazy(() => import('./views/Topup'))
 const RedirectOldRemoveLiquidityPathStructure = lazy(() => import('./views/LegacyRemoveLiquidity/redirects'))
-const TermsOfUse = lazy(() => import('./views/LegalPages/TermsOfUse'))
-const PrivacyPolicy = lazy(() => import('./views/LegalPages/PrivacyPolicy'))
 
 const redirectSwap = () => import('./views/Dex/Swap/redirects')
 const RedirectPathToSwapOnly = lazy(async () =>
@@ -128,234 +120,199 @@ const App: React.FC = () => {
     // ETH routes
     if (chainId === CHAIN_ID.ETH) {
       return (
-        <Menu>
-          <Suspense fallback={<PageLoader />}>
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/terms">
-                <TermsOfUse />
-              </Route>
-              <Route path="/privacy">
-                <PrivacyPolicy />
-              </Route>
-              {/* Redirects */}
-              <Route path="/admin-pools">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/farms">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/vaults">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/treasury-bills">
-                <Redirect to="/" />
-              </Route>
-              <Route exact path="/nft">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/pools">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/jungle-farms">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/admin-pools">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/iao">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/gnana">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/stats">
-                <Redirect to="/" />
-              </Route>
-              <Route exact path="/ss-iao">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/ss-iao/create">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/ss-iao/:id">
-                <Redirect to="/" />
-              </Route>
-              {/* SWAP ROUTES */}
-              <Route path="/swap" component={Swap} />
-              <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
-              <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-              <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-              <Route exact strict path="/find" component={PoolFinder} />
-              <Route exact strict path="/pool" component={Pool} />
-              <Route exact strict path="/create" component={RedirectToAddLiquidity} />
-              <Route exact path="/add" component={AddLiquidity} />
-              <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-              <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-              <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-              <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
-              {/* SWAP ROUTES */}
-              <Route component={NotFound} />
-            </Switch>
-          </Suspense>
-        </Menu>
+        <Suspense fallback={<PageLoader />}>
+        <Switch>
+          <Route path="/" exact component={Home} />
+    
+          {/* Redirects */}
+          {/* <Route path="/admin-pools">
+            <Redirect to="/" />
+          </Route> */}
+          <Route path="/farms">
+            <Redirect to="/" />
+          </Route>
+          {/* <Route exact path="/nft">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/pools">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/jungle-farms">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/admin-pools">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/iao">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/gnana">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/stats">
+            <Redirect to="/" />
+          </Route>
+          <Route exact path="/ss-iao">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/ss-iao/create">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/ss-iao/:id">
+            <Redirect to="/" />
+          </Route> */}
+          {/* SWAP ROUTES */}
+          <Route path="/swap" component={Swap} />
+          <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
+          <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+          <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+          <Route exact strict path="/find" component={PoolFinder} />
+          <Route exact strict path="/pool" component={Pool} />
+          <Route exact strict path="/create" component={RedirectToAddLiquidity} />
+          <Route exact path="/add" component={AddLiquidity} />
+          <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+          <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+          <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
+          <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+          {/* SWAP ROUTES */}
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
       )
     }
 
     // MATIC routes
     if (chainId === CHAIN_ID.MATIC || chainId === CHAIN_ID.MATIC_TESTNET) {
       return (
-        <Menu>
-          <Suspense fallback={<PageLoader />}>
-            <Switch>
-              <Route path="/" exact component={Home} />
-              {/* <Home />
-              </Route> */}
-              <Route path="/admin-pools">
-                <AdminPools />
-              </Route>
-              <Route path="/farms">
-                <DualFarms />
-              </Route>
-              <Route path="/terms">
-                <TermsOfUse />
-              </Route>
-              <Route path="/privacy">
-                <PrivacyPolicy />
-              </Route>
-              {/* Redirects */}
-              <Route path="/vaults">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/treasury-bills">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/pools">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/jungle-farms">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/admin-pools">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/iao">
-                <Redirect to="/" />
-              </Route>
-              <Route exact path="/nft">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/nft/:id">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/gnana">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/stats">
-                <Redirect to="/" />
-              </Route>
-              <Route exact path="/ss-iao">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/ss-iao/create">
-                <Redirect to="/" />
-              </Route>
-              <Route path="/ss-iao/:id">
-                <Redirect to="/" />
-              </Route>
-              {/* SWAP ROUTES */}
-              <Route path="/swap" component={Swap} />
-              <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
-              <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-              <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-              <Route exact strict path="/find" component={PoolFinder} />
-              <Route exact strict path="/pool" component={Pool} />
-              <Route exact strict path="/create" component={RedirectToAddLiquidity} />
-              <Route exact path="/add" component={AddLiquidity} />
-              <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-              <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-              <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-              <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
-              {/* SWAP ROUTES */}
-              <Route component={NotFound} />
-            </Switch>
-          </Suspense>
-        </Menu>
+        <Suspense fallback={<PageLoader />}>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          {/* <Home />
+          </Route> */}
+          {/* <Route path="/admin-pools">
+            <AdminPools />
+          </Route> */}
+          <Route path="/farms">
+            <DualFarms />
+          </Route>
+         
+          {/* Redirects */}
+         
+          {/* <Route path="/treasury-bills">
+            <Redirect to="/" />
+          </Route> */}
+          <Route path="/pools">
+            <Redirect to="/" />
+          </Route>
+          {/* <Route path="/jungle-farms">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/admin-pools">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/iao">
+            <Redirect to="/" />
+          </Route>
+          <Route exact path="/nft">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/nft/:id">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/gnana">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/stats">
+            <Redirect to="/" />
+          </Route>
+          <Route exact path="/ss-iao">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/ss-iao/create">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/ss-iao/:id">
+            <Redirect to="/" />
+          </Route> */}
+          {/* SWAP ROUTES */}
+          <Route path="/swap" component={Swap} />
+          <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
+          <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+          <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+          <Route exact strict path="/find" component={PoolFinder} />
+          <Route exact strict path="/pool" component={Pool} />
+          <Route exact strict path="/create" component={RedirectToAddLiquidity} />
+          <Route exact path="/add" component={AddLiquidity} />
+          <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+          <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+          <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
+          <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+          {/* SWAP ROUTES */}
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
       )
     }
     // Default BSC routes
     return (
-      <Menu>
         <Suspense fallback={<PageLoader />}>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/farms">
-              <Farms />
-            </Route>
-            <Route path="/pools">
-              <Pools />
-            </Route>
-            <Route path="/jungle-farms">
-              <JungleFarms />
-            </Route>
-            <Route path="/vaults">
-              <Vaults />
-            </Route>
-            <Route path="/treasury-bills">
-              <Bills />
-            </Route>
-            <Route path="/admin-pools">
-              <AdminPools />
-            </Route>
-            <Route path="/iao">
-              <Ifos />
-            </Route>
-            <Route exact path="/ss-iao">
-              <Iazos />
-            </Route>
-            <Route path="/ss-iao/create">
-              <CreateIazo />
-            </Route>
-            <Route path="/ss-iao/:id">
-              <IazoPage />
-            </Route>
-            <Route path="/gnana">
-              <ApeZone />
-            </Route>
-            <Route path="/spinner">
-              <PageLoader />
-            </Route>
-            <Route path="/terms">
-              <TermsOfUse />
-            </Route>
-            <Route path="/privacy">
-              <PrivacyPolicy />
-            </Route>
-            {/* Redirect */}
-            <Route path="/staking">
-              <Redirect to="/pools" />
-            </Route>
-            <Route path="/syrup">
-              <Redirect to="/pools" />
-            </Route>
-            {/* SWAP ROUTES */}
-            <Route path="/swap" component={Swap} />
-            <Route exact strict path="/orders" component={Orders} />
-            <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-            <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-            <Route exact strict path="/find" component={PoolFinder} />
-            <Route exact strict path="/pool" component={Pool} />
-            <Route exact strict path="/create" component={RedirectToAddLiquidity} />
-            <Route exact path="/add" component={AddLiquidity} />
-            <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-            <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-            <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-            <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
-            {/* SWAP ROUTES */}
-            <Route component={NotFound} />
-          </Switch>
-        </Suspense>
-      </Menu>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/farms">
+            <Farms />
+          </Route>
+          <Route path="/pools">
+            <Pools />
+          </Route>
+          {/* <Route path="/jungle-farms">
+            <JungleFarms />
+          </Route>
+          <Route path="/admin-pools">
+            <AdminPools />
+          </Route>
+          <Route path="/iao">
+            <Ifos />
+          </Route>
+          <Route exact path="/ss-iao">
+            <Iazos />
+          </Route>
+          <Route path="/ss-iao/create">
+            <CreateIazo />
+          </Route>
+          <Route path="/ss-iao/:id">
+            <IazoPage />
+          </Route>
+          <Route path="/gnana">
+            <ApeZone />
+          </Route>
+          <Route path="/spinner">
+            <PageLoader />
+          </Route> */}
+         
+          {/* Redirect */}
+          {/* <Route path="/staking">
+            <Redirect to="/pools" />
+          </Route>
+          <Route path="/syrup">
+            <Redirect to="/pools" />
+          </Route> */}
+          {/* SWAP ROUTES */}
+          <Route path="/swap" component={Swap} />
+          <Route exact strict path="/orders" component={Orders} />
+          <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+          <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+          <Route exact strict path="/find" component={PoolFinder} />
+          <Route exact strict path="/pool" component={Pool} />
+          <Route exact strict path="/create" component={RedirectToAddLiquidity} />
+          <Route exact path="/add" component={AddLiquidity} />
+          <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+          <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+          <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
+          <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+          {/* SWAP ROUTES */}
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
     )
   }
 
@@ -367,7 +324,6 @@ const App: React.FC = () => {
       <MarketingModalCheck />
       {showScrollIcon && <ScrollToTop />}
       {loadMenu()}
-      <ToastListener />
     </Router>
   )
 }

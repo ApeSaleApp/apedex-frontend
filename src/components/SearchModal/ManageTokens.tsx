@@ -7,7 +7,6 @@ import { useToken } from 'hooks/Tokens'
 import styled from '@emotion/styled'
 import { useRemoveUserAddedToken } from 'state/user/hooks'
 import useUserAddedTokens from 'state/user/hooks/useUserAddedTokens'
-import { CurrencyLogo } from 'components/Logo'
 import { getEtherscanLink, isAddress } from 'utils'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
@@ -75,7 +74,6 @@ export default function ManageTokens({
       userAddedTokens.map((token) => (
         <RowBetween key={token.address} width="100%" sx={{ margin: '20px 0px' }}>
           <RowFixed>
-            <CurrencyLogo currency={token} size="20px" />
             <Link external href={getEtherscanLink(token.address, 'address', chainId)} color="gray" ml="10px">
               {token.symbol}
             </Link>

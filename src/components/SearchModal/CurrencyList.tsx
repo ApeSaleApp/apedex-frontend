@@ -12,7 +12,6 @@ import { registerToken } from 'utils/wallet'
 import { useCombinedActiveList, WrappedTokenInfo } from '../../state/lists/hooks'
 import { useCurrencyBalance } from '../../state/wallet/hooks'
 import { useIsUserAddedToken } from '../../hooks/Tokens'
-import { CurrencyLogo } from '../Logo'
 import { isTokenOnList } from '../../utils'
 import ImportRow from './ImportRow'
 
@@ -97,7 +96,6 @@ function CurrencyRow({
       onClick={() => (isSelected ? null : onSelect())}
     >
       <Flex sx={{ alignItems: 'center' }}>
-        <CurrencyLogo currency={currency} size="30px" style={{ borderRadius: '15px' }} />
         <Flex sx={{ flexDirection: 'column', ml: '10px', alignItems: 'space-between' }}>
           <Flex sx={{ alignItems: 'center' }}>
             <Text title={currency.getName(chainId)} weight={700} sx={{ lineHeight: '22px' }}>

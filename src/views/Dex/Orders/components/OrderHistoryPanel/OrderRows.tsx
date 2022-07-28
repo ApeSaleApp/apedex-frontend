@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Flex, Svg, Text, TooltipBubble } from '@ape.swap/uikit'
 import { Order } from '@autonomylabs/limit-stop-orders'
-import { CurrencyLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import { formatUnits, getAddress } from 'ethers/lib/utils'
 import { useAllTokens } from 'hooks/Tokens'
@@ -95,7 +94,6 @@ const OrderRows: React.FC<{ orders: Order[] }> = ({ orders }) => {
                       {parseFloat((+inputAmount).toFixed(6))}
                     </Text>
                     <Flex sx={{ alignItems: 'center' }}>
-                      <CurrencyLogo currency={inputToken} size="12px" />
                       <Text size="10px" weight={400} ml="3px" sx={{ lineHeight: '15px' }}>
                         {inputToken?.getSymbol(chainId)}
                       </Text>
@@ -106,7 +104,6 @@ const OrderRows: React.FC<{ orders: Order[] }> = ({ orders }) => {
                       {parseFloat((+outputAmount).toFixed(6))}
                     </Text>
                     <Flex sx={{ alignItems: 'center' }}>
-                      <CurrencyLogo currency={outputToken} size="12px" />
                       <Text size="10px" weight={400} ml="3px" sx={{ lineHeight: '15px' }}>
                         {outputToken?.getSymbol(chainId)}
                       </Text>

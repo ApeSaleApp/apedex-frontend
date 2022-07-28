@@ -5,7 +5,6 @@ import { Text, ErrorIcon, Button, Flex, Svg } from '@ape.swap/uikit'
 import { computeLegacyPriceBreakdown, warningSeverity } from 'utils/prices'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { AutoColumn } from 'components/layout/Column'
-import { CurrencyLogo } from 'components/Logo'
 import { RowBetween, RowFixed } from 'components/layout/Row'
 import truncateHash from 'utils/truncateHash'
 import { useTranslation } from 'contexts/Localization'
@@ -49,7 +48,6 @@ export default function SwapModalHeader({
           {trade.inputAmount.toSignificant(6)}
         </Text>
         <Flex sx={{ alignItems: 'center' }}>
-          <CurrencyLogo currency={trade.inputAmount.currency} size="30px" />
           <Text size="14px" weight={700} ml="10px">
             {trade.inputAmount.currency.getSymbol(chainId)}
           </Text>
@@ -58,7 +56,7 @@ export default function SwapModalHeader({
       <Flex sx={{ justifyContent: 'center' }}>
         <Flex sx={{ ...styles.outerLogoCircle }}>
           <Flex sx={{ ...styles.innerLogoCircle }}>
-            <Svg icon="arrow" width="6px" color="textPrimary" />
+            <Svg icon="arrow" width="6px" />
           </Flex>
         </Flex>
       </Flex>
@@ -77,7 +75,6 @@ export default function SwapModalHeader({
           {realOutputAmount}
         </Text>
         <Flex sx={{ alignItems: 'center' }}>
-          <CurrencyLogo currency={trade.outputAmount.currency} size="30px" />
           <Text size="14px" weight={700} ml="10px">
             {trade.outputAmount.currency.getSymbol(chainId)}
           </Text>

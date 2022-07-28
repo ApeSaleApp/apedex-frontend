@@ -7,7 +7,6 @@ import { getEtherscanLink } from 'utils'
 import truncateHash from 'utils/truncateHash'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useCombinedInactiveList } from 'state/lists/hooks'
-import { ListLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import { EXTENDED_LIST_DETAILS } from 'config/constants/lists'
 
@@ -64,15 +63,7 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
                 <Tag
                   variant="success"
                   outline
-                  startIcon={
-                    (list.logoURI || extendedLogo) && (
-                      <ListLogo
-                        logoURI={extendedLogo || list.logoURI}
-                        size="12px"
-                        style={{ borderRadius: '6px', marginRight: '5px' }}
-                      />
-                    )
-                  }
+                  
                 >
                   via {extendedName || list.name}
                 </Tag>

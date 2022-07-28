@@ -2,9 +2,7 @@
 import React, { CSSProperties } from 'react'
 import { Token } from '@apeswapfinance/sdk'
 import { Button, Text, CheckmarkCircleIcon, Flex } from '@ape.swap/uikit'
-import CurrencyLogo from 'components/Logo/CurrencyLogo'
 import { EXTENDED_LIST_DETAILS } from 'config/constants/lists'
-import { ListLogo } from 'components/Logo'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useCombinedInactiveList } from 'state/lists/hooks'
 import styled from 'styled-components'
@@ -28,7 +26,7 @@ const CheckIcon = styled(CheckmarkCircleIcon)`
   height: 16px;
   width: 16px;
   margin-right: 6px;
-  stroke: ${({ theme }) => theme.colors.success};
+  stroke: ${({ theme }) => theme.colors.secondary};
 `
 
 const NameOverflow = styled.div`
@@ -70,7 +68,6 @@ export default function ImportRow({
 
   return (
     <TokenSection style={style}>
-      <CurrencyLogo currency={token} size="24px" style={{ opacity: dim ? '0.6' : '1' }} />
       <Flex sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
         <Flex sx={{ alignItems: 'center' }}>
           <Text>{token.symbol}</Text>
@@ -83,7 +80,6 @@ export default function ImportRow({
             <Text size="8px" mr="10px" color="textDisabled" sx={{ lineHeight: '0px' }}>
               via {extendedName || list.name}
             </Text>
-            <ListLogo logoURI={extendedLogo || list.logoURI} size="12px" style={{ borderRadius: '6px' }} />
           </Flex>
         )}
       </Flex>

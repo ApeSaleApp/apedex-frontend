@@ -8,7 +8,7 @@ export const LaunchPadInfoWrapper = styled.div`
   height: 471px;
   width: 280px;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
   margin-bottom: 30px;
   align-items: center;
   justify-content: space-between;
@@ -65,7 +65,7 @@ export const LiquidityButton = styled.div<{ active: boolean }>`
   background: ${(props) => (props.active ? props.theme.colors.yellow : 'transparent')};
   border: 2px solid ${({ theme }) => theme.colors.yellow};
   border-radius: 5px;
-  color: ${(props) => (props.active ? props.theme.colors.textPrimary : props.theme.colors.gray)};
+  color: ${(props) => (props.active ? props.theme.colors.textPrimary : props.theme.colors.lightGray)};
   font-weight: 700;
 
   align-items: center;

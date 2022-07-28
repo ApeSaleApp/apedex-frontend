@@ -24,7 +24,6 @@ import { AppBody } from '../../components/App'
 import { RowBetween, RowFixed, AutoRow } from '../../components/layout/Row'
 
 import UnlockButton from '../../components/UnlockButton'
-import { CurrencyLogo, DoubleCurrencyLogo } from '../../components/Logo'
 import useActiveWeb3React from '../../hooks/useActiveWeb3React'
 import { useCurrency } from '../../hooks/Tokens'
 import { usePairContract } from '../../hooks/useContract'
@@ -44,7 +43,7 @@ const StyledCard = styled(Card)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   height: 110px;
   width: 48.5%;
   margin-top: 15px;
@@ -421,7 +420,6 @@ export default function RemoveLiquidity({
         <RowBetween align="flex-end">
           <Text fontSize="24px">{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</Text>
           <RowFixed gap="4px">
-            <CurrencyLogo currency={currencyA} size="24px" />
             <Text fontSize="24px" ml="10px">
               {currencyA?.getSymbol(chainId)}
             </Text>
@@ -433,7 +431,6 @@ export default function RemoveLiquidity({
         <RowBetween align="flex-end">
           <Text fontSize="24px">{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</Text>
           <RowFixed gap="4px">
-            <CurrencyLogo currency={currencyB} size="24px" />
             <Text fontSize="24px" ml="10px">
               {currencyB?.getSymbol(chainId)}
             </Text>
@@ -455,7 +452,6 @@ export default function RemoveLiquidity({
         <RowBetween>
           <Text>{`${currencyA?.getSymbol(chainId) ?? ''}/${currencyB?.getSymbol(chainId) ?? ''} ${t('Burned')}`}</Text>
           <RowFixed>
-            <DoubleCurrencyLogo currency0={currencyA} currency1={currencyB} margin />
             <Text>{parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}</Text>
           </RowFixed>
         </RowBetween>

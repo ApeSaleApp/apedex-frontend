@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import { Modal, Button, Flex, Text } from '@ape.swap/uikit'
-import { DoubleCurrencyLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import React from 'react'
@@ -42,7 +41,6 @@ const RemoveLiquidityModal: React.FC<RemoveLiquidityModalProps> = ({
                 {parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}
               </Text>
               <Flex sx={{ alignItems: 'center' }}>
-                <DoubleCurrencyLogo currency0={currencyA} currency1={currencyB} size={30} />
                 <Text size="14px" weight={700} ml="5px">
                   {`${currencyA?.getSymbol(chainId)} - ${currencyB?.getSymbol(chainId)}`}
                 </Text>

@@ -1,10 +1,10 @@
 import { ArrowDropUpSmallIcon, Skeleton } from '@ape.swap/uikit'
-import Logo from 'components/Logo/Logo'
 import styled from 'styled-components'
 
-export const TokenContainer = styled(Logo)<{
+export const TokenContainer = styled.img<{
   size?: number
   image?: string
+  srcs?: string[] | string
   ml?: number
   mr?: number
   mt?: number
@@ -26,7 +26,7 @@ export const TokenContainer = styled(Logo)<{
 
 export const EarnIcon = styled(ArrowDropUpSmallIcon)<{ color?: string }>`
   transform: rotate(90deg);
-  fill: ${({ theme, color }) => color || theme.colors.text};
+  fill: ${({ theme, color }) => color || theme.colors.secondary};
 `
 
 export const IconSkeleton = styled(Skeleton)<{ size?: number; ml?: number; mr?: number; zIndex?: number }>`

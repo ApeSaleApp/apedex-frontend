@@ -13,7 +13,6 @@ export const Cards = styled.div`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
-    background-color: ${({ theme }) => theme.colors.navbar};
     padding: 15px;
     border-radius: 20px;
   }

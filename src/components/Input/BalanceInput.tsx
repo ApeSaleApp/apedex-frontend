@@ -22,7 +22,7 @@ const StyledTokenAdornmentWrapper = styled.div`
 
 const StyledMaxText = styled.div`
   align-items: center;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.textPrimary};
   display: flex;
   font-size: 14px;
   font-weight: 450;
@@ -31,7 +31,7 @@ const StyledMaxText = styled.div`
 `
 
 const StyledTokenSymbol = styled.span`
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.textPrimary};
   font-weight: 450;
 `
 

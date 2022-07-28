@@ -49,7 +49,7 @@ const StyledLinkExternal = styled(LinkExternal)`
   font-weight: 600;
 
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   display: flex;
   align-items: center;
 
@@ -57,7 +57,7 @@ const StyledLinkExternal = styled(LinkExternal)`
     padding-left: 4px;
     height: 18px;
     width: auto;
-    fill: ${({ theme }) => theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.textPrimary};
   }
 `
 

@@ -3,7 +3,7 @@ import { Flex, Button } from '@ape.swap/uikit'
 
 // DESCRIPTION
 export const List = styled.ul`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
 
   & > li {
     line-height: 1.4;

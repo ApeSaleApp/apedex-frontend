@@ -4,7 +4,7 @@ import { Text, ArrowDropDownIcon, ArrowDropUpIcon } from '@ape.swap/uikit'
 export const LaunchPadInfoWrapper = styled.div`
   width: 300px;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
@@ -47,7 +47,7 @@ export const MoreInfo = styled.a`
   padding-top: 15px;
   padding-bottom: 20px;
   cursor: pointer;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.textSecondary};
 `
 
 export const FaqLink = styled.a`
@@ -60,7 +60,7 @@ export const FaqWrapper = styled.div`
   position: relative;
   width: 280px;
   border-radius: 10px;
-  background: ${({ theme }) => (theme.isDark ? theme.colors.white4 : theme.colors.primary)};
+  background: ${({ theme }) => (theme.isDark ? theme.colors.white : theme.colors.textPrimary)};
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;

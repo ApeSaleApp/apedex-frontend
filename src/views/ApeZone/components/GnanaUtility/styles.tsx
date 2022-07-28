@@ -11,7 +11,6 @@ export const UtilityCon = styled.div`
 
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 1em;
-    background: ${({ theme }) => (theme.isDark ? '#212121' : theme.colors.navbar)};
   }
 `
 export const UtilityTitle = styled.div`
@@ -68,18 +67,18 @@ export const PlusIcon = styled(Text)`
 export const Section = styled.div`
   display: flex;
   justify-content: space-between;
-  background: ${({ theme }) => (theme.isDark ? theme.colors.white2 : theme.colors.white3)};
+  background: ${({ theme }) => (theme.isDark ? theme.colors.white : theme.colors.white)};
   align-items: center;
   padding-left: 0.6em;
   padding-right: 0.6em;
   border-radius: 10px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    background: ${({ theme }) => theme.colors.white3};
+    background: ${({ theme }) => theme.colors.white};
   }
 `
 export const Section2 = styled.div`
-  background: ${({ theme }) => (theme.isDark ? theme.colors.white2 : theme.colors.white3)};
+  background: ${({ theme }) => (theme.isDark ? theme.colors.white : theme.colors.white)};
   border-radius: 10px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
@@ -90,7 +89,7 @@ export const Section2 = styled.div`
   ${({ theme }) => theme.mediaQueries.md} {
     padding-right: 0;
     padding-left: 0;
-    background: ${({ theme }) => theme.colors.white3};
+    background: ${({ theme }) => theme.colors.white};
   }
 `
 
@@ -106,7 +105,7 @@ export const OpCon = styled.div<OpConProps>`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: ${({ theme }) => (theme.isDark ? theme.colors.white2 : theme.colors.white3)};
+  background: ${({ theme }) => (theme.isDark ? theme.colors.white : theme.colors.white)};
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 22px;
@@ -116,7 +115,7 @@ export const OpCon = styled.div<OpConProps>`
   padding-right: 10px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    background: ${({ theme }) => theme.colors.white3};
+    background: ${({ theme }) => theme.colors.white};
   }
 
   ${({ theme }) => theme.mediaQueries.xl} {
@@ -173,12 +172,12 @@ export const Option1 = styled.div`
 `
 
 export const HeadCard = styled.div`
-  background: ${({ theme }) => (theme.isDark ? theme.colors.white2 : theme.colors.white3)};
+  background: ${({ theme }) => (theme.isDark ? theme.colors.white : theme.colors.white)};
   border-radius: 10px;
   margin-bottom: 0.5em;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    background: ${({ theme }) => theme.colors.white3};
+    background: ${({ theme }) => theme.colors.white};
   }
 `
 export const HeadBody = styled(Box)`
@@ -191,7 +190,7 @@ export const HeadBody = styled(Box)`
 `
 export const HeadTitle = styled(Heading)`
   font-size: 22px;
-  color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : theme.colors.text)};
+  color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : theme.colors.textSecondary)};
   font-weight: 700;
   text-transform: uppercase;
 `

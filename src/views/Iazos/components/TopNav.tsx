@@ -12,7 +12,7 @@ const TopNav: React.FC = () => {
       <Link to="/ss-iao">
         <BackWrapper>
           <BackArrow src="/images/left-arrow.svg" />
-          <StyledText color="textPrimary">{t('Back to Self-Serve Launchpad')}</StyledText>
+          <StyledText >{t('Back to Self-Serve Launchpad')}</StyledText>
         </BackWrapper>
       </Link>
     </TopNavWrapper>
@@ -27,7 +27,7 @@ const TopNavWrapper = styled.div`
   display: flex;
   align-items: center;
   padding-left: 30px;
-  background: ${({ theme }) => (theme.isDark ? theme.colors.white3 : theme.colors.primary)};
+  background: ${({ theme }) => (theme.isDark ? theme.colors.white : theme.colors.textPrimary)};
   z-index: 0;
   ${({ theme }) => theme.mediaQueries.md} {
     width: 856px;

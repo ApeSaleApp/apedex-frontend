@@ -5,7 +5,6 @@ import useCurrentTime from 'hooks/useTimer'
 import TextInput from 'components/TextInput'
 import useTheme from 'hooks/useTheme'
 import { Flex, Spinner, useMatchBreakpoints } from '@ape.swap/uikit'
-import Banner from 'components/Banner'
 import { useTranslation } from 'contexts/Localization'
 import IconButton from './components/IconButton'
 import IazoCard from './components/IazoCard/IazoCard'
@@ -79,14 +78,7 @@ const Iazos: React.FC = () => {
     <>
       <PageWrapper>
         <Flex flexDirection="column">
-          <Banner
-            banner="ssiao"
-            title={t('Self Serve Offerings')}
-            link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/raise/self-serve-iao-ss-iao"
-            maxWidth={856}
-            listViewBreak
-            margin="30px 0 0 0"
-          />
+         
           <LaunchPadWrapper>
             <TopNavWrapper />
             <HeaderWrapper>

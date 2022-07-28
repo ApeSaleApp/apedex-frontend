@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Label = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.gray};
+  color: ${({ theme }) => theme.colors.lightGray};
   text-align: left;
 `
 

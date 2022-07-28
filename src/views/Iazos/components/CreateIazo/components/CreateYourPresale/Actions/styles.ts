@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Button } from '@ape.swap/uikit'
 
 const StyledButton = styled(Button)`
-  background-color: ${({ theme }) => theme.colors.white4} !important;
+  background-color: ${({ theme }) => theme.colors.white} !important;
   height: 40px;
   width: 135px;
   font-size: 14px;

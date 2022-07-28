@@ -95,12 +95,12 @@ const DisplayJungleFarms: React.FC<{ jungleFarms: JungleFarm[]; openId?: number 
               <>
                 {farm.projectLink && (
                   <a href={farm.projectLink} target="_blank" rel="noreferrer">
-                    <IconButton icon="website" color="textPrimary" width={20} style={{ padding: '8.5px 10px' }} />
+                    <IconButton icon="website"  width={20} style={{ padding: '8.5px 10px' }} />
                   </a>
                 )}
                 {farm?.twitter && (
                   <a href={farm?.twitter} target="_blank" rel="noreferrer">
-                    <IconButton icon="twitter" color="textPrimary" width={20} />
+                    <IconButton icon="twitter"  width={20} />
                   </a>
                 )}
               </>

@@ -15,7 +15,7 @@ export const Item = styled.div`
   display: flex;
   padding: 4px 10px;
   gap: 16px;
-  background: ${({ theme }) => theme.colors.white4};
+  background: ${({ theme }) => theme.colors.white};
 
   &:first-child {
     border-radius: 5px 5px 0px 0px;
@@ -26,7 +26,7 @@ export const Item = styled.div`
   }
 
   &:nth-child(even) {
-    background: ${({ theme }) => theme.colors.white3};
+    background: ${({ theme }) => theme.colors.white};
   }
 `
 

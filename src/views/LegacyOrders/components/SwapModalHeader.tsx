@@ -4,7 +4,6 @@ import { Text, ArrowDownIcon } from '@ape.swap/uikit'
 import { computeLegacyPriceBreakdown, warningSeverity } from 'utils/prices'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { AutoColumn } from 'components/layout/Column'
-import { CurrencyLogo } from 'components/Logo'
 import { RowBetween, RowFixed } from 'components/layout/Row'
 import truncateHash from 'utils/truncateHash'
 import { useTranslation } from 'contexts/Localization'
@@ -35,7 +34,6 @@ export default function SwapModalHeader({
     <AutoColumn gap="md">
       <RowBetween align="flex-end">
         <RowFixed gap="0px">
-          <CurrencyLogo currency={trade.inputAmount.currency} size="24px" style={{ marginRight: '12px' }} />
           <TruncatedText fontSize="24px" color="text">
             {trade.inputAmount.toSignificant(6)}
           </TruncatedText>
@@ -51,7 +49,6 @@ export default function SwapModalHeader({
       </RowFixed>
       <RowBetween align="flex-end">
         <RowFixed gap="0px">
-          <CurrencyLogo currency={trade.outputAmount.currency} size="24px" style={{ marginRight: '12px' }} />
           <TruncatedText fontSize="24px" color={priceImpactSeverity > 2 ? 'error' : 'text'}>
             {realOutputAmount || trade.outputAmount.toSignificant(6)}
           </TruncatedText>

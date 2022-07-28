@@ -63,7 +63,7 @@ const StyledButton = styled(Button)`
 
 const StyledMaxText = styled.div`
   align-items: center;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   display: flex;
   font-size: 12px;
   font-weight: 500;
@@ -73,7 +73,7 @@ const StyledMaxText = styled.div`
 `
 
 const StyledTokenSymbol = styled.span`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   font-weight: 500;
 `
 

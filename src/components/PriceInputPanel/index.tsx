@@ -24,7 +24,7 @@ const Container = styled.div`
   border-radius: 16px;
   width: 310px;
   height: 70px;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mediaQueries.md} {
     width: 244px;
@@ -32,7 +32,7 @@ const Container = styled.div`
 `
 
 const CurrencyInputContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 0px;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ const MessageContainer = styled.div`
   height: 100px;
   font-size: 12px;
   font-weight: 500;
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mediaQueries.md} {
     width: 340px;

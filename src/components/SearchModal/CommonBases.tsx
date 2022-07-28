@@ -4,7 +4,6 @@ import { ChainId, Currency, currencyEquals, ETHER, Token } from '@apeswapfinance
 import { Flex, Text } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { SUGGESTED_BASES } from '../../config/constants'
-import { CurrencyLogo } from '../Logo'
 
 const style = {
   wrapper: {
@@ -48,7 +47,6 @@ export default function CommonBases({
           sx={style.wrapper}
           disable={selectedCurrency === ETHER}
         >
-          <CurrencyLogo currency={ETHER} style={{ marginRight: 8 }} />
           <Text> {Currency.getNativeCurrencySymbol(chainId)}</Text>
         </Flex>
         {(chainId ? SUGGESTED_BASES[chainId] : []).map((token: Token) => {
@@ -60,7 +58,6 @@ export default function CommonBases({
               disable={selected}
               key={token.address}
             >
-              <CurrencyLogo currency={token} style={{ marginRight: 8 }} />
               <Text>{token.symbol}</Text>
             </Flex>
           )

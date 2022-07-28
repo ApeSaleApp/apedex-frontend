@@ -31,7 +31,6 @@ const PCard = styled.div`
   text-align: center;
   max-width: 530px;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.navbar};
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
@@ -46,7 +45,7 @@ const PCard = styled.div`
 `
 
 const StyledFlex = styled(Flex)`
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 const PoolCard: React.FC<HarvestProps> = ({ pool, removed }) => {

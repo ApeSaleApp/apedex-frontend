@@ -47,12 +47,12 @@ export const BuyBanana = styled(Button)`
   width: 100%;
   margin-right: 25px;
   line-height: 5px;
-  background-color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.text)};
+  background-color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textSecondary)};
   ${({ theme }) => theme.mediaQueries.md} {
     width: auto;
   }
   :hover {
-    background-color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.text)} !important;
+    background-color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textSecondary)} !important;
     opacity: 0.7;
   }
 `
@@ -64,8 +64,8 @@ export const LearnMore = styled(Button)`
   line-height: 5px;
   width: 100%;
   margin-top: 10px;
-  border: 3px solid ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.text)};
-  color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.text)};
+  border: 3px solid ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textSecondary)};
+  color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textSecondary)};
   background-color: rgb(0, 0, 0, 0);
   ${({ theme }) => theme.mediaQueries.sm} {
     width: auto;
@@ -77,8 +77,8 @@ export const LearnMore = styled(Button)`
   }
   :hover {
     background-color: rgb(0, 0, 0, 0) !important;
-    border: 3px solid ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.text)} !important;
-    color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.text)} !important;
+    border: 3px solid ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textSecondary)} !important;
+    color: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.textSecondary)} !important;
     opacity: 0.7;
   }
 `

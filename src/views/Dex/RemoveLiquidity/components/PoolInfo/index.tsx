@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Flex, Text } from '@ape.swap/uikit'
 import { CurrencyAmount, Pair, Percent, TokenAmount } from '@apeswapfinance/sdk'
-import { CurrencyLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import useTotalSupply from 'hooks/useTotalSupply'
 import React from 'react'
@@ -49,7 +48,6 @@ const PoolInfo: React.FC<{
           <Text size="12px" weight={700} mr="5px">
             {parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) || '-'}
           </Text>
-          <CurrencyLogo currency={pair?.token0} size="18px" />
         </Flex>
       </Flex>
       <Flex sx={{ justifyContent: 'space-between' }}>
@@ -62,7 +60,6 @@ const PoolInfo: React.FC<{
           <Text size="12px" weight={700} mr="5px">
             {parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) || '-'}
           </Text>
-          <CurrencyLogo currency={pair?.token1} size="18px" />
         </Flex>
       </Flex>
     </Flex>

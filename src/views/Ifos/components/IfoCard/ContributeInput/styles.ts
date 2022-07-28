@@ -27,6 +27,6 @@ export const Container = styled.div`
   display: flex;
   border-radius: 10px;
   height: 48px;
-  background-color: ${({ theme }) => theme.colors.white2};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 export const MaxButton = styled(Button)``

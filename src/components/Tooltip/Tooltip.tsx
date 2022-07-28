@@ -7,9 +7,9 @@ export interface TooltipProps {
 
 const TooltipContent = styled.div`
   padding: 16px;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.bgSecondary};
   border-radius: 16px;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   width: max-content;
   display: none;
   padding: 16px;

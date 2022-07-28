@@ -4,7 +4,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button, Flex, Text, InfoIcon, TooltipBubble, useMatchBreakpoints } from '@ape.swap/uikit'
 import { Token } from '@apeswapfinance/sdk'
-import { CurrencyLogo } from 'components/Logo'
 import { AutoRow } from 'components/layout/Row'
 import useAutonomyOrdersLib from 'hooks/useAutonomyOrdersLib'
 import { useTranslation } from 'contexts/Localization'
@@ -12,8 +11,8 @@ import { useTranslation } from 'contexts/Localization'
 const OrderRowWrapper = styled(Flex)`
   position: relative;
   padding: 16px 20px;
-  background: ${({ theme }) => theme.colors.white4};
-  border-bottom: ${({ theme }) => `1px solid ${theme.colors.white2}`};
+  background: ${({ theme }) => theme.colors.white};
+  border-bottom: ${({ theme }) => `1px solid ${theme.colors.white}`};
   justify-content: space-between;
   align-items: center;
   &:first-child {
@@ -44,7 +43,7 @@ const OrderCol = styled(Flex)`
 `
 
 const TokenText = styled(Text)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
 `
 
 const TooltipIcon = styled('div')`
@@ -125,7 +124,6 @@ export default function OrderRow({ order, tokenPair }: IOrderRowProps) {
             {(+inputAmount).toFixed(6)}
           </Text>
           <AutoRow gap="5px" align="center">
-            <CurrencyLogo currency={tokenPair.input} size="12px" />
             <TokenText fontSize="12px" color="#ffb300" style={{ opacity: 0.8 }}>
               {tokenPair.input?.symbol}
             </TokenText>
@@ -139,7 +137,6 @@ export default function OrderRow({ order, tokenPair }: IOrderRowProps) {
             {(+outputAmount).toFixed(6)}
           </Text>
           <AutoRow gap="5px" align="center">
-            <CurrencyLogo currency={tokenPair.output} size="12px" />
             <TokenText fontSize="12px" color="#ffb300" style={{ opacity: 0.8 }}>
               {tokenPair.output?.symbol}
             </TokenText>

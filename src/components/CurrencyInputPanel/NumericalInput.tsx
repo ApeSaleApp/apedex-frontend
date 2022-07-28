@@ -11,7 +11,7 @@ const StyledInput = styled.input<{
   removeLiquidity?: boolean
   disabledText?: boolean
 }>`
-  color: ${({ error, theme }) => (error ? theme.colors.error : theme.colors.text)};
+  color: ${({ error, theme }) => (error ? theme.colors.error : theme.colors.textSecondary)};
   opacity: ${({ disabledText }) => disabledText && 0.4};
   display: inline-block;
   width: inherit;
@@ -48,7 +48,7 @@ const StyledInput = styled.input<{
   }
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textSecondary};
   }
   ::after {
     content: '%';

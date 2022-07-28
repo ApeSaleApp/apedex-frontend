@@ -4,7 +4,6 @@ import { Button, Text } from '@ape.swap/uikit'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
 import { RowBetween, RowFixed } from '../layout/Row'
-import { CurrencyLogo } from '../Logo'
 import { Field } from '../../state/mint/actions'
 
 function ConfirmAddModalBottom({
@@ -30,14 +29,12 @@ function ConfirmAddModalBottom({
       <RowBetween>
         <Text>{`${currencies[Field.CURRENCY_A]?.getSymbol(chainId)} ${t('Deposited')}`}</Text>
         <RowFixed>
-          <CurrencyLogo currency={currencies[Field.CURRENCY_A]} style={{ marginRight: '8px' }} />
           <Text>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</Text>
         </RowFixed>
       </RowBetween>
       <RowBetween>
         <Text>{`${currencies[Field.CURRENCY_B]?.getSymbol(chainId)} ${t('Deposited')}`}</Text>
         <RowFixed>
-          <CurrencyLogo currency={currencies[Field.CURRENCY_B]} style={{ marginRight: '8px' }} />
           <Text>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</Text>
         </RowFixed>
       </RowBetween>

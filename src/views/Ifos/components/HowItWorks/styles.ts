@@ -46,7 +46,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  background-color: ${({ theme }) => theme.colors.navbar};
   margin-bottom: 57px;
   padding: 30px 20px;
 
@@ -59,7 +58,7 @@ export const IconBox = styled.div`
   border-radius: 5px;
   width: 100px;
   height: 100px;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   position: relative;
   flex-shrink: 0;
 `

@@ -8,7 +8,7 @@ export const BodyWrapper = styled(Card)`
   width: 360px;
   margin-bottom: 80px;
   overflow: hidden;
-  background: ${({ theme }) => theme.colors.white2};
+  background: ${({ theme }) => theme.colors.white};
   ${({ theme }) => theme.mediaQueries.md} {
     width: 680px;
     margin-bottom: 0px;

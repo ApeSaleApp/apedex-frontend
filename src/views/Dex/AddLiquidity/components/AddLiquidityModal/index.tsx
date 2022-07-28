@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import { Modal, Button, Flex, Text } from '@ape.swap/uikit'
-import { CurrencyLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import React from 'react'
@@ -46,7 +45,6 @@ const AddLiquidityModal: React.FC<AddLiquidityModalProps> = ({
                 {parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)}
               </Text>
               <Flex sx={{ alignItems: 'center' }}>
-                <CurrencyLogo currency={currencies[Field.CURRENCY_A]} size="30px" />
                 <Text size="14px" weight={700} ml="10px">
                   {currencies[Field.CURRENCY_A].getSymbol(chainId)}
                 </Text>
@@ -55,7 +53,7 @@ const AddLiquidityModal: React.FC<AddLiquidityModalProps> = ({
             <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
               <Flex sx={styles.outerLogoCircle}>
                 <Flex sx={styles.innerLogoCircle}>
-                  <Text weight={700} color="textPrimary" sx={{ lineHeight: '0px' }}>
+                  <Text weight={700} sx={{ lineHeight: '0px' }}>
                     +
                   </Text>
                 </Flex>
@@ -66,7 +64,6 @@ const AddLiquidityModal: React.FC<AddLiquidityModalProps> = ({
                 {parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)}
               </Text>
               <Flex sx={{ alignItems: 'center' }}>
-                <CurrencyLogo currency={currencies[Field.CURRENCY_B]} size="30px" />
                 <Text size="14px" weight={700} ml="10px">
                   {currencies[Field.CURRENCY_B].getSymbol(chainId)}
                 </Text>

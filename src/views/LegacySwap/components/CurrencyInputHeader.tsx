@@ -1,8 +1,8 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, useMatchBreakpoints, Tabs, Tab } from '@ape.swap/uikit'
-import { Button } from '@ape.swap/uikit'
+import { Flex, useMatchBreakpoints, Tabs, Tab , Button } from '@ape.swap/uikit'
+
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import { CHAIN_ID } from 'config/constants/chains'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
@@ -23,7 +23,6 @@ const CurrencyInputContainer = styled(Flex)`
   justify-content: space-between;
   padding: 20px 25px 0px 20px;
   width: 100%;
-  background: ${({ theme }) => theme.colors.navbar};
   margin-bottom: 20px;
 
   /* ${({ theme }) => theme.mediaQueries.xs} {

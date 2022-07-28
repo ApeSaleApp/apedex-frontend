@@ -117,7 +117,7 @@ const LaunchCalendar: React.FC = () => {
                         <SwiperSlide style={{ maxWidth: '219px', minWidth: '219px' }} key={launch?.textLine1}>
                           <LaunchCard>
                             <Flex alignItems="center" justifyContent="center" style={{ height: '100%' }}>
-                              <QuestionMark fill={theme.colors.text} />
+                              <QuestionMark fill={theme.colors.textSecondary} />
                             </Flex>
                           </LaunchCard>
                         </SwiperSlide>

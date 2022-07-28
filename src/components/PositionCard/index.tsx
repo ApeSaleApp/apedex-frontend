@@ -16,8 +16,6 @@ import { currencyId } from '../../utils/currencyId'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 
 import { AutoColumn } from '../layout/Column'
-import CurrencyLogo from '../Logo/CurrencyLogo'
-import { DoubleCurrencyLogo } from '../Logo'
 import { RowBetween, RowFixed } from '../layout/Row'
 import { BIG_INT_ZERO } from '../../config/constants'
 import Dots from '../Loader/Dots'
@@ -84,7 +82,6 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
               </FixedHeightRow>
               <FixedHeightRow onClick={() => setShowMore(!showMore)}>
                 <RowFixed>
-                  <DoubleCurrencyLogo currency0={currency0} currency1={currency1} margin size={20} />
                   <StyledText small color="gray">
                     {currency0.getSymbol(chainId)}-{currency1.getSymbol(chainId)} LP
                   </StyledText>
@@ -184,7 +181,6 @@ export default function FullPositionCard({ pair }: PositionCardProps) {
     <Flex sx={{ ...styles.poolContainer }} onClick={() => setShowMore((prev) => !prev)}>
       <Flex sx={{ ...styles.innerContainer }}>
         <Flex sx={{ ...styles.titleContainer }}>
-          <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={28} />
           <Text size="14px" weight={700} ml="5px">
             {!currency0 || !currency1 ? (
               <Dots>Loading</Dots>
@@ -232,7 +228,6 @@ export default function FullPositionCard({ pair }: PositionCardProps) {
                     <Text size="14px" weight={700} mr="8px">
                       {token0Deposited?.toSignificant(6)}
                     </Text>
-                    <CurrencyLogo size="20px" currency={currency0} />
                   </Flex>
                 ) : (
                   '-'
@@ -247,7 +242,6 @@ export default function FullPositionCard({ pair }: PositionCardProps) {
                     <Text size="14px" weight={700} mr="8px">
                       {token1Deposited?.toSignificant(6)}
                     </Text>
-                    <CurrencyLogo size="20px" currency={currency1} />
                   </Flex>
                 ) : (
                   '-'

@@ -2,7 +2,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { Button, Text, Link, Flex, Checkbox } from '@ape.swap/uikit'
-import { ListLogo } from 'components/Logo'
 import { TokenList } from '@uniswap/token-lists'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from 'state'
@@ -21,7 +20,6 @@ interface ImportProps {
 const TextDot = styled.div`
   height: 3px;
   width: 3px;
-  background-color: ${({ theme }) => theme.colors.text};
   border-radius: 50%;
 `
 
@@ -65,13 +63,7 @@ function ImportList({ listURL, list, onImport }: ImportProps) {
   return (
     <Flex sx={{ flexDirection: 'column', padding: '10px' }}>
       <Flex sx={{ flexDirection: 'row' }}>
-        {(list.logoURI || extendedLogo) && (
-          <ListLogo
-            logoURI={extendedLogo || list.logoURI}
-            size="40px"
-            style={{ borderRadius: '20px', marginRight: '10px' }}
-          />
-        )}
+      
         <Flex sx={{ flexDirection: 'column', margin: '10px 0px' }}>
           <Flex>
             <Text bold mr="6px">

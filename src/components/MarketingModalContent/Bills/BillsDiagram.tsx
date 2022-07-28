@@ -11,7 +11,7 @@ const BillsDiagram: React.FC = () => {
   return (
     <Surround>
       <Content>
-        <BillsM1 width={50} bgColor={theme.theme.colors.white4} color={theme.theme.colors.text} mr={15} />
+        <BillsM1 width={50} bgColor={theme.theme.colors.white} color={theme.theme.colors.textSecondary} mr={15} />
         <RightContent>
           <RightHeader>{t('Get LP')}</RightHeader>
           <RightText>
@@ -26,7 +26,7 @@ const BillsDiagram: React.FC = () => {
       </Content>
 
       <Content>
-        <BillsM2 width={50} bgColor={theme.theme.colors.white4} color={theme.theme.colors.text} mr={15} />
+        <BillsM2 width={50} bgColor={theme.theme.colors.white} color={theme.theme.colors.textSecondary} mr={15} />
         <RightContent>
           <RightHeader>{t('Select and Buy')}</RightHeader>
           <RightText>{t('Select the Bill of your preference, and click the buy button.')}</RightText>
@@ -34,7 +34,7 @@ const BillsDiagram: React.FC = () => {
       </Content>
 
       <Content>
-        <BillsM3 width={50} bgColor={theme.theme.colors.white4} color={theme.theme.colors.text} mr={15} />
+        <BillsM3 width={50} bgColor={theme.theme.colors.white} color={theme.theme.colors.textSecondary} mr={15} />
         <RightContent>
           <RightHeader>{t('Receive and Claim')}</RightHeader>
           <RightText>{t('Receive your NFT, claim vested tokens or trade the NFT.')}</RightText>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Flex, Text } from '@ape.swap/uikit'
-import Banner from 'components/Banner'
 import { useFetchIazoSettings, useIazoSettings } from 'state/hooks'
 import { useTranslation } from 'contexts/Localization'
 import LuanchpadInfo from './components/LaunchpadInfo/LaunchpadInfo'
@@ -20,7 +19,6 @@ const PageWrapper = styled.div`
 const LaunchPadWrapper = styled.div`
   border-radius: 20px;
   margin-top: 20px;
-  background: ${({ theme }) => theme.colors.navbar};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,14 +49,7 @@ export default function CreateIazo(): JSX.Element {
     <>
       <PageWrapper>
         <Flex flexDirection="column">
-          <Banner
-            banner="ssiao"
-            link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/raise/self-serve-iao-ss-iao"
-            title={t('Self-Serve Iao')}
-            maxWidth={856}
-            listViewBreak
-            margin="30px 0 0 0"
-          />
+
           <LaunchPadWrapper>
             <TopNav />
             <HeaderWrapper>

@@ -24,13 +24,12 @@ const OrderHistoryContainer = styled(StyledSwapContainer)`
 const TabWrapper = styled('div')`
   padding: 20px 20px 0px 20px;
   width: 100%;
-  background: ${({ theme }) => theme.colors.navbar};
 `
 
 const TabContent = styled('div')`
   margin: 20px;
   padding: 20px;
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 20px;
 `
 

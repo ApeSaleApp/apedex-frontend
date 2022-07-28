@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Flex, Text } from '@ape.swap/uikit'
 import { Currency, Percent, Price, TokenAmount } from '@apeswapfinance/sdk'
-import { DoubleCurrencyLogo } from 'components/Logo'
 import { ONE_BIPS } from 'config/constants'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
@@ -29,11 +28,7 @@ const PoolInfo: React.FC<{
           <Text size="12px" weight={700} mr="5px" sx={dexStyles.textWrap}>
             {liquidityMinted?.toSignificant(6)}
           </Text>
-          <DoubleCurrencyLogo
-            currency0={currencies[Field.CURRENCY_A]}
-            currency1={currencies[Field.CURRENCY_B]}
-            size={16}
-          />
+          
         </Flex>
       </Flex>
       <Flex sx={{ justifyContent: 'space-between', margin: '4px 0px' }}>

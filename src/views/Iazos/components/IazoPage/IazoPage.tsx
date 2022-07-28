@@ -1,7 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Flex, Spinner } from '@ape.swap/uikit'
-import Banner from 'components/Banner'
 import { useFetchIazo, useIazos } from 'state/hooks'
 import { useTranslation } from 'contexts/Localization'
 import TokenInfoCard from './TokenInfoCard'
@@ -35,14 +34,6 @@ const IazoPage: React.FC = () => {
     <>
       <PageWrapper>
         <Flex flexDirection="column">
-          <Banner
-            banner="ssiao"
-            link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/raise/self-serve-iao-ss-iao"
-            title={t('Self-Serve Iao')}
-            maxWidth={856}
-            listViewBreak
-            margin="30px 0 0 0"
-          />
           <LaunchPadWrapper>
             <TopNav />
             <BeforeSaleWrapper>

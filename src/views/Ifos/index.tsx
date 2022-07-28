@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from 'components/Banner'
 import { useTranslation } from 'contexts/Localization'
 import Container from 'components/layout/Container'
 import ifos, { pastIfos } from 'config/constants/ifo'
@@ -35,13 +34,7 @@ const Ifos = () => {
   return (
     <>
       <Container>
-        <Banner
-          banner="iao"
-          link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/raise/initial-ape-offerings-iaos"
-          title={t('Official Initial Ape Offerings')}
-          maxWidth={992}
-          margin="30px 0px 20px 0px"
-        />
+
         <IfoProjectCard ifoId={projectId} />
         {tabOption === 'past' && <IfoPastProjectSwiper onSelectProject={setProjectId} />}
         <IfoTabButtons onSelect={handleTabSelectionChange} selectedTab={tabOption} />

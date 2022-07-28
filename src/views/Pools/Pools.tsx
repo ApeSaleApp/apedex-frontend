@@ -12,7 +12,6 @@ import { useBlock } from 'state/block/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { usePollPools, usePools, usePoolTags } from 'state/hooks'
 import ListViewLayout from 'components/layout/ListViewLayout'
-import Banner from 'components/Banner'
 import { Pool } from 'state/types'
 import PoolMenu from './components/Menu'
 import DisplayPools from './components/DisplayPools'
@@ -143,13 +142,6 @@ const Pools: React.FC = () => {
         style={{ position: 'relative', top: '30px', width: '100%' }}
       >
         <ListViewLayout>
-          <Banner
-            banner="pools"
-            link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/stake/pools"
-            title={t('Staking Pools')}
-            listViewBreak
-            maxWidth={1130}
-          />
           <Flex flexDirection="column" alignSelf="center" style={{ maxWidth: '1130px', width: '100%' }}>
             <PoolMenu
               onHandleQueryChange={handleChangeQuery}

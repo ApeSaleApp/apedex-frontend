@@ -16,7 +16,6 @@ import useTheme from 'hooks/useTheme'
 import { useCurrencyBalance } from 'state/wallet/hooks'
 import { useIsExpertMode, useUserSlippageTolerance } from 'state/user/hooks'
 import TransactionConfirmationModal, { ConfirmationModalContent } from 'components/TransactionConfirmationModal'
-import DoubleCurrencyLogo from 'components/Logo/DoubleLogo'
 import { useSwapState } from 'state/swap/hooks'
 import { useTranslation } from 'contexts/Localization'
 import { PairState } from '../../hooks/usePairs'
@@ -241,11 +240,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
         <Text sx={{ fontSize: '24px', marginRight: '10px', fontWeight: '700', lineHeight: '1.5' }}>
           {`${currencies[Field.CURRENCY_A]?.getSymbol(chainId)}/${currencies[Field.CURRENCY_B]?.getSymbol(chainId)}`}
         </Text>
-        <DoubleCurrencyLogo
-          currency0={currencies[Field.CURRENCY_A]}
-          currency1={currencies[Field.CURRENCY_B]}
-          size={30}
-        />
+        
       </Flex>
     ) : (
       <AutoColumn>
@@ -253,11 +248,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
           <Text sx={{ fontSize: '24px', marginRight: '10px', fontWeight: '700', lineHeight: '1.5' }}>
             {liquidityMinted?.toSignificant(6)}
           </Text>
-          <DoubleCurrencyLogo
-            currency0={currencies[Field.CURRENCY_A]}
-            currency1={currencies[Field.CURRENCY_B]}
-            size={30}
-          />
+          
         </Flex>
         <Row>
           <Text sx={{ fontSize: '20px', fontWeight: '400', lineHeight: '1.5' }}>
@@ -398,7 +389,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
             height: '29px',
           }}
         >
-          <AddIcon width="25px" color="textPrimary" />
+          <AddIcon width="25px"  />
         </Flex>
       </Flex>
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>

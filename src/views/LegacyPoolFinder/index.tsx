@@ -8,7 +8,6 @@ import SwapBanner from 'components/SwapBanner'
 import LiquidityPositionLink from 'components/Links/LiquidityPositons'
 import { useTranslation } from 'contexts/Localization'
 import { AutoColumn, ColumnCenter } from '../../components/layout/Column'
-import { CurrencyLogo } from '../../components/Logo'
 import { MinimalPositionCard } from '../../components/PositionCard'
 import Row from '../../components/layout/Row'
 import CurrencySearchModal from '../../components/SearchModal/CurrencySearchModal'
@@ -27,8 +26,8 @@ enum Fields {
 }
 
 const StyledButton = styled(Button).attrs({ variant: 'text', scale: 'sm' })`
-  background-color: ${({ theme }) => theme.colors.white4};
-  color: ${({ theme }) => theme.colors.text};
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.textSecondary};
   box-shadow: none;
   border-radius: 16px;
 `
@@ -107,7 +106,6 @@ export default function PoolFinder() {
             >
               {currency0 ? (
                 <Row>
-                  <CurrencyLogo currency={currency0} />
                   <Text ml="8px">{currency0.getSymbol(chainId)}</Text>
                 </Row>
               ) : (
@@ -129,7 +127,6 @@ export default function PoolFinder() {
             >
               {currency1 ? (
                 <Row>
-                  <CurrencyLogo currency={currency1} />
                   <Text ml="8px">{currency1.getSymbol(chainId)}</Text>
                 </Row>
               ) : (

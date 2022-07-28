@@ -170,7 +170,7 @@ const StyledText = styled(Text)`
 `
 
 const StyledSkeleton = styled(Skeleton)`
-  background-color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 const StyledHeader = styled(Text)`

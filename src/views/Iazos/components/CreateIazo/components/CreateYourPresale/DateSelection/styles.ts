@@ -4,7 +4,7 @@ import { Text } from '@ape.swap/uikit'
 export const DateContainer = styled.div`
   width: 300px;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   margin-bottom: 30px;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@ export const DateSelectionContainer = styled.div`
   position: relative;
   display: flex;
   height: 135px;
-  background: ${({ theme }) => theme.colors.white4};
+  background: ${({ theme }) => theme.colors.white};
   width: 280px;
   border-radius: 10px;
   margin-top: 15px;

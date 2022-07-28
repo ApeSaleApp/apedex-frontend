@@ -7,7 +7,6 @@ import { useFarmTags, useFetchFarmLpAprs, useFetchLpTokenPrices } from 'state/ho
 import ListViewMenu from 'components/ListViewMenu'
 import { orderBy } from 'lodash'
 import ListViewLayout from 'components/layout/ListViewLayout'
-import Banner from 'components/Banner'
 import { useTranslation } from 'contexts/Localization'
 import { Farm } from 'state/types'
 import { useFarms, usePollFarms } from 'state/farms/hooks'
@@ -136,13 +135,7 @@ const Farms: React.FC = () => {
         style={{ position: 'relative', top: '30px', width: '100%' }}
       >
         <ListViewLayout>
-          <Banner
-            banner="banana-farms"
-            link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/stake/farms"
-            title={t('Banana Farms')}
-            listViewBreak
-            maxWidth={1130}
-          />
+         
           <Flex alignItems="center" justifyContent="center" mt="20px">
             <ListViewMenu
               onHandleQueryChange={handleChangeQuery}

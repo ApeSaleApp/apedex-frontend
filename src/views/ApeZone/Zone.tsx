@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'contexts/Localization'
 import Page from 'components/layout/Page'
 import Spacer from 'components/Spacer'
-import Banner from 'components/Banner'
 import GnanaUtility from './components/GnanaUtility/GnanaUtility'
-import GnanaDisclaimers from './components/GnanaDisclaimers/GnanaDisclaimers'
 import ConvertCard from './components/ConvertCard'
 import ReturnCard from './components/ReturnCard'
 import {
@@ -31,13 +29,7 @@ const Zone = () => {
   return (
     <>
       <Page width="1130px">
-        <Banner
-          banner="gnana"
-          link="https://apeswap.gitbook.io/apeswap-finance/welcome/apeswap-tokens/gnana"
-          title={t('Golden Banana')}
-          margin="0px 0px 20px 0px"
-          maxWidth={1130}
-        />
+
         <PaddedCard>
           <TopCon>
             <CenterCard>
@@ -69,7 +61,6 @@ const Zone = () => {
         </Cards>
 
         <GnanaUtility />
-        <GnanaDisclaimers />
 
         <Spacer size="lg" />
         <Spacer size="md" />

@@ -229,11 +229,11 @@ const StyledInput = styled(Input)`
   height: 40px;
   border-radius: 10px;
   border: none;
-  background-color: ${({ theme }) => theme.colors.white3};
-  color: ${({ theme }) => theme.colors.text};
-  placeholder-color: ${({ theme }) => theme.colors.gray};
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.textSecondary};
+  placeholder-color: ${({ theme }) => theme.colors.lightGray};
   ::placeholder {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.textSecondary};
   }
   :focus {
     box-shadow: none !important;

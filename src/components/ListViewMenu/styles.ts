@@ -10,7 +10,7 @@ export const ControlContainer = styled(Flex)`
   flex-direction: row;
   padding: 15px;
   z-index: 1;
-  background-color: ${({ theme }) => theme.colors.white2};
+  background-color: ${({ theme }) => theme.colors.white};
   min-width: 300px;
   max-width: 500px;
   width: 100%;
@@ -46,7 +46,7 @@ export const ToggleWrapper = styled.div`
   justify-content: center;
   cursor: pointer;
 
-  {
+   {
     margin-left: 4px;
     ${({ theme }) => theme.mediaQueries.md} {
       margin-left: 8px;
@@ -146,7 +146,7 @@ export const StyledImage = styled.img`
 export const StyledHeading = styled(Heading)`
   font-size: 30px;
   max-width: 176px !important;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
 
   ${({ theme }) => theme.mediaQueries.xs} {
     font-size: 30px;

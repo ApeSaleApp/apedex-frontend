@@ -10,7 +10,7 @@ export const ControlContainer = styled(Flex)`
   flex-direction: row;
   padding: 15px;
   z-index: 1;
-  background-color: ${({ theme }) => theme.colors.white2};
+  background-color: ${({ theme }) => theme.colors.white};
   min-width: 300px;
   max-width: 500px;
   width: 100%;
@@ -71,7 +71,7 @@ export const ToggleWrapper = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
- {
+   {
     margin-left: 4px;
     ${({ theme }) => theme.mediaQueries.md} {
       margin-left: 8px;

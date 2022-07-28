@@ -20,7 +20,7 @@ import { AppBody } from '../../components/App'
 
 const StyledCard = styled(Card)`
   /* background-color: ${({ theme }) => (theme.isDark ? '#383838' : '#F0F0F0')}; */
-  background-color: ${({ theme }) => theme.colors.white3};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 const StyledText = styled(Text)`
@@ -31,10 +31,10 @@ const StyledText = styled(Text)`
 `
 
 const StyledFlex = styled(Flex)`
-  background: ${({ theme }) => theme.colors.white2};
+  background: ${({ theme }) => theme.colors.white};
 `
 const InnerFlex = styled(Flex)`
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
 `
 
 export default function Pool() {

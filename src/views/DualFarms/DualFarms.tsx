@@ -7,7 +7,6 @@ import { useDualFarms, usePollDualFarms } from 'state/dualFarms/hooks'
 import { DualFarm } from 'state/types'
 import { orderBy } from 'lodash'
 import ListViewLayout from 'components/layout/ListViewLayout'
-import Banner from 'components/Banner'
 import { useTranslation } from 'contexts/Localization'
 import ListViewMenu from '../../components/ListViewMenu'
 import HarvestAllAction from './components/CardActions/HarvestAllAction'
@@ -154,13 +153,7 @@ const DualFarms: React.FC = () => {
         style={{ position: 'relative', top: '30px', width: '100%' }}
       >
         <ListViewLayout>
-          <Banner
-            banner="polygon-farms"
-            link="https://apeswap.gitbook.io/apeswap-finance/product-and-features/stake/farms"
-            title={t('Polygon Farms')}
-            listViewBreak
-            maxWidth={1130}
-          />
+        
           <Flex alignItems="center" justifyContent="center" mt="20px">
             <ListViewMenu
               onHandleQueryChange={handleChangeQuery}

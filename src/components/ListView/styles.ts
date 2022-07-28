@@ -30,7 +30,7 @@ export const ListExpandedContainer = styled(Flex)<{ size?: number; justifyConten
   overflow: hidden;
   margin: 0px 10px 0px 10px;
   padding: 10px;
-  background: ${({ theme }) => theme.colors.white3};
+  background: ${({ theme }) => theme.colors.white};
   max-width: 500px;
   min-width: 300px;
   width: 100%;
@@ -49,7 +49,7 @@ export const ListCardContainer = styled(Flex)`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: ${({ theme }) => theme.colors.white2};
+  background: ${({ theme }) => theme.colors.white};
   border-bottom: 1px solid rgba(226, 226, 226, 0.2);
   padding: 10px;
   margin: 0px 10px 0px 10px;

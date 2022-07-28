@@ -13,7 +13,7 @@ const InputPanel = styled.div`
   flex-flow: column nowrap;
   position: relative;
   border-radius: 1.25rem;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   z-index: 1;
   width: 100%;
 `
@@ -23,10 +23,10 @@ const ContainerRow = styled.div<{ error: boolean }>`
   justify-content: center;
   align-items: center;
   border-radius: 1.25rem;
-  border: 1px solid ${({ error, theme }) => (error ? theme.colors.error : theme.colors.background)};
+  border: 1px solid ${({ error, theme }) => (error ? theme.colors.error : theme.colors.bgSecondary)};
   transition: border-color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')},
     color 500ms ${({ error }) => (error ? 'step-end' : 'step-start')};
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
 `
 
 const InputContainer = styled.div`
@@ -39,15 +39,15 @@ const Input = styled.input<{ error?: boolean }>`
   outline: none;
   border: none;
   flex: 1 1 auto;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   transition: color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')};
-  color: ${({ error, theme }) => (error ? theme.colors.error : theme.colors.primary)};
+  color: ${({ error, theme }) => (error ? theme.colors.error : theme.colors.textPrimary)};
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
   width: 100%;
   ::placeholder {
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.lightGray};
   }
   padding: 0px;
   -webkit-appearance: textfield;
@@ -62,7 +62,7 @@ const Input = styled.input<{ error?: boolean }>`
   }
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.lightGray};
   }
 `
 

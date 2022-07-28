@@ -51,7 +51,7 @@ export const TextButton = styled.a`
 `
 export const Hiw = styled(StyledText)`
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   text-transform: uppercase;
   margin-top: 1em;
 
@@ -115,7 +115,7 @@ export const RightContent = styled.div`
 `
 export const RightHeader = styled(StyledText)`
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textSecondary};
   text-align: left;
   margin: 0;
 `

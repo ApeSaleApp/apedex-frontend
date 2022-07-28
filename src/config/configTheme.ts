@@ -43,9 +43,12 @@ export const configTheme: Theme = {
     lightYellow: 'rgba(255, 233, 7, 0.12)',
     mint: '#3FD4AB', // mint
     red: '#EF5350',
+    error: '#EF5350',
+    success: '#60A92A',
     secondary: '#60A92A', // green
     bgPrimary: '#e5e5e5',
     bgSecondary: '#ffffff',
+    bgSecondaryDisabled: 'rgba(0, 0, 0, 0.54)',
     lightGray: '#F6F6F6',
     mediumGray: '#F5F5F9',
     textPrimary: '#000000',
@@ -62,6 +65,7 @@ export const configTheme: Theme = {
         secondary: '#FFE907', // yellow
         bgPrimary: '#252831',
         bgSecondary: '#33363F',
+        bgSecondaryDisabled: 'rgba(255, 255, 255, 0.54)',
         lightGray: '#3B3E47',
         mediumGray: '#474A53',
         textPrimary: '#ffffff',
@@ -363,13 +367,18 @@ export const lightTheme = {
     lightYellow: 'rgba(255, 233, 7, 0.12)',
     mint: '#3FD4AB', // mint
     red: '#EF5350',
+    error: '#EF5350',
+    success: '#60A92A',
     secondary: '#60A92A', // green
     bgPrimary: '#e5e5e5',
     bgSecondary: '#ffffff',
+    bgSecondaryDisabled: 'rgba(0, 0, 0, 0.54)',
     lightGray: '#F6F6F6',
     mediumGray: '#F5F5F9',
     textPrimary: '#000000',
+    textDisabled: '#F6F6F6',
     textSecondary: 'rgba(0, 0, 0, 0.54)',
+    textNote: 'rgba(0, 0, 0, 0.38)',
   },
   button: {
     primary: {
@@ -439,13 +448,19 @@ export const darkTheme = {
     lightYellow: 'rgba(255, 233, 7, 0.12)',
     mint: '#3FD4AB', // mint
     red: '#EF5350',
+    error: '#EF5350',
+    success: '#60A92A',
     secondary: '#FFE907', // yellow
     bgPrimary: '#252831',
     bgSecondary: '#33363F',
+    bgSecondaryDisabled: 'rgba(255, 255, 255, 0.54)',
     lightGray: '#3B3E47',
     mediumGray: '#474A53',
     textPrimary: '#ffffff',
+    textDisabled: '#3B3E47',
     textSecondary: 'rgba(255, 255, 255, 0.54)',
+    yellow: '#FFE907',
+    textNote: 'rgba(0, 0, 0, 0.38)',
   },
   button: {
     primary: {

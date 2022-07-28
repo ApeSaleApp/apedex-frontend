@@ -1,3 +1,4 @@
+// delete
 import React from 'react'
 import { Navbar as UikitMenu } from '@ape.swap/uikit'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'

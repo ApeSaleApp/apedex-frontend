@@ -62,6 +62,6 @@ export const ErrorText = styled(Text)<{ severity?: 0 | 1 | 2 | 3 | 4 }>`
       : severity === 2
       ? theme.colors.yellow
       : severity === 1
-      ? theme.colors.text
+      ? theme.colors.textSecondary
       : theme.colors.success};
 `
