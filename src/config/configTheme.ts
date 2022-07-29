@@ -46,6 +46,7 @@ export const configTheme: Theme = {
     error: '#EF5350',
     success: '#60A92A',
     secondary: '#60A92A', // green
+    textActiveSecondary: '#ffffff',
     bgPrimary: '#e5e5e5',
     bgSecondary: '#ffffff',
     bgSecondaryDisabled: 'rgba(0, 0, 0, 0.54)',
@@ -63,6 +64,7 @@ export const configTheme: Theme = {
         mint: '#3FD4AB', // mint
         red: '#EF5350',
         secondary: '#FFE907', // yellow
+        textActiveSecondary: '#000000',
         bgPrimary: '#252831',
         bgSecondary: '#33363F',
         bgSecondaryDisabled: 'rgba(255, 255, 255, 0.54)',
@@ -370,6 +372,7 @@ export const lightTheme = {
     error: '#EF5350',
     success: '#60A92A',
     secondary: '#60A92A', // green
+    textActiveSecondary: '#ffffff',
     bgPrimary: '#e5e5e5',
     bgSecondary: '#ffffff',
     bgSecondaryDisabled: 'rgba(0, 0, 0, 0.54)',
@@ -451,6 +454,7 @@ export const darkTheme = {
     error: '#EF5350',
     success: '#60A92A',
     secondary: '#FFE907', // yellow
+    textActiveSecondary: '#000000',
     bgPrimary: '#252831',
     bgSecondary: '#33363F',
     bgSecondaryDisabled: 'rgba(255, 255, 255, 0.54)',

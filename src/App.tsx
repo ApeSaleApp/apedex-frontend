@@ -14,6 +14,7 @@ import {
   useFetchLiveTags,
 } from 'state/hooks'
 import { usePollBlockNumber } from 'state/block/hooks'
+import { Layout } from 'Layout'
 import GlobalStyle, { ApeTheme } from './style/Global'
 import Menu from './components/Menu' // delete component
 import PageLoader from './components/PageLoader'
@@ -23,7 +24,6 @@ import AddLiquidity from './views/Dex/AddLiquidity'
 import RemoveLiquidity from './views/Dex/RemoveLiquidity'
 import PoolFinder from './views/Dex/PoolFinder'
 import ResetScroll from './utils/resetScroll'
-
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
@@ -121,17 +121,17 @@ const App: React.FC = () => {
     if (chainId === CHAIN_ID.ETH) {
       return (
         <Suspense fallback={<PageLoader />}>
-        <Switch>
-          <Route path="/" exact component={Home} />
-    
-          {/* Redirects */}
-          {/* <Route path="/admin-pools">
+          <Switch>
+            <Route path="/" exact component={Home} />
+
+            {/* Redirects */}
+            {/* <Route path="/admin-pools">
             <Redirect to="/" />
           </Route> */}
-          <Route path="/farms">
-            <Redirect to="/" />
-          </Route>
-          {/* <Route exact path="/nft">
+            <Route path="/farms">
+              <Redirect to="/" />
+            </Route>
+            {/* <Route exact path="/nft">
             <Redirect to="/" />
           </Route>
           <Route path="/pools">
@@ -161,23 +161,23 @@ const App: React.FC = () => {
           <Route path="/ss-iao/:id">
             <Redirect to="/" />
           </Route> */}
-          {/* SWAP ROUTES */}
-          <Route path="/swap" component={Swap} />
-          <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
-          <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-          <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-          <Route exact strict path="/find" component={PoolFinder} />
-          <Route exact strict path="/pool" component={Pool} />
-          <Route exact strict path="/create" component={RedirectToAddLiquidity} />
-          <Route exact path="/add" component={AddLiquidity} />
-          <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-          <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-          <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-          <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
-          {/* SWAP ROUTES */}
-          <Route component={NotFound} />
-        </Switch>
-      </Suspense>
+            {/* SWAP ROUTES */}
+            <Route path="/swap" component={Swap} />
+            <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
+            <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+            <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+            <Route exact strict path="/find" component={PoolFinder} />
+            <Route exact strict path="/pool" component={Pool} />
+            <Route exact strict path="/create" component={RedirectToAddLiquidity} />
+            <Route exact path="/add" component={AddLiquidity} />
+            <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+            <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+            <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
+            <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+            {/* SWAP ROUTES */}
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
       )
     }
 
@@ -185,26 +185,26 @@ const App: React.FC = () => {
     if (chainId === CHAIN_ID.MATIC || chainId === CHAIN_ID.MATIC_TESTNET) {
       return (
         <Suspense fallback={<PageLoader />}>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          {/* <Home />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            {/* <Home />
           </Route> */}
-          {/* <Route path="/admin-pools">
+            {/* <Route path="/admin-pools">
             <AdminPools />
           </Route> */}
-          <Route path="/farms">
-            <DualFarms />
-          </Route>
-         
-          {/* Redirects */}
-         
-          {/* <Route path="/treasury-bills">
+            <Route path="/farms">
+              <DualFarms />
+            </Route>
+
+            {/* Redirects */}
+
+            {/* <Route path="/treasury-bills">
             <Redirect to="/" />
           </Route> */}
-          <Route path="/pools">
-            <Redirect to="/" />
-          </Route>
-          {/* <Route path="/jungle-farms">
+            <Route path="/pools">
+              <Redirect to="/" />
+            </Route>
+            {/* <Route path="/jungle-farms">
             <Redirect to="/" />
           </Route>
           <Route path="/admin-pools">
@@ -234,28 +234,28 @@ const App: React.FC = () => {
           <Route path="/ss-iao/:id">
             <Redirect to="/" />
           </Route> */}
-          {/* SWAP ROUTES */}
-          <Route path="/swap" component={Swap} />
-          <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
-          <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-          <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-          <Route exact strict path="/find" component={PoolFinder} />
-          <Route exact strict path="/pool" component={Pool} />
-          <Route exact strict path="/create" component={RedirectToAddLiquidity} />
-          <Route exact path="/add" component={AddLiquidity} />
-          <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-          <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-          <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-          <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
-          {/* SWAP ROUTES */}
-          <Route component={NotFound} />
-        </Switch>
-      </Suspense>
+            {/* SWAP ROUTES */}
+            <Route path="/swap" component={Swap} />
+            <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
+            <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+            <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+            <Route exact strict path="/find" component={PoolFinder} />
+            <Route exact strict path="/pool" component={Pool} />
+            <Route exact strict path="/create" component={RedirectToAddLiquidity} />
+            <Route exact path="/add" component={AddLiquidity} />
+            <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+            <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+            <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
+            <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+            {/* SWAP ROUTES */}
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
       )
     }
     // Default BSC routes
     return (
-        <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<PageLoader />}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/farms">
@@ -288,7 +288,7 @@ const App: React.FC = () => {
           <Route path="/spinner">
             <PageLoader />
           </Route> */}
-         
+
           {/* Redirect */}
           {/* <Route path="/staking">
             <Redirect to="/pools" />
@@ -323,7 +323,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <MarketingModalCheck />
       {showScrollIcon && <ScrollToTop />}
-      {loadMenu()}
+      <Layout>{loadMenu()}</Layout>
     </Router>
   )
 }

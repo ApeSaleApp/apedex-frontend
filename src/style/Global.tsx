@@ -3,47 +3,48 @@ import { createGlobalStyle } from 'styled-components'
 import { ApeSwapTheme } from '@ape.swap/uikit/dist/theme'
 
 export declare type ButtonThemeVariant = {
-    background: string;
-    backgroundActive: string;
-    backgroundHover: string;
-    border: string | number;
-    borderColorHover: string;
-    boxShadow: string;
-    boxShadowActive: string;
-    color: string;
-};
+  background: string
+  backgroundActive: string
+  backgroundHover: string
+  border: string | number
+  borderColorHover: string
+  boxShadow: string
+  boxShadowActive: string
+  color: string
+}
 enum variants {
-    PRIMARY = 'primary',
-    DISABLED = 'disabled'
+  PRIMARY = 'primary',
+  DISABLED = 'disabled',
 }
 export declare type Colors = {
-    transparent: string,
-    white : string,
-    black: string,
-    yellow: string,
-    lightYellow : string,
-    mint: string,
-    red: string,
-    error: string,
-    success: string,
-    secondary: string,
-    bgPrimary: string,
-    bgSecondary: string,
-    bgSecondaryDisabled: string,
-    lightGray : string,
-    mediumGray: string,
-    textPrimary: string,
-    textSecondary: string,
-    textDisabled: string,
-    textNote : string,
-};
+  transparent: string
+  white: string
+  black: string
+  yellow: string
+  lightYellow: string
+  mint: string
+  red: string
+  error: string
+  success: string
+  secondary: string
+  textActiveSecondary: string
+  bgPrimary: string
+  bgSecondary: string
+  bgSecondaryDisabled: string
+  lightGray: string
+  mediumGray: string
+  textPrimary: string
+  textSecondary: string
+  textDisabled: string
+  textNote: string
+}
 export declare type ButtonTheme = {
-    [key in variants]: ButtonThemeVariant;
-};
+  [key in variants]: ButtonThemeVariant
+}
 
-export interface ApeTheme extends Omit<ApeSwapTheme, "colors"| "button">{
-    colors: Colors;
-    button: ButtonTheme;
+export interface ApeTheme extends Omit<ApeSwapTheme, 'colors' | 'button'> {
+  colors: Colors
+  button: ButtonTheme
 }
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
@@ -51,10 +52,10 @@ declare module 'styled-components' {
 }
 
 declare module '@emotion/react' {
-    export interface Theme extends ApeTheme {}
-  }
+  export interface Theme extends ApeTheme {}
+}
 
-declare module '@emotion/styled'{
+declare module '@emotion/styled' {
   export interface DefaultTheme extends ApeTheme {}
 }
 
