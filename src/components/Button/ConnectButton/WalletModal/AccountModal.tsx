@@ -1,0 +1,67 @@
+/** @jsxImportSource theme-ui */
+import React, { useContext } from 'react'
+import { Text, useMatchBreakpoints } from '@ape.swap/uikit'
+import { Modal, ModalContext } from 'components/Modal'
+import { Flex } from 'components/Flex'
+import { Link } from 'components/Link'
+import Button from 'components/Button/Button'
+import { localStorageKey } from './config'
+import CopyToClipboard from './CopyToClipboard'
+
+interface Props {
+  account?: string
+  logout: () => void
+  t: (key: string) => string
+  uDName?: string
+}
+
+const AccountModal: React.FC<Props> = ({ uDName, account, logout, t }) => {
+  const { handleClose } = useContext(ModalContext)
+  const { isXs, isSm, isMd } = useMatchBreakpoints()
+  const reducedAddress = account ? `${account.substring(0, 15)}...${account.substring(account.length - 4)}` : null
+
+  return (
+    <Modal title={t('Your wallet')} minWidth="350px">
+      <Text
+        size="20px"
+        weight={600}
+        sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
+        mb="8px"
+      >
+        {isXs || isSm || isMd ? uDName || reducedAddress : uDName || account}
+      </Text>
+      <Flex sx={{ alignItems: 'center' }} mt="8px" mb="32px">
+        <Link
+          external
+          sx={{ '&:hover': { textDecoration: 'underline' } }}
+          href={`https://bscscan.com/address/${account}`}
+          mr="16px"
+        >
+          {t('View on BscScan')}
+        </Link>
+        <CopyToClipboard toCopy={account}>{t('Copy Address')}</CopyToClipboard>
+      </Flex>
+      <Flex sx={{ justifyContent: 'center' }}>
+        <Button
+          size="sm"
+          variant="secondary"
+          onClick={() => {
+            logout()
+            window.localStorage.removeItem(localStorageKey)
+            handleClose()
+            window.location.reload()
+          }}
+        >
+          {t('Logout')}
+        </Button>
+      </Flex>
+    </Modal>
+  )
+}
+
+AccountModal.defaultProps = {
+  account: undefined,
+  uDName: undefined,
+}
+
+export default AccountModal

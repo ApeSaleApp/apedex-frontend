@@ -9,7 +9,6 @@ import {
   UserRejectedRequestError as UserRejectedRequestErrorWalletConnect,
   WalletConnectConnector,
 } from '@web3-react/walletconnect-connector'
-import { ConnectorNames, localStorageKey } from '@ape.swap/uikit'
 import { connectorsByName } from 'utils/web3React'
 import { setupNetwork } from 'utils/wallet'
 import { useNetworkChainId, useToast } from 'state/hooks'
@@ -17,6 +16,7 @@ import { profileClear } from 'state/profile'
 
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'contexts/Localization'
+import { ConnectorNames, localStorageKey } from 'components/Button/ConnectButton/WalletModal'
 
 const useAuth = () => {
   const { activate, deactivate } = useWeb3React()

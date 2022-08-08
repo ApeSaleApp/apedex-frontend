@@ -1,3 +1,4 @@
+import { ConnectButton } from 'components/Button'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import { menu } from './menu'
@@ -13,6 +14,7 @@ export const Navigator = () => {
           {t(item.name)}
         </StyledNavLink>
       ))}
+      <ConnectButton />
     </NavigatorWrapper>
   )
 }

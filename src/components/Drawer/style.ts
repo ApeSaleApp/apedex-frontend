@@ -9,6 +9,19 @@ export const DrawerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: translateX(-236px);
+  transition: all 300ms linear;
+  &.show-sidebar {
+    transform: translateX(0);
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    position: static;
+    transform: translateX(0);
+  }
 `
 
 export const NavigatorWrapper = styled.nav`

@@ -1,14 +1,13 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?bgv2x8');
-  src: url('fonts/icomoon.eot?bgv2x8#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?bgv2x8') format('truetype'), url('fonts/icomoon.woff?bgv2x8') format('woff'),
-    url('fonts/icomoon.svg?bgv2x8#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?ib9a2l');
+  src: url('fonts/icomoon.eot?ib9a2l#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ib9a2l') format('truetype'), url('fonts/icomoon.woff?ib9a2l') format('woff'),
+    url('fonts/icomoon.svg?ib9a2l#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-
 [class^='icon-'],
 [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -74,22 +73,21 @@
   content: '\e906';
 }
 .icon-more .path1:before {
-  content: '\e907';
-  color: rgb(255, 255, 255);
-  opacity: 0.54;
+  content: '\e92c';
+  color: rgb(255, 233, 7);
 }
 .icon-more .path2:before {
-  content: '\e908';
+  content: '\e92d';
   margin-left: -1em;
   color: rgb(51, 54, 63);
 }
 .icon-more .path3:before {
-  content: '\e909';
+  content: '\e92e';
   margin-left: -1em;
   color: rgb(51, 54, 63);
 }
 .icon-more .path4:before {
-  content: '\e90a';
+  content: '\e92f';
   margin-left: -1em;
   color: rgb(51, 54, 63);
 }

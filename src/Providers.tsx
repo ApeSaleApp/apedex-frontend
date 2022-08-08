@@ -1,5 +1,4 @@
 import React from 'react'
-import { ModalProvider, ModalProvider as OldModalProvider } from '@ape.swap/uikit'
 import { Web3ReactProvider, createWeb3ReactRoot } from '@web3-react/core'
 import { HelmetProvider } from 'react-helmet-async'
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -10,6 +9,7 @@ import { RefreshContextProvider } from 'contexts/RefreshContext'
 import store from 'state'
 import NftProvider from 'views/Nft/contexts/NftProvider'
 import { NetworkContextName } from 'config/constants'
+import { ModalProvider, ModalProvider as OldModalProvider } from './components/Modal'
 import { LanguageProvider } from './contexts/Localization'
 
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)

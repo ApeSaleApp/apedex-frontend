@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ThemeProvider as SCThemeProvider } from 'styled-components'
 import { ThemeProvider as ThemeUIProvider } from 'theme-ui'
 import { configTheme, darkTheme, lightTheme } from 'config/configTheme'
+import { light, dark, Apeswap } from '@ape.swap/uikit'
 
 const CACHE_KEY = 'IS_DARK'
 
@@ -19,7 +20,6 @@ const ThemeContextProvider = ({ children }) => {
       return !prevState
     })
   }
-  
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       <SCThemeProvider theme={isDark ? darkTheme : lightTheme}>

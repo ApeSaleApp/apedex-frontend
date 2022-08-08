@@ -4,6 +4,7 @@ import { ApeSwapTheme } from '@ape.swap/uikit/dist/theme'
 
 export declare type ButtonThemeVariant = {
   background: string
+  backgroundColor: string
   backgroundActive: string
   backgroundHover: string
   border: string | number
@@ -37,6 +38,7 @@ export declare type Colors = {
   textSecondary: string
   textDisabled: string
   textNote: string
+  navbar: string
 }
 export declare type ButtonTheme = {
   [key in variants]: ButtonThemeVariant
@@ -64,11 +66,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
   body {
-    background-color: ${({ theme }) => theme.colors.bgPrimary};
+    background-color: ${({ theme }) => theme.colors.bgSecondary};
     img {
       height: auto;
       max-width: 100%;
     }
+  }
+  button {
+      background-color: transparent;
+      border: 0;
   }
 `
 
