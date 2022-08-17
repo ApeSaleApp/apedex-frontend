@@ -14,7 +14,11 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   let hoverStyle = {
     '&:hover': {
-      '&:not([disabled])': { borderColor: '#FFDA00', background: variant === 'primary' && '#FFDA00' },
+      '&:not([disabled])': {
+        borderColor: 'secondary',
+        background: variant === 'primary' && 'secondary',
+        color: 'textActiveSecondary',
+      },
       '&:disabled': {},
     },
   }
@@ -26,39 +30,40 @@ const Button: React.FC<ButtonProps> = ({
       },
     }
   }
-  if (variant === 'tertiary') {
-    hoverStyle = {
-      '&:hover': {
-        '&:not([disabled])': {
-          borderColor: 'primaryBtnDisable',
-          background: 'white4',
-        },
-        '&:disabled': {},
-      },
-    }
-  }
-  if (variant === 'success') {
-    hoverStyle = {
-      '&:hover': {
-        '&:not([disabled])': {
-          borderColor: 'hoveredSuccess',
-          background: 'hoveredSuccess',
-        },
-        '&:disabled': {},
-      },
-    }
-  }
-  if (variant === 'danger') {
-    hoverStyle = {
-      '&:hover': {
-        '&:not([disabled])': {
-          borderColor: 'hoveredDanger',
-          background: 'hoveredDanger',
-        },
-        '&:disabled': {},
-      },
-    }
-  }
+  //   if (variant === 'tertiary') {
+  //     hoverStyle = {
+  //       '&:hover': {
+  //         '&:not([disabled])': {
+  //           borderColor: 'primaryBtnDisable',
+  //           background: 'white',
+  //           color: 'text'
+  //         },
+  //         '&:disabled': {},
+  //       },
+  //     }
+  //   }
+  //   if (variant === 'success') {
+  //     hoverStyle = {
+  //       '&:hover': {
+  //         '&:not([disabled])': {
+  //           borderColor: 'hoveredSuccess',
+  //           background: 'hoveredSuccess',
+  //         },
+  //         '&:disabled': {},
+  //       },
+  //     }
+  //   }
+  //   if (variant === 'danger') {
+  //     hoverStyle = {
+  //       '&:hover': {
+  //         '&:not([disabled])': {
+  //           borderColor: 'hoveredDanger',
+  //           background: 'hoveredDanger',
+  //         },
+  //         '&:disabled': {},
+  //       },
+  //     }
+  //   }
 
   return (
     <ThemeUIButton

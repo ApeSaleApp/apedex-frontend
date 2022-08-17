@@ -19,14 +19,6 @@ export const Drawer: React.FC<any> = ({ toggleDrawer, setToggleDrawer }) => {
 
   return (
     <DrawerWrapper className={toggleDrawer ? 'show-sidebar' : ''}>
-      {isMobile && (
-        <HamburgerCloseIcon
-          onClick={() => setToggleDrawer(false)}
-          width="24px"
-          color="textSecondary"
-          style={{ marginLeft: 'auto' }}
-        />
-      )}
       <div>
         <Logo path={isDark ? '/image-ape/logo-dark.png' : '/image-ape/logo-light.png'} />
         <Navigator />

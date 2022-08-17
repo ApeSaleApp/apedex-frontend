@@ -2,9 +2,11 @@
 import React, { useCallback, useState } from 'react'
 import { Currency, Token } from '@apeswapfinance/sdk'
 import styled from '@emotion/styled'
-import { Flex, Text, ModalProps, ModalFooter, Modal } from '@ape.swap/uikit'
 import { TokenList } from '@uniswap/token-lists'
 import { useTranslation } from 'contexts/Localization'
+import { Flex } from 'components/Flex'
+import { Modal, ModalFooter, ModalProps } from 'components/Modal'
+import { Text } from 'components/Text'
 import CurrencySearch from './CurrencySearch'
 import ImportToken from './ImportToken'
 import Manage from './Manage'
@@ -20,12 +22,7 @@ interface CurrencySearchModalProps extends ModalProps {
 
 const ScrollableContainer = styled(Flex)`
   flex-direction: column;
-  max-height: 400px;
-  overflow-y: scroll;
-  ${({ theme }) => theme.mediaQueries.xs} {
-    max-height: none;
-    overflow-y: auto;
-  }
+  height: auto;
 `
 
 export default function CurrencySearchModal({

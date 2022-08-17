@@ -48,3 +48,53 @@ export const menu: IMenu[] = [
     icon: 'icon-speaker',
   },
 ]
+
+export const PARTNER = [
+  {
+    id: 1,
+    url: '',
+    icon: '/image-ape/partner/globe.svg',
+    iconLight: '/image-ape/partner/globe-light.svg',
+  },
+  {
+    id: 2,
+    url: '',
+    icon: '/image-ape/partner/envelope.svg',
+    iconLight: '/image-ape/partner/envelope-light.svg',
+  },
+  {
+    id: 3,
+    url: '',
+    icon: '/image-ape/partner/market.svg',
+  },
+  {
+    id: 4,
+    url: '',
+    icon: '/image-ape/partner/dragon.svg',
+  },
+  {
+    id: 5,
+    url: '',
+    icon: '/image-ape/partner/discord.svg',
+  },
+  {
+    id: 6,
+    url: '',
+    icon: '/image-ape/partner/m.svg',
+  },
+  {
+    id: 7,
+    url: '',
+    icon: '/image-ape/partner/twitter.svg',
+  },
+  {
+    id: 8,
+    url: '',
+    icon: '/image-ape/partner/telegram.svg',
+  },
+  {
+    id: 9,
+    url: '',
+    icon: '/image-ape/partner/reddit.svg',
+  },
+]

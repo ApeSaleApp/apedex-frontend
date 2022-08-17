@@ -1,11 +1,12 @@
 /** @jsxImportSource theme-ui */
 import { Link, useHistory } from 'react-router-dom'
-import { CogIcon, Flex, Text, useModal } from '@ape.swap/uikit'
+import { Flex, Text, useModal } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import { CHAIN_ID } from 'config/constants/chains'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import SettingsModal from '../../../../components/Menu/GlobalSettings/SettingsModal'
+import { Icon } from 'components/Icons'
+import GlobalSettings from 'components/Menu/GlobalSettings'
 import { styles } from './styles'
 
 const DexNav = () => {
@@ -19,8 +20,6 @@ const DexNav = () => {
     pathname?.includes('remove') ||
     pathname?.includes('find')
 
-  const [onPresentSettingsModal] = useModal(<SettingsModal />)
-
   return (
     <Flex sx={styles.dexNavContainer}>
       <Flex
@@ -30,11 +29,11 @@ const DexNav = () => {
           size="14px"
           sx={{
             ...styles.navLink,
-            color: !pathname?.includes('swap') && 'textDisabled',
+            ...styles[pathname?.endsWith('/') ? 'navLinkActive' : 'scd'],
             mr: chainId === CHAIN_ID.BSC ? '0px' : '30px',
           }}
           as={Link}
-          to="/swap"
+          to="/"
           id="swap-link"
           className="swap"
         >
@@ -45,7 +44,7 @@ const DexNav = () => {
             size="14px"
             sx={{
               ...styles.navLink,
-              color: !pathname?.includes('orders') && 'textDisabled',
+              ...styles[pathname?.includes('orders') ? 'navLinkActive' : 'scd'],
             }}
             as={Link}
             to="/orders"
@@ -57,7 +56,7 @@ const DexNav = () => {
         )}
         <Text
           size="14px"
-          sx={{ ...styles.navLink, color: !onLiquidity && 'textDisabled' }}
+          sx={{ ...styles.navLink, ...styles[pathname?.includes('add') ? 'navLinkActive' : 'scd'] }}
           as={Link}
           to="/add"
           id="liquidity-link"
@@ -67,8 +66,7 @@ const DexNav = () => {
         </Text>
       </Flex>
       <Flex sx={{ ...styles.navIconContainer }}>
-        {/* <CardIcon sx={{cursor: 'pointer'}}/> */}
-        <CogIcon sx={{ cursor: 'pointer' }} onClick={onPresentSettingsModal} />
+        <GlobalSettings />
       </Flex>
     </Flex>
   )

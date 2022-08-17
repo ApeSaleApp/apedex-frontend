@@ -14,6 +14,17 @@ const Main = styled.div`
     border-bottom-left-radius: 35px;
   }
 `
+const ContentWrapper = styled.div`
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2% 0;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+`
+
 export const Layout = ({ children }) => {
   const [toggleDrawer, setToggleDrawer] = useState<boolean>(false)
   return (
@@ -21,7 +32,7 @@ export const Layout = ({ children }) => {
       <Drawer toggleDrawer={toggleDrawer} setToggleDrawer={setToggleDrawer} />
       <Main>
         <Header toggleDrawer={toggleDrawer} setToggleDrawer={setToggleDrawer} />
-        {children}
+        <ContentWrapper>{children}</ContentWrapper>
       </Main>
     </LayoutWrapper>
   )

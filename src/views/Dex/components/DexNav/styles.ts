@@ -36,6 +36,15 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   navLink: {
     position: 'relative',
     cursor: 'pointer',
-    ...textUnderlineHover,
+    padding: '10px',
+    ':hover': {
+      fontWeight: 'bolder',
+    },
+  },
+
+  navLinkActive: {
+    background: 'secondary',
+    color: 'textActiveSecondary',
+    borderRadius: '12px',
   },
 }

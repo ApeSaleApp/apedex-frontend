@@ -1,12 +1,13 @@
 /** @jsxImportSource theme-ui */
-import { Flex, Svg } from '@ape.swap/uikit'
+import { Flex } from 'components/Flex'
+import { Svg } from 'components/Svg'
 import React from 'react'
 import { styles } from './styles'
 
 const SwapSwitchButton: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
   <Flex sx={styles.swapSwitchContainer}>
     <Flex sx={styles.swapSwitchButton} onClick={onClick}>
-      <Svg icon="swapArrows" width="13px"  />
+      <Svg icon="swapArrows" width="13px" />
     </Flex>
   </Flex>
 )

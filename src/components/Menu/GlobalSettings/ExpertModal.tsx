@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import { Text, Flex, Modal, ModalProps, Checkbox, Button } from '@ape.swap/uikit'
 import { useExpertModeManager } from 'state/user/hooks'
 import { useTranslation } from 'contexts/Localization'
 import UnderlinedButton from 'components/UnderlinedButton'
+import Button from 'components/Button/Button'
+import { Checkbox } from 'components/Checkbox'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import { Modal, ModalProps } from 'components/Modal'
 
 interface ExpertModalProps extends ModalProps {
   setShowConfirmExpertModal: (boolean) => void
@@ -22,7 +26,10 @@ const ExpertModal: React.FC<ExpertModalProps> = ({ setShowConfirmExpertModal, se
             'Expert mode turns off the Confirm transaction prompt, and allows high slippage trades that often result in bad rates and lost funds',
           )}
         </Text>
-        <Text mb="24px">{t('Only use this mode if you know what you’re doing')}</Text>
+        <br />
+        <Text mb="24px" style={{ display: 'inline-block' }}>
+          {t('Only use this mode if you know what you’re doing')}
+        </Text>
         <Flex alignItems="center" mb="24px">
           <Checkbox
             name="confirmed"
@@ -31,7 +38,7 @@ const ExpertModal: React.FC<ExpertModalProps> = ({ setShowConfirmExpertModal, se
             onChange={() => setIsRememberChecked(!isRememberChecked)}
             scale="sm"
           />
-          <Text ml="10px" color="gray" style={{ userSelect: 'none' }}>
+          <Text ml="10px" color="textPrimary" style={{ userSelect: 'none' }}>
             {t('Don’t show this again')}
           </Text>
         </Flex>

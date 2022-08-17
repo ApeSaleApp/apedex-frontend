@@ -1,7 +1,10 @@
 /** @jsxImportSource theme-ui */
-import { Flex, Svg, Text, useModal } from '@ape.swap/uikit'
 import { Currency } from '@apeswapfinance/sdk'
+import { Flex } from 'components/Flex'
+import { useModal } from 'components/Modal'
 import CurrencySearchModal from 'components/SearchModal/CurrencySearchModal'
+import { Svg } from 'components/Svg'
+import { Text } from 'components/Text'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import React, { useCallback } from 'react'
 import { styles } from './styles'

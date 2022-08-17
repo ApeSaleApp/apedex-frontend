@@ -76,6 +76,34 @@ const GlobalStyle = createGlobalStyle`
       background-color: transparent;
       border: 0;
   }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.textPrimary};
+}
 `
 
+enum colorValues {
+  transparent = 'transparent',
+  white = 'white',
+  black = 'black',
+  yellow = 'yellow',
+  lightYellow = 'lightYellow',
+  mint = 'mint',
+  red = 'red',
+  error = 'error',
+  success = 'success',
+  secondary = 'secondary',
+  textActiveSecondary = 'textActiveSecondary',
+  bgPrimary = 'bgPrimary',
+  bgSecondary = 'bgSecondary',
+  bgSecondaryDisabled = 'bgSecondaryDisabled',
+  lightGray = 'lightGray',
+  mediumGray = 'mediumGray',
+  textPrimary = 'textPrimary',
+  textSecondary = 'textSecondary',
+  textDisabled = 'textDisabled',
+  textNote = 'textNote',
+  navbar = 'navbar',
+}
+export type colorProps = `${colorValues}`
 export default GlobalStyle

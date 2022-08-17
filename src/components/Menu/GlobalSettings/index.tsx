@@ -1,5 +1,7 @@
 import React from 'react'
-import { CogIcon, useModal, Button } from '@ape.swap/uikit'
+import { Icon } from 'components/Icons'
+import { useModal } from 'components/Modal'
+import Button from 'components/Button/Button'
 import SettingsModal from './SettingsModal'
 import useIsMobile from '../../../hooks/useIsMobile'
 
@@ -13,7 +15,7 @@ const GlobalSettings = () => {
       size={isMobile ? 'sm' : 'md'}
       style={{ fontSize: '25px', padding: 8, height: isMobile ? '36px' : '40px' }}
     >
-      <CogIcon width="28px" color="white" />
+      <Icon iconName="icon-setting" size="16px" />
     </Button>
   )
 }

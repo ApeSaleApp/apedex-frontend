@@ -217,7 +217,7 @@ const Swap: React.FC = () => {
       <Flex sx={{ flexDirection: 'column' }}>
         <Flex sx={dexStyles.dexContainer}>
           <DexNav />
-          <Flex sx={{ margin: '25px 0px', maxWidth: '100%', width: '420px' }} />
+          <Flex sx={{ margin: '25px 0px', maxWidth: '100%', width: '30%' }} />
           <DexPanel
             value={formattedAmounts[Field.INPUT]}
             panelText="From"

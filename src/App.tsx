@@ -162,8 +162,8 @@ const App: React.FC = () => {
             <Redirect to="/" />
           </Route> */}
             {/* SWAP ROUTES */}
-            <Route path="/swap" component={Swap} />
-            <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
+            {/* <Route path="/swap" component={Swap} /> */}
+            {/* <Route exact strict path="/orders" component={RedirectPathToSwapOnly} /> */}
             <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
             <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
             <Route exact strict path="/find" component={PoolFinder} />
@@ -235,8 +235,8 @@ const App: React.FC = () => {
             <Redirect to="/" />
           </Route> */}
             {/* SWAP ROUTES */}
-            <Route path="/swap" component={Swap} />
-            <Route exact strict path="/orders" component={RedirectPathToSwapOnly} />
+            {/* <Route path="/swap" component={Swap} /> */}
+            {/* <Route exact strict path="/orders" component={RedirectPathToSwapOnly} /> */}
             <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
             <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
             <Route exact strict path="/find" component={PoolFinder} />
@@ -257,7 +257,10 @@ const App: React.FC = () => {
     return (
       <Suspense fallback={<PageLoader />}>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/orders" component={Home} />
+          <Route exact path="/add" component={Home} />
+
           <Route path="/farms">
             <Farms />
           </Route>
@@ -297,8 +300,8 @@ const App: React.FC = () => {
             <Redirect to="/pools" />
           </Route> */}
           {/* SWAP ROUTES */}
-          <Route path="/swap" component={Swap} />
-          <Route exact strict path="/orders" component={Orders} />
+          {/* <Route path="/swap" component={Swap} /> */}
+          {/* <Route exact strict path="/orders" component={Orders} /> */}
           <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
           <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
           <Route exact strict path="/find" component={PoolFinder} />

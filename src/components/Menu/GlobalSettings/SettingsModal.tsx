@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, Flex, ModalProps, LinkExternal, Modal } from '@ape.swap/uikit'
 import { Link, Switch } from 'theme-ui'
 
 import {
@@ -13,9 +12,13 @@ import {
 } from 'state/user/hooks'
 import { useSwapActionHandlers } from 'state/swap/hooks'
 import { useTranslation } from 'contexts/Localization'
-import TransactionSettings from './TransactionSettings'
-import ExpertModal from './ExpertModal'
+import { Modal, ModalProps } from 'components/Modal'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import { LinkExternal } from 'components/Link'
 import { styles } from './styles'
+import ExpertModal from './ExpertModal'
+import TransactionSettings from './TransactionSettings'
 
 const ScrollableContainer = styled(Flex)`
   flex-direction: column;

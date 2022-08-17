@@ -2,13 +2,15 @@
 /* eslint-disable no-restricted-syntax */
 import React, { KeyboardEvent, useCallback, useMemo, useRef, useState } from 'react'
 import { Currency, ETHER, Token } from '@apeswapfinance/sdk'
-import { Text, Flex, Input } from '@ape.swap/uikit'
 import { FixedSizeList } from 'react-window'
 import styled from '@emotion/styled'
 import useDebounce from 'hooks/useDebounce'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { TagInfo, useAllLists, useInactiveListUrls, WrappedTokenInfo } from 'state/lists/hooks'
 import { useTranslation } from 'contexts/Localization'
+import { Text } from 'components/Text'
+import { Flex } from 'components/Flex'
+import { Input } from '@ape.swap/uikit'
 import { useAllTokens, useToken, useIsUserAddedToken } from '../../hooks/Tokens'
 import { isAddress } from '../../utils'
 import Column from '../layout/Column'
@@ -181,7 +183,7 @@ function CurrencySearch({
       />
     ) : (
       <Column style={{ padding: '20px', height: '100%' }}>
-        <Text color="gray" textAlign="center" mb="20px">
+        <Text color="textPrimary" textAlign="center" mb="20px">
           {t('No results found')}
         </Text>
       </Column>
@@ -229,7 +231,7 @@ const StyledInput = styled(Input)`
   height: 40px;
   border-radius: 10px;
   border: none;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   color: ${({ theme }) => theme.colors.textSecondary};
   placeholder-color: ${({ theme }) => theme.colors.lightGray};
   ::placeholder {

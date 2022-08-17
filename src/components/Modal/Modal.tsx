@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({
   open = true,
   title,
   zIndex = 'modal',
-  minWidth = '50%',
+  minWidth = '350px',
   maxWidth = '80%',
   onAnimationComplete,
   ...props

@@ -6,7 +6,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     position: 'relative',
     width: '100%',
     height: '94px',
-    background: 'white3',
+    background: 'mediumGray',
     padding: '10px',
     borderRadius: '10px',
     justifyContent: 'space-between',

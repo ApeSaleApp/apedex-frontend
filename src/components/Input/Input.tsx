@@ -22,7 +22,7 @@ const StyledInput = styled.input`
   width: 100%;
   background: none;
   border: 0;
-  color: ${({ theme }) => (theme.colors.textPrimary)};
+  color: ${({ theme }) => theme.colors.textPrimary};
   flex: 1;
   height: 56px;
   margin: 0;

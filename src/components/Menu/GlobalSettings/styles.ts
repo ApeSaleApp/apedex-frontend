@@ -5,7 +5,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: '8px',
     backgroundColor: 'white3',
     'input:checked ~ &': {
-      backgroundColor: 'yellow',
+      backgroundColor: 'secondary',
     },
   },
 }

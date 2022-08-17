@@ -35,6 +35,130 @@ export const configTheme: Theme = {
     dropdown: 10,
     modal: 100,
   },
+  forms: {
+    input: {
+      sm: {
+        background: 'white3',
+        borderRadius: 10,
+        height: '32px',
+        width: '200px',
+      },
+      md: {
+        background: 'white3',
+        borderRadius: 10,
+        height: '36px',
+        width: '200px',
+      },
+      lg: {
+        background: 'white3',
+        borderRadius: 14,
+        height: '48px',
+        width: '200px',
+      },
+    },
+    textarea: {
+      padding: '10px 13px 10px 10px',
+      borderRadius: 'normal',
+      border: 'none',
+      fontWeight: 'normal',
+      background: 'lvl1',
+      resize: 'none',
+      color: 'textareaColor',
+      '&:focus': {
+        outline: 'none !important',
+      },
+    },
+    checkbox: {
+      background: 'lvl1',
+      borderRadius: '5px',
+      borderWidth: '2px',
+      borderStyle: 'solid',
+      borderColor: 'lvl2',
+      boxShadow: 'none',
+      outline: 'none',
+      appearance: 'none',
+      width: 'inherit',
+      height: 'inherit',
+      margin: '0px',
+      cursor: 'pointer',
+      '& + svg': {
+        display: 'none',
+        position: 'absolute',
+        pointerEvents: 'none',
+        top: '0',
+        left: '0',
+        bottom: '0',
+        right: '0',
+        margin: 'auto',
+      },
+      '&:checked ': {
+        background: 'yellow',
+        borderColor: 'yellow',
+        '& + svg': {
+          display: 'block',
+        },
+      },
+      '&:focus:not(:checked)': {
+        outline: 'none',
+        boxShadow: 'none',
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: '0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)',
+      },
+      '&:hover:not(:disabled):not(:checked)': {
+        borderColor: 'yellow',
+        boxShadow: '0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)',
+      },
+    },
+    radio: {
+      background: 'lvl1',
+      borderRadius: '50px',
+      borderWidth: '2px',
+      borderStyle: 'solid',
+      borderColor: 'lvl2',
+      boxShadow: 'none',
+      outline: 'none',
+      appearance: 'none',
+      width: 'inherit',
+      height: 'inherit',
+      margin: '0px',
+      cursor: 'pointer',
+      '& + span': {
+        display: 'none',
+        position: 'absolute',
+        pointerEvents: 'none',
+        top: '0',
+        left: '0',
+        bottom: '0',
+        right: '0',
+        margin: 'auto',
+        backgroundColor: 'radioChecked',
+        borderRadius: '50px',
+      },
+      '&:checked ': {
+        background: 'yellow',
+        borderColor: 'yellow',
+        '& + span': {
+          display: 'block',
+        },
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: '0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .2)',
+      },
+      '&:hover:not(:disabled):not(:checked)': {
+        borderColor: 'yellow',
+      },
+    },
+    label: {
+      inline: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        columnGap: 2,
+      },
+    },
+  },
   colors: {
     transparent: 'transparent',
     white: '#ffffff',
@@ -89,11 +213,11 @@ export const configTheme: Theme = {
   },
   buttons: {
     primary: {
-      color: 'background',
+      color: 'textSecondary',
       bg: 'lightGray',
     },
     secondary: {
-      color: 'background',
+      color: 'textPrimary',
       bg: 'secondary',
     },
     gray: {

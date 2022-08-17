@@ -30,17 +30,16 @@ export const dexStyles: Record<string, ThemeUIStyleObject> = {
   pageContainer: {
     justifyContent: 'center',
     height: 'fit-content',
-    minHeight: '100vh',
-    padding: '75px 0px',
+    width: '30%',
+    minWidth: '350px',
   },
   dexContainer: {
     width: 'auto',
     maxWidth: '420px',
     height: 'fit-content',
-    background: 'white2',
+    background: 'bgSecondary',
     padding: '15px',
     borderRadius: '10px',
-    margin: '0px 10px',
     flexDirection: 'column',
   },
   textWrap: {
