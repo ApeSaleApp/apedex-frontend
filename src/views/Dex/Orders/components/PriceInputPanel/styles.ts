@@ -24,7 +24,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     },
   },
   currentButton: {
-    background: 'yellow',
+    background: 'secondary',
     height: 'fit-content',
     width: '110px',
     maxWidth: '100%',

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Flex } from 'theme-ui'
 
 export const ButtonWrapperStyled = styled.div`
   background: ${({ theme }) => (theme.isDark ? '#3b3e46' : '#ffffff')};
@@ -28,4 +29,24 @@ export const ButtonModalStyled = styled.button`
   color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: 500;
   font-size: 16px;
+`
+export const FlexStyled = styled(Flex)`
+  background: ${({ theme }) => (theme.isDark ? theme.colors.yellow : theme.colors.success)};
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  padding-right: 1px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:active {
+    transform: scale(0.9);
+  }
+`
+
+export const SwapSwitchContainer = styled(Flex)`
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 `

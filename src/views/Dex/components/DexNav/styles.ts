@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import { ThemeUIStyleObject } from 'theme-ui'
 import { textUnderlineHover } from 'views/Dex/styles'
 
@@ -7,6 +8,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     position: 'relative',
     width: '100%',
     height: '30px',
+    gap: '10px',
     justifyContent: 'space-between',
     flexDirection: 'row',
   },

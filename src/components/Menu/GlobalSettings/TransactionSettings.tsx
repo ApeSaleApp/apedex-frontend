@@ -1,10 +1,12 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react'
 import { escapeRegExp } from 'utils'
-import { Text, Flex, Input as NewInput, Input } from '@ape.swap/uikit'
+import { Input as NewInput, Input } from '@ape.swap/uikit'
 import { useUserSlippageTolerance, useUserTransactionTTL } from 'state/user/hooks'
 import { useTranslation } from 'contexts/Localization'
 import styled from '@emotion/styled'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
 
 enum SlippageError {
   InvalidInput = 'InvalidInput',
@@ -83,7 +85,7 @@ const SlippageTabs = () => {
         </Flex>
         <Flex flexWrap="wrap">
           <SelectButton
-            sx={{ background: userSlippageTolerance === 10 ? 'yellow' : 'white3' }}
+            sx={{ background: userSlippageTolerance === 10 ? 'secondary' : 'lightGray' }}
             onClick={() => {
               setSlippageInput('')
               setUserSlippageTolerance(10)
@@ -94,7 +96,7 @@ const SlippageTabs = () => {
             </Text>
           </SelectButton>
           <SelectButton
-            sx={{ background: userSlippageTolerance === 50 ? 'yellow' : 'white3' }}
+            sx={{ background: userSlippageTolerance === 50 ? 'secondary' : 'lightGray' }}
             onClick={() => {
               setSlippageInput('')
               setUserSlippageTolerance(50)
@@ -105,7 +107,7 @@ const SlippageTabs = () => {
             </Text>
           </SelectButton>
           <SelectButton
-            sx={{ background: userSlippageTolerance === 100 ? 'yellow' : 'white3' }}
+            sx={{ background: userSlippageTolerance === 100 ? 'secondary' : 'lightGray' }}
             onClick={() => {
               setSlippageInput('')
               setUserSlippageTolerance(100)
@@ -132,14 +134,14 @@ const SlippageTabs = () => {
                 }}
                 // isWarning={!slippageInputIsValid}
               />
-              <Text color="yellow" weight={700} style={{ position: 'absolute', right: '10px' }}>
+              <Text color="secondary" weight={700} style={{ position: 'absolute', right: '10px' }}>
                 %
               </Text>
             </Flex>
           </Flex>
         </Flex>
         {!!slippageError && (
-          <Text weight={500} color={slippageError === SlippageError.InvalidInput ? 'error' : 'error'} mt="8px">
+          <Text weight={500} color="error" mt="8px">
             {slippageError === SlippageError.InvalidInput
               ? t('Enter a valid slippage percentage')
               : slippageError === SlippageError.RiskyLow
@@ -161,8 +163,8 @@ const SlippageTabs = () => {
             width: '91px',
             height: '36px',
             borderRadius: '10px',
-            borderColor: 'yellow',
-            color: 'yellow',
+            borderColor: 'secondary',
+            color: 'secondary',
             fontWeight: '700',
             textAlign: 'center',
           }}
@@ -183,8 +185,8 @@ const StyledInput = styled(Input)`
   width: 100%;
   height: 36px;
   font-weight: 700;
-  color: ${(props) => props.theme.colors.yellow};
-  border-color: ${(props) => props.theme.colors.yellow};
+  color: ${(props) => props.theme.colors.secondary};
+  border-color: ${(props) => props.theme.colors.secondary};
 `
 const SelectButton = styled(Flex)`
   width: 64.67px;

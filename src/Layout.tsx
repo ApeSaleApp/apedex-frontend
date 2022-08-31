@@ -17,6 +17,7 @@ const Main = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   width: 95%;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 2% 0;

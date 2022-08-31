@@ -6,7 +6,10 @@ import { light, dark, Apeswap } from '@ape.swap/uikit'
 
 const CACHE_KEY = 'IS_DARK'
 
-const ThemeContext = React.createContext({ isDark: null, toggleTheme: () => null })
+const ThemeContext = React.createContext({
+  isDark: null,
+  toggleTheme: () => null,
+})
 
 const ThemeContextProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
@@ -20,6 +23,7 @@ const ThemeContextProvider = ({ children }) => {
       return !prevState
     })
   }
+
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       <SCThemeProvider theme={isDark ? darkTheme : lightTheme}>

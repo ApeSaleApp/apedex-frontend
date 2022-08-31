@@ -1,5 +1,7 @@
 /** @jsxImportSource theme-ui */
-import { Flex, Svg, Text } from '@ape.swap/uikit'
+import { Flex } from 'components/Flex'
+import { Svg } from 'components/Svg'
+import { Text } from 'components/Text'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -14,6 +16,7 @@ const MyPositions: React.FC = () => {
         width: 'fit-content',
         alignItems: 'center',
         position: 'relative',
+        lineHeight: '24px',
         ...textUnderlineHover,
       }}
       as={Link}

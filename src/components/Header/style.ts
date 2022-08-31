@@ -85,6 +85,7 @@ export const StyledNavLink = styled(NavLink)`
 
 export const NavBottomStyled = styled.nav`
   position: fixed;
+  z-index: 99;
   bottom: 0;
   left: 0;
   width: 100%;

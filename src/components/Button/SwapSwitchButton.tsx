@@ -2,14 +2,14 @@
 import { Flex } from 'components/Flex'
 import { Svg } from 'components/Svg'
 import React from 'react'
-import { styles } from './styles'
+import { FlexStyled, SwapSwitchContainer } from './style'
 
 const SwapSwitchButton: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
-  <Flex sx={styles.swapSwitchContainer}>
-    <Flex sx={styles.swapSwitchButton} onClick={onClick}>
+  <SwapSwitchContainer>
+    <FlexStyled onClick={onClick}>
       <Svg icon="swapArrows" width="13px" />
-    </Flex>
-  </Flex>
+    </FlexStyled>
+  </SwapSwitchContainer>
 )
 
 export default React.memo(SwapSwitchButton)

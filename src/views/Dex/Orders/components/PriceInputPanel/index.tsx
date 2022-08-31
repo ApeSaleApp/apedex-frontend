@@ -1,9 +1,10 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
 import { Currency } from '@apeswapfinance/sdk'
-import { Text, Flex } from '@ape.swap/uikit'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
 import { Input as NumericalInput } from './NumericalInput'
 import { styles as tokenSelectorStyles } from '../../../components/TokenSelector/styles'
 import { styles } from './styles'
@@ -35,7 +36,7 @@ const PriceInputPanel: React.FC<PriceInputPanelProps> = ({
         <Flex sx={{ flexDirection: 'column' }}>
           <Text mb="5px">{t('Price')}</Text>
           <Flex sx={styles.currentButton} onClick={() => onUserInput(currentPrice)}>
-            <Text size="10px" weight={600} sx={{ lineHeight: '12px', textAlign: 'center' }}>
+            <Text color="textActiveSecondary" size="10px" weight={600} sx={{ lineHeight: '12px', textAlign: 'center' }}>
               {t('Use Current')}
             </Text>
           </Flex>

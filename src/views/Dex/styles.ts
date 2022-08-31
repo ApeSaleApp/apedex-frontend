@@ -32,6 +32,9 @@ export const dexStyles: Record<string, ThemeUIStyleObject> = {
     height: 'fit-content',
     width: '30%',
     minWidth: '350px',
+    '@media screen and (max-width: 900px)': {
+      width: '100%',
+    },
   },
   dexContainer: {
     width: 'auto',
@@ -41,6 +44,10 @@ export const dexStyles: Record<string, ThemeUIStyleObject> = {
     padding: '15px',
     borderRadius: '10px',
     flexDirection: 'column',
+    '@media screen and (max-width: 900px)': {
+      width: '100%',
+      maxWidth: '100%',
+    },
   },
   textWrap: {
     wordBreak: 'break-all',

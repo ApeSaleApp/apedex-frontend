@@ -1,10 +1,13 @@
+import { Flex } from 'components/Flex'
 import { CHAIN_ID } from 'config/constants/chains'
 import SwiperProvider from 'contexts/SwiperProvider'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
+import useTheme from 'hooks/useTheme'
 import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import AddLiquidity from 'views/Dex/AddLiquidity'
 import Orders from 'views/Dex/Orders'
+import Pool from 'views/Dex/Pool'
 import Swap from 'views/Dex/Swap'
 import { Information } from './components/Information/Information'
 import LaunchCalendar from './components/LaunchCalendar/LaunchCalendar'
@@ -14,42 +17,88 @@ import StatCards from './components/StatCards/StatCards'
 import TrendingTokens from './components/TrendingTokens/TrendingTokens'
 import Values from './components/Values/Values'
 import WelcomeContent from './components/WelcomeContent/WelcomeContent'
-import { Banner, ChartWrapper } from './styles'
+import { Banner, ButtonChartStyled, ChartWrapper, HomeWrapper, OnOffStyled, ThumbSwitchStyled } from './styles'
 
+const CACHE_KEY_CHART = 'IS_CHART_OPEN'
 const renderComponent = {
   '/': () => <Swap />,
   '/orders': () => <Orders />,
   '/add': () => <Route exact path="/add" component={AddLiquidity} />,
+  '/pool': () => <Route exact path="/pool" component={Pool} />,
 }
 const Home: React.FC = () => {
   //   const { chainId } = useActiveWeb3React()
-  const { path, url } = useRouteMatch()
-  console.log(url)
+  const [isOpenChart, setIsOpenChart] = React.useState(() => {
+    const isOpenChartSetting = localStorage.getItem(CACHE_KEY_CHART)
+    return isOpenChartSetting ? JSON.parse(isOpenChartSetting) : false
+  })
+  const toggleChart = () => {
+    setIsOpenChart((prevState) => {
+      localStorage.setItem(CACHE_KEY_CHART, JSON.stringify(!prevState))
+      return !prevState
+    })
+  }
+  const { path } = useRouteMatch()
   return (
     <>
-      <ChartWrapper className="wrapper-chart">
-        <Information />
-      </ChartWrapper>
-      {renderComponent[path]()}
+      <ButtonChartStyled type="button" onClick={toggleChart}>
+        <OnOffStyled className={!isOpenChart && 'deactive'}>{isOpenChart ? 'On' : 'Off'}</OnOffStyled>
+        <ThumbSwitchStyled className={!isOpenChart && 'deactive'}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_108_6366)">
+              <path
+                d="M15 14H3.66667C3.22464 14 2.80072 13.8244 2.48816 13.5118C2.17559 13.1993 2 12.7754 2 12.3333V1C2 0.734784 1.89464 0.48043 1.70711 0.292893C1.51957 0.105357 1.26522 0 1 0C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1L0 12.3333C0.00105878 13.3055 0.387707 14.2375 1.07511 14.9249C1.76252 15.6123 2.69453 15.9989 3.66667 16H15C15.2652 16 15.5196 15.8946 15.7071 15.7071C15.8946 15.5196 16 15.2652 16 15C16 14.7348 15.8946 14.4804 15.7071 14.2929C15.5196 14.1054 15.2652 14 15 14Z"
+                fill="white"
+              />
+              <path
+                d="M5 4C4.73478 4 4.48043 4.14223 4.29289 4.39541C4.10536 4.64858 4 4.99196 4 5.35V11.65C4 12.008 4.10536 12.3514 4.29289 12.6046C4.48043 12.8578 4.73478 13 5 13C5.26522 13 5.51957 12.8578 5.70711 12.6046C5.89464 12.3514 6 12.008 6 11.65V5.35C6 4.99196 5.89464 4.64858 5.70711 4.39541C5.51957 4.14223 5.26522 4 5 4Z"
+                fill="#3FD4AB"
+              />
+              <path
+                d="M8 7.5V11.5C8 11.8978 8.10536 12.2794 8.29289 12.5607C8.48043 12.842 8.73478 13 9 13C9.26522 13 9.51957 12.842 9.70711 12.5607C9.89464 12.2794 10 11.8978 10 11.5V7.5C10 7.10218 9.89464 6.72064 9.70711 6.43934C9.51957 6.15804 9.26522 6 9 6C8.73478 6 8.48043 6.15804 8.29289 6.43934C8.10536 6.72064 8 7.10218 8 7.5Z"
+                fill="#EF5350"
+              />
+              <path
+                d="M12 4.36364V11.6364C12 11.998 12.1054 12.3449 12.2929 12.6006C12.4804 12.8563 12.7348 13 13 13C13.2652 13 13.5196 12.8563 13.7071 12.6006C13.8946 12.3449 14 11.998 14 11.6364V4.36364C14 4.00198 13.8946 3.65513 13.7071 3.3994C13.5196 3.14367 13.2652 3 13 3C12.7348 3 12.4804 3.14367 12.2929 3.3994C12.1054 3.65513 12 4.00198 12 4.36364Z"
+                fill="#3FD4AB"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_108_6366">
+                <rect width="16" height="16" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </ThumbSwitchStyled>
+      </ButtonChartStyled>
+      <HomeWrapper>
+        {isOpenChart && (
+          <ChartWrapper className="wrapper-chart">
+            <Information />
+          </ChartWrapper>
+        )}
 
-      {/* <Banner /> */}
-      {/* <WelcomeContent /> */}
-      {/* <StatCards />
+        {renderComponent[path]()}
+
+        {/* <Banner /> */}
+        {/* <WelcomeContent /> */}
+        {/* <StatCards />
       <TrendingTokens />
       <SwiperProvider>
         <News />
       </SwiperProvider> */}
-      {/* {chainId === CHAIN_ID.BSC && (
+        {/* {chainId === CHAIN_ID.BSC && (
         <SwiperProvider>
           <Services />
         </SwiperProvider>
       )} */}
-      {/* <SwiperProvider>
+        {/* <SwiperProvider>
         <Values />
       </SwiperProvider>
       <SwiperProvider>
         <LaunchCalendar />
       </SwiperProvider> */}
+      </HomeWrapper>
     </>
   )
 }

@@ -6,6 +6,6 @@ const IconStyled = styled.span<any>`
   font-size: ${({ theme, size }) => size};
   color: ${({ theme, color }) => theme.colors[color]};
 `
-export const Icon = ({ iconName, size, color = 'textSecondary' }) => {
+export const Icon = ({ iconName, size, color = '' }) => {
   return <IconStyled className={iconName} size={size} color={color} />
 }

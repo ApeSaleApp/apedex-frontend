@@ -14,12 +14,12 @@ import { useExpertModeManager, useUserRecentTransactions, useUserSlippageToleran
 import { useDefaultsFromURLSearch, useDerivedSwapInfo, useSwapActionHandlers, useSwapState } from 'state/swap/hooks'
 import useWrapCallback, { WrapType } from 'hooks/useWrapCallback'
 import maxAmountSpend from 'utils/maxAmountSpend'
+import SwapSwitchButton from 'components/Button/SwapSwitchButton'
 import { dexStyles } from '../styles'
 import DexPanel from '../components/DexPanel'
 import DexNav from '../components/DexNav'
 import ConfirmSwapModal from './components/ConfirmSwapModal'
 import ImportTokenWarningModal from './components/ImportTokenWarningModal'
-import SwapSwitchButton from './components/SwapSwitchButton'
 import DexActions from './components/DexActions'
 import DexTradeInfo from './components/DexTradeInfo'
 import LoadingBestRoute from './components/LoadingBestRoute'
@@ -214,7 +214,7 @@ const Swap: React.FC = () => {
 
   return (
     <Flex sx={dexStyles.pageContainer}>
-      <Flex sx={{ flexDirection: 'column' }}>
+      <Flex sx={{ flexDirection: 'column', width: '100%' }}>
         <Flex sx={dexStyles.dexContainer}>
           <DexNav />
           <Flex sx={{ margin: '25px 0px', maxWidth: '100%', width: '30%' }} />

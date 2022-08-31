@@ -8,7 +8,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     justifyContent: 'center',
   },
   swapSwitchButton: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'secondary',
     height: '30px',
     width: '30px',
     borderRadius: '30px',

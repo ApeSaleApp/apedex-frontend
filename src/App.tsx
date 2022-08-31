@@ -260,6 +260,7 @@ const App: React.FC = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/orders" component={Home} />
           <Route exact path="/add" component={Home} />
+          <Route exact path="/pool" component={Home} />
 
           <Route path="/farms">
             <Farms />

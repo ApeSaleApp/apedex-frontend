@@ -7,6 +7,7 @@ import { CHAIN_ID } from 'config/constants/chains'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { Icon } from 'components/Icons'
 import GlobalSettings from 'components/Menu/GlobalSettings'
+import useTheme from 'hooks/useTheme'
 import { styles } from './styles'
 
 const DexNav = () => {
@@ -56,7 +57,7 @@ const DexNav = () => {
         )}
         <Text
           size="14px"
-          sx={{ ...styles.navLink, ...styles[pathname?.includes('add') ? 'navLinkActive' : 'scd'] }}
+          sx={{ ...styles.navLink, ...styles[['/add', '/pool'].includes(pathname) ? 'navLinkActive' : 'scd'] }}
           as={Link}
           to="/add"
           id="liquidity-link"
