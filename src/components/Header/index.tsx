@@ -33,7 +33,9 @@ export const Header = ({ toggleDrawer, setToggleDrawer }) => {
         )}
         {!isMobile && (
           <Menu>
-            <StyledNavLink to="/">{t('Trade')}</StyledNavLink>
+            <StyledNavLink exact to="/">
+              {t('Trade')}
+            </StyledNavLink>
             <StyledNavLink to="/liquidity">{t('Liquidity')}</StyledNavLink>
           </Menu>
         )}
@@ -48,7 +50,9 @@ export const Header = ({ toggleDrawer, setToggleDrawer }) => {
       </HeaderWrapper>
       {isMobile && (
         <Menu>
-          <StyledNavLink to="/">{t('Trade')}</StyledNavLink>
+          <StyledNavLink exact to="/">
+            {t('Trade')}
+          </StyledNavLink>
           <StyledNavLink to="/liquidity">{t('Liquidity')}</StyledNavLink>
         </Menu>
       )}
