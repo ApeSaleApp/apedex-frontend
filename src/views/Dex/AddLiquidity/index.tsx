@@ -34,7 +34,6 @@ function AddLiquidity({
   const { INPUT, OUTPUT } = useSwapState()
   const { t } = useTranslation()
   const [tradeValueUsd, setTradeValueUsd] = useState(0)
-
   // Set either param currency or swap currency
   currencyIdA = currencyIdA || INPUT.currencyId
   currencyIdB = currencyIdB || OUTPUT.currencyId
@@ -74,21 +73,21 @@ function AddLiquidity({
       const newCurrencyId = currencyId(currency)
       if (field === Field.CURRENCY_A) {
         if (newCurrencyId === currencyIdB) {
-          history.push(`/add/${currencyIdB}/${currencyIdA}`)
+          history.push(`/liquidity/add/${currencyIdB}/${currencyIdA}`)
         } else if (currencyIdB) {
-          history.push(`/add/${newCurrencyId}/${currencyIdB}`)
+          history.push(`/liquidity/add/${newCurrencyId}/${currencyIdB}`)
         } else {
-          history.push(`/add/${newCurrencyId}`)
+          history.push(`/liquidity/add/${newCurrencyId}`)
         }
       } else if (field === Field.CURRENCY_B) {
         if (newCurrencyId === currencyIdA) {
           if (currencyIdB) {
-            history.push(`/add/${currencyIdB}/${newCurrencyId}`)
+            history.push(`/liquidity/add/${currencyIdB}/${newCurrencyId}`)
           } else {
-            history.push(`/add/${newCurrencyId}`)
+            history.push(`/liquidity/add/${newCurrencyId}`)
           }
         } else {
-          history.push(`/add/${currencyIdA || 'ETH'}/${newCurrencyId}`)
+          history.push(`/liquidity/add/${currencyIdA || 'ETH'}/${newCurrencyId}`)
         }
       }
     },

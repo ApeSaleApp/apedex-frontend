@@ -14,7 +14,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     cursor: 'pointer',
   },
   confirmDisabledInputContainer: {
-    backgroundColor: 'white3',
+    backgroundColor: 'lightGray',
     borderRadius: '10px',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -29,7 +29,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: '30px',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white2',
+    backgroundColor: 'bgSecondary',
   },
   innerLogoCircle: {
     height: '22.5px',

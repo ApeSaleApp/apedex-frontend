@@ -181,6 +181,7 @@ export const configTheme: Theme = {
     textNote: 'rgba(0, 0, 0, 0.38)',
     navbar: '#FFFFFF',
     text: '#000000',
+    smartGradient: 'linear-gradient(94.44deg, #BA801E -9.73%, #E7CF67 40.14%, #BA801E 93.01%)',
     modes: {
       dark: {
         transparent: 'transparent',
@@ -217,7 +218,7 @@ export const configTheme: Theme = {
       bg: 'lightGray',
     },
     secondary: {
-      color: 'textPrimary',
+      color: 'textActiveSecondary',
       bg: 'secondary',
     },
     gray: {
@@ -286,6 +287,12 @@ export const lightTheme = {
     textSecondary: 'rgba(0, 0, 0, 0.54)',
     textNote: 'rgba(0, 0, 0, 0.38)',
     navbar: '#FFFFFF',
+  },
+  cards: {
+    primary: {
+      background: 'navbar',
+      borderRadius: 'normal',
+    },
   },
   button: {
     primary: {

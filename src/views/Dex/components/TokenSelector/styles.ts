@@ -5,7 +5,6 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   primaryFlex: {
     minWidth: 'max-content',
     height: '40px',
-    background: 'white4',
     padding: '5px 10px',
     borderRadius: '10px',
     alignItems: 'center',

@@ -1,7 +1,9 @@
 /** @jsxImportSource theme-ui */
-import { Button, Flex, useModal } from '@ape.swap/uikit'
 import { ETHER, ROUTER_ADDRESS } from '@apeswapfinance/sdk'
 import { TransactionResponse } from '@ethersproject/providers'
+import Button from 'components/Button/Button'
+import { Flex } from 'components/Flex'
+import { useModal } from 'components/Modal'
 import UnlockButton from 'components/UnlockButton'
 import { useTranslation } from 'contexts/Localization'
 import { BigNumber, Contract } from 'ethers'

@@ -22,8 +22,8 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   padding: 2% 0;
   gap: 16px;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 `
 
 export const Layout = ({ children }) => {

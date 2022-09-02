@@ -32,7 +32,7 @@ const OrderRows: React.FC<{ orders: Order[] }> = ({ orders }) => {
         </Text>
         <span />
       </Grid>
-      <div sx={{ background: 'white3', borderRadius: '0px 0px 10px 10px' }}>
+      <div sx={{ background: 'lightGray', borderRadius: '0px 0px 10px 10px' }}>
         {orders?.length !== 0 ? (
           orders.map((order, i) => {
             const inputToken = allTokens[getAddress(order.inputToken)]

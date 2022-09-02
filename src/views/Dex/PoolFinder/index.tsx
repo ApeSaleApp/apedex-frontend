@@ -1,8 +1,11 @@
 /** @jsxImportSource theme-ui */
 import React, { useCallback, useEffect, useState } from 'react'
 import { Currency, ETHER, JSBI, TokenAmount } from '@apeswapfinance/sdk'
-import { Text, useModal, Flex, Svg } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
+import { Text } from 'components/Text'
+import { Flex } from 'components/Flex'
+import { useModal } from 'components/Modal'
+import { Svg } from 'components/Svg'
 import { AutoColumn, ColumnCenter } from '../../../components/layout/Column'
 import { MinimalPositionCard } from '../../../components/PositionCard'
 import Row from '../../../components/layout/Row'
@@ -117,7 +120,7 @@ export default function PoolFinder() {
                 ...styles.addContainer,
               }}
             >
-              <Text weight={700} sx={{ lineHeight: '0px' }}>
+              <Text color="textActiveSecondary" sx={{ lineHeight: '0px' }}>
                 +
               </Text>
             </Flex>
@@ -148,7 +151,7 @@ export default function PoolFinder() {
               style={{ justifyItems: 'center', backgroundColor: '', margin: '20px 0px', borderRadius: '12px' }}
             >
               <Text textAlign="center">{t('Pool Found!')}</Text>
-              <StyledInternalLink to="/pool">
+              <StyledInternalLink to="/liquidity/pool">
                 <Text textAlign="center" style={{ textDecoration: 'underline' }}>
                   {t('Manage this pool.')}
                 </Text>
@@ -163,7 +166,7 @@ export default function PoolFinder() {
               ) : (
                 <AutoColumn gap="sm" justify="center" style={{ margin: '20px 0px' }}>
                   <Text textAlign="center">{t('You don’t have liquidity in this pool yet.')}</Text>
-                  <StyledInternalLink to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
+                  <StyledInternalLink to={`/liquidity/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
                     <Text style={{ textDecoration: 'underline' }} textAlign="center">
                       {t('Add Liquidity')}
                     </Text>
@@ -174,7 +177,7 @@ export default function PoolFinder() {
               <AutoColumn gap="sm" justify="center" style={{ margin: '20px 0px' }}>
                 <Text textAlign="center">No pool found.</Text>
                 <StyledInternalLink
-                  to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}
+                  to={`/liquidity/add/${currencyId(currency0)}/${currencyId(currency1)}`}
                   style={{ textDecoration: 'underline' }}
                 >
                   {t('Create pool.')}

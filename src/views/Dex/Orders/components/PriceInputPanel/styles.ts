@@ -13,7 +13,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     width: '100%',
     minWidth: '250px',
     height: '55px',
-    background: 'white3',
+    background: 'lightGray',
     borderRadius: '10px',
     alignItems: 'center',
     marginLeft: '7px',
@@ -41,7 +41,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     ':hover': buttonHover,
   },
   messageContainer: {
-    background: 'white3',
+    background: 'lightGray',
     padding: '20px',
     borderRadius: '10px',
   },

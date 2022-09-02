@@ -56,7 +56,7 @@ const PriceInputPanel: React.FC<PriceInputPanelProps> = ({
               marginRight: '10px',
               cursor: 'default',
               '&:active': { transform: 'none' },
-              ':hover': { background: 'white4' },
+              ':hover': { background: 'bgSecondary' },
             }}
           >
             <Text sx={tokenSelectorStyles.tokenText}>{outputCurrency?.getSymbol(chainId)}</Text>

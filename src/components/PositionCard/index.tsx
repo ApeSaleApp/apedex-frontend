@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { useEffect, useState } from 'react'
 import { JSBI, Pair, Percent } from '@apeswapfinance/sdk'
-import { Text, Card, Flex, CardProps, Button, Svg } from '@ape.swap/uikit'
 import { Link } from 'react-router-dom'
 import { Box, Divider } from 'theme-ui'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -9,6 +8,11 @@ import styled from 'styled-components'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { getTokenUsdPrice } from 'utils/getTokenUsdPrice'
 import { useTranslation } from 'contexts/Localization'
+import { Text } from 'components/Text'
+import { Flex } from 'components/Flex'
+import { Svg } from 'components/Svg'
+import Button from 'components/Button/Button'
+import { Card, CardProps } from 'components/Card'
 import useTotalSupply from '../../hooks/useTotalSupply'
 
 import { useTokenBalance } from '../../state/wallet/hooks'
@@ -82,7 +86,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
               </FixedHeightRow>
               <FixedHeightRow onClick={() => setShowMore(!showMore)}>
                 <RowFixed>
-                  <StyledText small color="gray">
+                  <StyledText small color="textSecondary">
                     {currency0.getSymbol(chainId)}-{currency1.getSymbol(chainId)} LP
                   </StyledText>
                 </RowFixed>
@@ -92,13 +96,13 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
               </FixedHeightRow>
               <AutoColumn gap="4px">
                 <FixedHeightRow>
-                  <Text color="gray" small>
+                  <Text color="textSecondary" small>
                     {t('Share of Pool')}:
                   </Text>
                   <Text>{poolTokenPercentage ? `${poolTokenPercentage.toFixed(6)}%` : '-'}</Text>
                 </FixedHeightRow>
                 <FixedHeightRow>
-                  <Text color="gray" small>
+                  <Text color="textSecondary" small>
                     {`${t('Pooled')} ${currency0.getSymbol(chainId)}`}:
                   </Text>
                   {token0Deposited ? (
@@ -110,7 +114,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
                   )}
                 </FixedHeightRow>
                 <FixedHeightRow>
-                  <Text color="gray" small>
+                  <Text color="textSecondary" small>
                     {`${t('Pooled')} ${currency1.getSymbol(chainId)}`}:
                   </Text>
                   {token1Deposited ? (
@@ -268,7 +272,12 @@ export default function FullPositionCard({ pair }: PositionCardProps) {
                   >
                     {t('Add')}
                   </Button>
-                  <Button as={Link} to={`/remove/${currencyId(currency0)}/${currencyId(currency1)}`} mb="8px" fullWidth>
+                  <Button
+                    as={Link}
+                    to={`/liquidity/remove/${currencyId(currency0)}/${currencyId(currency1)}`}
+                    mb="8px"
+                    fullWidth
+                  >
                     {t('Remove')}
                   </Button>
                 </Flex>

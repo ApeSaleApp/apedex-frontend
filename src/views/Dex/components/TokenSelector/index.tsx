@@ -42,7 +42,7 @@ const TokenSelector: React.FC<{
         ...styles.primaryFlex,
         cursor: 'default',
         '&:active': { transform: 'none' },
-        ':hover': { background: 'white4' },
+        ':hover': { background: 'bgSecondary' },
       }}
     >
       <Text sx={styles.tokenText}>

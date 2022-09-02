@@ -5,7 +5,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     position: 'relative',
     borderRadius: '10px',
     width: '100%',
-    background: 'white3',
+    background: 'bgPrimary',
     padding: '10px 0px',
     flexDirection: 'column',
     alignItems: 'center',
@@ -23,7 +23,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   primaryFlex: {
     minWidth: 'max-content',
     height: '40px',
-    background: 'white4',
+    background: 'bgSecondary',
     padding: '5px 10px',
     borderRadius: '10px',
     alignItems: 'center',

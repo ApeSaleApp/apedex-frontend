@@ -25,7 +25,7 @@ const OrderTradeInfo: React.FC<{
       sx={{
         flexDirection: 'column',
         borderRadius: '10px',
-        background: 'white3',
+        background: 'lightGray',
         padding: '10px',
         mt: '10px',
         width: '100%',

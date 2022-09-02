@@ -5,7 +5,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     flexDirection: 'column',
   },
   swapSwitchButton: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'secondary',
     height: '30px',
     width: '30px',
     borderRadius: '30px',
@@ -14,7 +14,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     cursor: 'pointer',
   },
   confirmDisabledInputContainer: {
-    backgroundColor: 'white3',
+    backgroundColor: 'lightGray',
     borderRadius: '10px',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -29,7 +29,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: '30px',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white2',
+    backgroundColor: 'lightGray',
     flexDirection: 'column',
   },
   innerLogoCircle: {
@@ -38,6 +38,6 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: '22.5px',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'yellow',
+    backgroundColor: 'secondary',
   },
 }

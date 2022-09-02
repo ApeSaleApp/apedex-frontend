@@ -1,13 +1,12 @@
 /** @jsxImportSource theme-ui */
 import { Link, useHistory } from 'react-router-dom'
-import { Flex, Text, useModal } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import { CHAIN_ID } from 'config/constants/chains'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import { Icon } from 'components/Icons'
 import GlobalSettings from 'components/Menu/GlobalSettings'
-import useTheme from 'hooks/useTheme'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
 import { styles } from './styles'
 
 const DexNav = () => {
@@ -16,7 +15,7 @@ const DexNav = () => {
   const { chainId } = useActiveWeb3React()
 
   const onLiquidity =
-    pathname?.includes('add') ||
+    pathname?.includes('liquidity') ||
     pathname?.includes('pool') ||
     pathname?.includes('remove') ||
     pathname?.includes('find')
@@ -57,9 +56,9 @@ const DexNav = () => {
         )}
         <Text
           size="14px"
-          sx={{ ...styles.navLink, ...styles[['/add', '/pool'].includes(pathname) ? 'navLinkActive' : 'scd'] }}
+          sx={{ ...styles.navLink, ...styles[onLiquidity ? 'navLinkActive' : 'scd'] }}
           as={Link}
-          to="/add"
+          to="/liquidity"
           id="liquidity-link"
           className="liquidity"
         >

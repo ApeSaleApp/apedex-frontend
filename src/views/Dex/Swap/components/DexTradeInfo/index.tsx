@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Flex, HelpIcon, Svg, Text, TooltipBubble } from '@ape.swap/uikit'
+import { HelpIcon, TooltipBubble } from '@ape.swap/uikit'
 import { Trade } from '@apeswapfinance/sdk'
 import { useTranslation } from 'contexts/Localization'
 import React, { useMemo, useState } from 'react'
@@ -12,8 +12,11 @@ import { dexStyles } from 'views/Dex/styles'
 import FormattedPriceImpact from 'views/LegacyOrders/components/FormattedPriceImpact'
 import { AnimatePresence, motion } from 'framer-motion'
 import { computeTradePriceBreakdown, computeSlippageAdjustedAmounts } from 'utils/prices'
-import { styles } from './styles'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import { Svg } from 'components/Svg'
 import TradePrice from './TradePrice'
+import { styles } from './styles'
 
 const DexTradeInfo: React.FC<{
   trade: Trade
@@ -54,18 +57,14 @@ const DexTradeInfo: React.FC<{
           <Flex
             sx={{
               ...styles.normalRouterContainer,
-              background: isBonusRouter ? 'smartGradient' : 'white4',
+              background: isBonusRouter ? 'smartGradient' : 'lightGray',
             }}
           >
-            <Text
-              size="8px"
-              weight={700}
-              sx={{ ...dexStyles.textWrap, lineHeight: isBonusRouter ? '10px' : '10px' }}
-            >
+            <Text size="8px" weight={700} sx={{ ...dexStyles.textWrap, lineHeight: isBonusRouter ? '10px' : '10px' }}>
               {isBonusRouter ? t('Bonus Router') : isSmartRouter ? t('Smart Router') : t('ApeSwap Router')}
             </Text>
           </Flex>
-          <Svg icon="caret" direction={showMore ? 'up' : 'down'} />
+          <Svg icon="caret" color="textPrimary" direction={showMore ? 'up' : 'down'} />
         </Flex>
       </Flex>
       <AnimatePresence>
@@ -117,7 +116,7 @@ const DexTradeInfo: React.FC<{
             <Flex
               sx={{
                 ...styles.bottomRouterContainer,
-                background: isBonusRouter ? 'smartGradient' : 'white4',
+                background: isBonusRouter ? 'smartGradient' : 'bgSecondary',
               }}
             >
               <Flex sx={{ justifyContent: 'space-between', margin: '4px 0px' }}>
@@ -143,21 +142,17 @@ const DexTradeInfo: React.FC<{
                     transformTip="translate(22px, 0px)"
                     width="200px"
                   >
-                    <HelpIcon
-                      width="12px"
-                      color={isBonusRouter ? 'textPrimary' : 'text'}
-                      sx={{ alignSelf: 'flex-end' }}
-                    />
+                    <HelpIcon width="12px" color="textPrimary" sx={{ alignSelf: 'flex-end' }} />
                   </TooltipBubble>
                 </Flex>
               </Flex>
               {isBonusRouter && (
                 <>
                   <Flex sx={{ justifyContent: 'space-between', margin: '2px 0px' }}>
-                    <Text  size="10px" sx={dexStyles.textWrap} mr="10px">
+                    <Text size="10px" sx={dexStyles.textWrap} mr="10px">
                       {t('Estimated swap bonus')}
                     </Text>
-                    <Text  size="10px" sx={dexStyles.textWrap}>
+                    <Text size="10px" sx={dexStyles.textWrap}>
                       ~ {(bestRoute?.bonusRouter?.summary?.searchSummary?.expectedKickbackProfit * 0.3).toFixed(6)}{' '}
                       {CHAIN_PARAMS[chainId].nativeCurrency.symbol}{' '}
                       {`(~$${(bestRoute?.bonusRouter?.summary?.searchSummary?.expectedUsdProfit * 0.3).toFixed(2)})`}

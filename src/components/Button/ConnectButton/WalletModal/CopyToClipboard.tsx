@@ -53,7 +53,7 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
       {...props}
     >
       {children}
-      <CopyIcon width="20px" color="text" ml="4px" mb="-4px" />
+      <CopyIcon width="20px" color="textPrimary" ml="4px" mb="-4px" />
       <Tooltip isTooltipDisplayed={isTooltipDisplayed}>Copied</Tooltip>
     </Text>
   )

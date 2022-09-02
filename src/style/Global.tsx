@@ -104,6 +104,7 @@ enum colorValues {
   textDisabled = 'textDisabled',
   textNote = 'textNote',
   navbar = 'navbar',
+  smartGradient = 'smartGradient',
 }
 export type colorProps = `${colorValues}`
 export default GlobalStyle

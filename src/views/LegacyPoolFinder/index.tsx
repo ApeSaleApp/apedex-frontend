@@ -139,7 +139,7 @@ export default function PoolFinder() {
                 style={{ justifyItems: 'center', backgroundColor: '', padding: '12px 0px', borderRadius: '12px' }}
               >
                 <Text textAlign="center">{t('Pool Found!')}</Text>
-                <StyledInternalLink to="/pool">
+                <StyledInternalLink to="/liquidity/pool">
                   <Text textAlign="center" style={{ textDecoration: 'underline' }}>
                     {t('Manage this pool.')}
                   </Text>

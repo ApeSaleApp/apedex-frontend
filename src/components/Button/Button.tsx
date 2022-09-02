@@ -86,7 +86,7 @@ const Button: React.FC<ButtonProps> = ({
         width: fullWidth ? '100%' : 'max-content',
       }}
     >
-      {children}
+      {startIcon} {children}
     </ThemeUIButton>
   )
 }

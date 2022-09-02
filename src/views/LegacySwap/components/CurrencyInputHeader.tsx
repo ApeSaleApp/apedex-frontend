@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, useMatchBreakpoints, Tabs, Tab , Button } from '@ape.swap/uikit'
+import { Flex, useMatchBreakpoints, Tabs, Tab, Button } from '@ape.swap/uikit'
 
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import { CHAIN_ID } from 'config/constants/chains'
@@ -80,7 +80,7 @@ const CurrencyInputHeader: React.FC<Props> = () => {
           <Tab
             index={2}
             label={t('LIQUIDITY')}
-            onClick={() => history.push('/pool')}
+            onClick={() => history.push('/liquidity/pool')}
             size={isMobile ? 'sm' : 'md'}
             variant="centered"
             activeTab={getActiveTab()}

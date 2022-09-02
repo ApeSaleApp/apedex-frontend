@@ -6,7 +6,7 @@ import StyledInternalLink from './index'
 const LiquidityPositionLink = () => {
   const { t } = useTranslation()
   return (
-    <StyledInternalLink to="/pool">
+    <StyledInternalLink to="/liquidity/pool">
       <Flex justifyContent="flex-start" margin="0px 30px 0px 26px">
         <ArrowDropUpIcon width="11px" style={{ transform: 'rotate(270deg)', marginRight: '10px' }} />
         <Text fontSize="13px">{t('See your Liquidity Positons')}</Text>

@@ -6,8 +6,9 @@ import useTheme from 'hooks/useTheme'
 import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import AddLiquidity from 'views/Dex/AddLiquidity'
+import Liquidity from 'views/Dex/Liquidity'
 import Orders from 'views/Dex/Orders'
-import Pool from 'views/Dex/Pool'
+
 import Swap from 'views/Dex/Swap'
 import { Information } from './components/Information/Information'
 import LaunchCalendar from './components/LaunchCalendar/LaunchCalendar'
@@ -23,8 +24,7 @@ const CACHE_KEY_CHART = 'IS_CHART_OPEN'
 const renderComponent = {
   '/': () => <Swap />,
   '/orders': () => <Orders />,
-  '/add': () => <Route exact path="/add" component={AddLiquidity} />,
-  '/pool': () => <Route exact path="/pool" component={Pool} />,
+  '/liquidity': () => <Liquidity />,
 }
 const Home: React.FC = () => {
   //   const { chainId } = useActiveWeb3React()

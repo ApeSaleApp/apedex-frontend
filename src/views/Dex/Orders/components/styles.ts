@@ -25,7 +25,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     ':hover': buttonHover,
   },
   SwapConfirmDisabledInputContainer: {
-    backgroundColor: 'white3',
+    backgroundColor: 'lightGray',
     borderRadius: '10px',
     justifyContent: 'space-between',
     alignItems: 'center',

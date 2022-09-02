@@ -1,11 +1,15 @@
 /** @jsxImportSource theme-ui */
 import React, { useMemo } from 'react'
 import { Pair } from '@apeswapfinance/sdk'
-import { Text, Flex, AddIcon, Button, Spinner } from '@ape.swap/uikit'
 import { Link } from 'react-router-dom'
 import UnlockButton from 'components/UnlockButton'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import Button from 'components/Button/Button'
+import { Spinner } from 'theme-ui'
+import { AddIcon } from 'components/Svg'
 import FullPositionCard from '../../../components/PositionCard'
 import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
 import { usePairs } from '../../../hooks/usePairs'
@@ -88,14 +92,7 @@ export default function Pool() {
                 {t('Add liquidity to receive LP tokens')}
               </Text>
               {account ? (
-                <Button
-                  id="join-pool-button"
-                  as={Link}
-                  to="/add"
-                  startIcon={<AddIcon color="white" />}
-                  fullWidth
-                  mt="10px"
-                >
+                <Button id="join-pool-button" as={Link} to="/liquidity/add" fullWidth mt="10px">
                   {t('Add Liquidity')}
                 </Button>
               ) : (
@@ -107,7 +104,7 @@ export default function Pool() {
           {account && !v2IsLoading && (
             <Flex sx={{ flexDirection: 'column', alignItems: 'center', margin: '20px 0px 10px 0px' }}>
               <Text mb="8px">{t('Dont see a pool you joined?')}</Text>
-              <Text style={{ textDecoration: 'underline' }} mb="8px" as={Link} to="/find">
+              <Text style={{ textDecoration: 'underline' }} mb="8px" as={Link} to="/liquidity/find">
                 {t('Find other LP tokens')}
               </Text>
             </Flex>

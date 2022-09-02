@@ -2,7 +2,7 @@ import { ThemeUIStyleObject } from 'theme-ui'
 
 export const styles: Record<string, ThemeUIStyleObject> = {
   SwapConfirmDisabledInputContainer: {
-    backgroundColor: 'white3',
+    backgroundColor: 'lightGray',
     borderRadius: '10px',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -17,7 +17,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: '30px',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white2',
+    backgroundColor: 'bgSecondary',
     flexDirection: 'column',
   },
   innerLogoCircle: {
