@@ -22,14 +22,17 @@ const ConnectButton = () => {
     return (
       <Button
         size="sm"
+        variant="secondary"
         fontSize="14px"
-        sx={buttonStyle}
+        type="button"
         onClick={() => {
           onPresentAccountModal()
         }}
         account={account}
       >
-        <Text weight="normal">{accountEllipsis}</Text>
+        <Text weight="normal" color="textActiveSecondary">
+          {accountEllipsis}
+        </Text>
       </Button>
     )
   }

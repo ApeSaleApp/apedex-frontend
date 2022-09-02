@@ -1,7 +1,7 @@
 import { ThemeUIStyleObject } from 'theme-ui'
 
 export const buttonHover = {
-  '&:not([disabled])': { borderColor: '#FFDA00', background: '#FFDA00' },
+  '&:not([disabled])': { borderColor: 'secondary', background: 'secondary', color: 'textActiveSecondary' },
   '&:disabled': {},
 }
 

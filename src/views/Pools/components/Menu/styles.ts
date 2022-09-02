@@ -10,7 +10,8 @@ export const ControlContainer = styled(Flex)`
   flex-direction: row;
   padding: 15px;
   z-index: 1;
-  background-color: ${({ theme }) => theme.colors.white};
+  gap: 5px;
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   min-width: 300px;
   max-width: 500px;
   width: 100%;
@@ -25,13 +26,13 @@ export const ControlContainer = styled(Flex)`
     flex-direction: row;
     min-height: 59px;
     height: 100%;
-    padding: 0px 50px 0px 30px;
+    padding: 10px 50px 10px 30px;
     align-items: center;
     max-width: 100%;
     height: auto;
   }
   ${({ theme }) => theme.mediaQueries.xl} {
-    padding: 0px 30px 0px 30px;
+    padding: 10px 30px 10px 30px;
   }
 `
 
@@ -47,6 +48,7 @@ export const LabelWrapper = styled.div`
 export const StyledText = styled(Text)`
   font-weight: 700;
   font-size: 16px !important;
+  margin-left: 16px;
 `
 
 export const LearnMoreButton = styled(Button)`
@@ -54,8 +56,8 @@ export const LearnMoreButton = styled(Button)`
   width: 192px;
   align-items: center;
   padding-left: 40px;
-  color: ${({ theme }) => theme.colors.yellow};
-  border: 2px solid ${({ theme }) => theme.colors.yellow};
+  color: ${({ theme }) => theme.colors.secondary};
+  border: 2px solid ${({ theme }) => theme.colors.secondary};
 `
 
 export const ClaimAllWrapper = styled(Flex)`

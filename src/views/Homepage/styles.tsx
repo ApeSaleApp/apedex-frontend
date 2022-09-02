@@ -58,8 +58,8 @@ export const ButtonChartStyled = styled.button`
   position: relative;
   border-radius: 22px;
   height: 22px;
-  background: #1a1a1b;
-  border: 1px solid #707070;
+  background: ${({ theme }) => (theme.isDark ? theme.colors.bgPrimary : 'white')};
+  border: 1px solid ${({ theme }) => (theme.isDark ? ' #707070' : 'rgba(0, 0, 0, 0.12)')};
   border-radius: 11.5px;
   margin-right: auto;
 `
@@ -88,8 +88,8 @@ export const ThumbSwitchStyled = styled.div`
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  background: #33363f;
-  border: 1px solid #707070;
+  background: ${({ theme }) => theme.colors.bgSecondary};
+  border: 1px solid ${({ theme }) => (theme.isDark ? ' #707070' : 'rgba(0, 0, 0, 0.12)')};
   box-shadow: rgb(26 26 27 / 10%) 0px 6px 12px 0px;
   transition: all 200ms linear;
   &.deactive {

@@ -1,5 +1,7 @@
 /** @jsxImportSource theme-ui */
-import { InfoIcon, TooltipBubble, Flex } from '@ape.swap/uikit'
+import { Flex } from 'components/Flex'
+import { InfoIcon, Svg } from 'components/Svg'
+import { TooltipBubble } from 'components/TooltipBubble'
 import React, { useState } from 'react'
 import { ContentContainer, DropDownIcon, ListCardContainer, ListExpandedContainer, styles } from './styles'
 import { ListCardProps } from './types'
@@ -28,11 +30,15 @@ const MobileListCard: React.FC<ListCardProps> = ({
             </Flex>
           </Flex>
           <Flex>
-            {expandedContent && <DropDownIcon open={expanded} mr="20px" />}
+            {expandedContent && (
+              <span style={{ marginRight: '30px' }}>
+                <Svg icon="caret" direction={expanded ? 'up' : 'down'} width="15px" />
+              </span>
+            )}
             {infoContent && (
               <div style={{ display: 'inline-block' }}>
                 <TooltipBubble body={infoContent} transformTip={infoContentPosition || 'translate(-82%, 50%)'}>
-                  <InfoIcon width="25px" />
+                  <InfoIcon width="25px" color="textPrimary" />
                 </TooltipBubble>
               </div>
             )}

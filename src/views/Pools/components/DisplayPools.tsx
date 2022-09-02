@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
-import { IconButton, Text, Flex, TagVariants } from '@ape.swap/uikit'
 import { Box } from 'theme-ui'
 import BigNumber from 'bignumber.js'
 import ListView from 'components/ListView'
@@ -15,6 +14,10 @@ import { Pool, Tag } from 'state/types'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { NextArrow } from 'views/Farms/components/styles'
 import { useTranslation } from 'contexts/Localization'
+import { TagVariants } from '@ape.swap/uikit'
+import { Text } from 'components/Text'
+import { Flex } from 'components/Flex'
+import IconButton from 'components/Button/IconButton'
 import Actions from './Actions'
 import HarvestAction from './Actions/HarvestAction'
 import InfoContent from '../InfoContent'
@@ -34,7 +37,7 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
     const liquidityUrl = !pool?.lpStaking
       ? pool.stakingToken.symbol === 'GNANA'
         ? 'https://apeswap.finance/gnana'
-        : `https://apeswap.finance/swap?outputCurrency=${pool?.stakingToken.address[chainId]}`
+        : `/?outputCurrency=${pool?.stakingToken.address[chainId]}`
       : `${BASE_ADD_LIQUIDITY_URL}/${pool?.lpTokens?.token?.address[chainId]}/${pool?.lpTokens?.quoteToken?.address[chainId]}`
     const userAllowance = pool?.userData?.allowance
     const userEarnings = getBalanceNumber(
@@ -67,7 +70,7 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
       title: <Text bold>{pool?.rewardToken?.symbol || pool?.tokenName}</Text>,
       id: pool.sousId,
       infoContent: <InfoContent pool={pool} />,
-      infoContentPosition: 'translate(-82%, 28%)',
+      //   infoContentPosition: 'translate(-82%, 28%)',
       open: openId === pool.sousId,
       cardContent: (
         <>
@@ -75,10 +78,10 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
             {!isMobile && (
               <>
                 <a href={pool.projectLink} target="_blank" rel="noreferrer">
-                  <IconButton icon="website"  width={20} style={{ padding: '8.5px 10px' }} />
+                  <IconButton icon="website" width={20} style={{ padding: '8.5px 10px' }} />
                 </a>
                 <a href={pool?.twitter} target="_blank" rel="noreferrer">
-                  <IconButton icon="twitter"  width={20} />
+                  <IconButton icon="twitter" width={20} />
                 </a>
               </>
             )}
@@ -90,7 +93,7 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
             height={50}
             toolTip={t('APRs are calculated based on current value of the token, reward rate, and share of pool.')}
             toolTipPlacement="bottomLeft"
-            toolTipTransform="translate(0, 60%)"
+            toolTipTransform="translate(10%, 0)"
             aprCalculator={
               <ApyButton
                 lpLabel={pool?.stakingToken?.symbol}
@@ -107,8 +110,8 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
             width={isMobile ? 160 : 110}
             height={50}
             toolTip={t('The total value of the tokens currently staked in this pool.')}
-            toolTipPlacement="bottomLeft"
-            toolTipTransform="translate(0%, 75%)"
+            toolTipPlacement="bottomRight"
+            toolTipTransform="translate(13%, 0)"
           />
           <ListViewContent title={t('Earned')} value={userEarningsUsd} height={50} width={isMobile ? 80 : 150} />
         </>
@@ -146,7 +149,7 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
               />
             )}
           </ActionContainer>
-          {!isMobile && <NextArrow />}
+          {!isMobile && <NextArrow color="textPrimary" />}
           <Actions
             allowance={userAllowance?.toString()}
             stakedBalance={pool?.userData?.stakedBalance?.toString()}
@@ -156,7 +159,7 @@ const DisplayPools: React.FC<{ pools: Pool[]; openId?: number; poolTags: Tag[] }
             stakeTokenValueUsd={pool?.stakingToken?.price}
             sousId={pool?.sousId}
           />
-          {!isMobile && <NextArrow />}
+          {!isMobile && <NextArrow color="textPrimary" />}
           <HarvestAction
             sousId={pool?.sousId}
             disabled={userEarnings <= 0}

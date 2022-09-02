@@ -1,5 +1,6 @@
-import { Button, Flex } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
+import Button from 'components/Button/Button'
+import { Flex } from 'components/Flex'
 
 export const StyledButtonSquare = styled(Button)<{ height?: number; minWidth?: number }>`
   border-radius: 10px;

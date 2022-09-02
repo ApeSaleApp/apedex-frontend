@@ -1,4 +1,6 @@
+import { iconTypes } from 'components/Svg'
 import { ReactNode } from 'react'
+import { colorProps } from 'style/Global'
 import { ButtonProps as ThemeUIButtonProps } from 'theme-ui'
 
 export enum sizes {
@@ -48,4 +50,11 @@ export interface ButtonProps extends Omit<ThemeUIButtonProps, 'sx'> {
   fullWidth?: boolean
   load?: boolean
   [key: string]: any
+}
+
+export interface IconButtonProps extends Omit<ButtonProps, 'variant'> {
+  variant?: iconButtonVariantsProps
+  color?: colorProps
+  background?: colorProps
+  icon?: iconTypes
 }

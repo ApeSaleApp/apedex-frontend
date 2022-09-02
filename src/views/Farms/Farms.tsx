@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import { Flex } from '@ape.swap/uikit'
 import { useFarmTags, useFetchFarmLpAprs, useFetchLpTokenPrices } from 'state/hooks'
 import ListViewMenu from 'components/ListViewMenu'
 import { orderBy } from 'lodash'
@@ -10,6 +9,7 @@ import ListViewLayout from 'components/layout/ListViewLayout'
 import { useTranslation } from 'contexts/Localization'
 import { Farm } from 'state/types'
 import { useFarms, usePollFarms } from 'state/farms/hooks'
+import { Flex } from 'components/Flex'
 import DisplayFarms from './components/DisplayFarms'
 import { BLUE_CHIPS, NUMBER_OF_FARMS_VISIBLE, STABLES } from './constants'
 import HarvestAllAction from './components/CardActions/HarvestAllAction'
@@ -128,14 +128,8 @@ const Farms: React.FC = () => {
 
   return (
     <>
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        mb="100px"
-        style={{ position: 'relative', top: '30px', width: '100%' }}
-      >
+      <Flex mb="100px" style={{ position: 'relative', width: '100%', flexDirection: 'column' }}>
         <ListViewLayout>
-         
           <Flex alignItems="center" justifyContent="center" mt="20px">
             <ListViewMenu
               onHandleQueryChange={handleChangeQuery}
@@ -148,8 +142,8 @@ const Farms: React.FC = () => {
               showMonkeyImage
             />
           </Flex>
-          <DisplayFarms farms={renderFarms()} openPid={urlSearchedFarm} farmTags={farmTags} />
         </ListViewLayout>
+        <DisplayFarms farms={renderFarms()} openPid={urlSearchedFarm} farmTags={farmTags} />
       </Flex>
       <div ref={loadMoreRef} />
     </>

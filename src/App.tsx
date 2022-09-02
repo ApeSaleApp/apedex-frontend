@@ -105,6 +105,7 @@ const App: React.FC = () => {
         <Suspense fallback={<PageLoader />}>
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/order" component={Home} />
             <Route path="/liquidity" component={Home} />
             <Route path="/pools">
               <Redirect to="/" />
@@ -171,6 +172,7 @@ const App: React.FC = () => {
         <Suspense fallback={<PageLoader />}>
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/order" component={Home} />
             <Route path="/liquidity" component={Home} />
             <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
             <Route exact strict path="/send" component={RedirectPathToSwapOnly} />

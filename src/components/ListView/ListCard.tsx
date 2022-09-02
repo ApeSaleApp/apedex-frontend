@@ -1,5 +1,7 @@
 /** @jsxImportSource theme-ui */
-import { Flex, Svg, InfoIcon, TooltipBubble  } from '@ape.swap/uikit'
+import { Flex } from 'components/Flex'
+import { InfoIcon, Svg } from 'components/Svg'
+import { TooltipBubble } from 'components/TooltipBubble'
 import React, { useState } from 'react'
 import { ContentContainer, ListCardContainer, ListExpandedContainer, styles } from './styles'
 import { ListCardProps } from './types'
@@ -42,12 +44,8 @@ const ListCard: React.FC<ListCardProps> = ({
         )}
         {infoContent && (
           <div style={{ display: 'inline-block' }}>
-            <TooltipBubble
-              placement="bottomRight"
-              body={infoContent}
-              transformTip={infoContentPosition || 'translate(-82%, 40%)'}
-            >
-              <InfoIcon width="25px" />
+            <TooltipBubble placement="bottomRight" body={infoContent} transformTip={infoContentPosition}>
+              <InfoIcon width="25px" color="textPrimary" />
             </TooltipBubble>
           </div>
         )}

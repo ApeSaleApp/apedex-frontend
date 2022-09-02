@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, useHistory } from 'react-router-dom'
-import { Toggle } from '@ape.swap/uikit'
+
 import { useTranslation } from 'contexts/Localization'
+import { Toggle } from 'components/Toggle'
 
 const Wrapper = styled.div`
   ${({ theme }) => theme.mediaQueries.md} {

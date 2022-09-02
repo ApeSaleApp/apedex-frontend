@@ -15,9 +15,9 @@ const Button: React.FC<ButtonProps> = ({
   let hoverStyle = {
     '&:hover': {
       '&:not([disabled])': {
+        color: 'textActiveSecondary',
         borderColor: 'secondary',
         background: variant === 'primary' && 'secondary',
-        color: 'textActiveSecondary',
       },
       '&:disabled': {},
     },

@@ -4,7 +4,6 @@ import BigNumber from 'bignumber.js'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { PoolCategory } from 'config/constants/types'
 import { useWeb3React } from '@web3-react/core'
-import { Flex } from '@ape.swap/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import { useTranslation } from 'contexts/Localization'
@@ -13,6 +12,7 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { usePollPools, usePools, usePoolTags } from 'state/hooks'
 import ListViewLayout from 'components/layout/ListViewLayout'
 import { Pool } from 'state/types'
+import { Flex } from 'components/Flex'
 import PoolMenu from './components/Menu'
 import DisplayPools from './components/DisplayPools'
 
@@ -135,30 +135,23 @@ const Pools: React.FC = () => {
 
   return (
     <>
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        mb="100px"
-        style={{ position: 'relative', top: '30px', width: '100%' }}
-      >
-        <ListViewLayout>
-          <Flex flexDirection="column" alignSelf="center" style={{ maxWidth: '1130px', width: '100%' }}>
-            <PoolMenu
-              onHandleQueryChange={handleChangeQuery}
-              onSetSortOption={setSortOption}
-              onSetStake={setStakedOnly}
-              onSetTokenOption={setTokenOption}
-              pools={[...stakedOnlyPools, ...stakedInactivePools]}
-              activeOption={sortOption}
-              activeTokenOption={tokenOption}
-              stakedOnly={stakedOnly}
-              query={searchQuery}
-            />
-            <DisplayPools pools={renderPools()} openId={urlSearchedPool} poolTags={poolTags} />
-            <div ref={loadMoreRef} />
-          </Flex>
-        </ListViewLayout>
-      </Flex>
+      <ListViewLayout>
+        <Flex style={{ maxWidth: '1130px', width: '100%', flexDirection: 'column' }}>
+          <PoolMenu
+            onHandleQueryChange={handleChangeQuery}
+            onSetSortOption={setSortOption}
+            onSetStake={setStakedOnly}
+            onSetTokenOption={setTokenOption}
+            pools={[...stakedOnlyPools, ...stakedInactivePools]}
+            activeOption={sortOption}
+            activeTokenOption={tokenOption}
+            stakedOnly={stakedOnly}
+            query={searchQuery}
+          />
+          <DisplayPools pools={renderPools()} openId={urlSearchedPool} poolTags={poolTags} />
+          <div ref={loadMoreRef} />
+        </Flex>
+      </ListViewLayout>
     </>
   )
 }

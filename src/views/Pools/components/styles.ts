@@ -1,5 +1,8 @@
-import { ArrowDropUpIcon, Button, Flex, Tag } from '@ape.swap/uikit'
+import { Tag } from '@ape.swap/uikit'
 import styled from '@emotion/styled'
+import Button from 'components/Button/Button'
+import { Flex } from 'components/Flex'
+import { ArrowDropUpIcon } from 'components/Svg'
 
 export const StyledButton = styled(Button)`
   border-radius: 10px;

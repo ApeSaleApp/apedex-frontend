@@ -1,5 +1,7 @@
 /** @jsxImportSource theme-ui */
-import { Flex, HelpIcon, TooltipBubble } from '@ape.swap/uikit'
+import { Flex } from 'components/Flex'
+import { HelpIcon } from 'components/Svg'
+import { TooltipBubble } from 'components/TooltipBubble'
 import React from 'react'
 import { TitleText, ListViewContentContainer, ValueText, ValueSkeleton } from './styles'
 import { ListViewContentProps } from './types'
@@ -36,7 +38,7 @@ const ListViewContent: React.FC<ListViewContentProps> = ({
               >
                 <TitleText lineHeight={lineHeight}>
                   {title}
-                  <HelpIcon width="12px" ml="5px" />
+                  <HelpIcon color="textPrimary" width="12px" ml="5px" />
                 </TitleText>
               </TooltipBubble>
             </div>

@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `
 
-enum colorValues {
+export enum colorValues {
   transparent = 'transparent',
   white = 'white',
   black = 'black',

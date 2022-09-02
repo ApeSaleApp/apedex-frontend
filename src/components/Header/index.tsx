@@ -10,7 +10,6 @@ import useSelectNetwork from 'hooks/useSelectNetwork'
 import useTheme from 'hooks/useTheme'
 import { Mode } from 'components/Button/Mode'
 import useIsMobile from 'hooks/useIsMobile'
-import { HamburgerIcon } from 'components/Icons'
 import { HeaderWrapper, Menu, StyledNavLink } from './style'
 import { MenuMobile } from './MenuMobile'
 
@@ -33,10 +32,17 @@ export const Header = ({ toggleDrawer, setToggleDrawer }) => {
         )}
         {!isMobile && (
           <Menu>
-            <StyledNavLink exact to="/">
+            <StyledNavLink
+              to="/"
+              isActive={(match, location) => {
+                const { pathname } = location
+                return pathname === '/' || pathname.includes('orders') || pathname.includes('liquidity')
+              }}
+            >
               {t('Trade')}
             </StyledNavLink>
-            <StyledNavLink to="/liquidity">{t('Liquidity')}</StyledNavLink>
+            <StyledNavLink to="/pools">{t('Pools')}</StyledNavLink>
+            <StyledNavLink to="/farms">{t('Farms')}</StyledNavLink>
           </Menu>
         )}
         <Flex alignItems="center" sx={{ gap: '12px' }}>

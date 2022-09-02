@@ -1,6 +1,7 @@
+import { useModal } from 'components/Modal'
+import { CalculateIcon } from 'components/Svg'
 import React from 'react'
 import styled from 'styled-components'
-import { CalculateIcon, useModal } from '@ape.swap/uikit'
 import ApyCalculatorModal from './ApyCalculatorModal'
 
 export interface ApyButtonProps {
@@ -34,7 +35,7 @@ const ApyButton: React.FC<ApyButtonProps> = ({ lpLabel, rewardTokenPrice, apy, a
 
   return (
     <>
-      <StyledCalculateIcon onClick={onPresentApyModal} color="yellow" ml="3px" style={{ cursor: 'pointer' }} />
+      <StyledCalculateIcon onClick={onPresentApyModal} color="secondary" ml="3px" style={{ cursor: 'pointer' }} />
     </>
   )
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Flex, Text, LinkExternal } from '@ape.swap/uikit'
 import { Pool } from 'state/types'
 import { useBlock } from 'state/block/hooks'
 import getTimePeriods from 'utils/getTimePeriods'
@@ -7,6 +6,9 @@ import { BSC_BLOCK_TIME } from 'config'
 import { BLOCK_EXPLORER } from 'config/constants/chains'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from 'contexts/Localization'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import { LinkExternal } from 'components/Link'
 
 const InfoContent: React.FC<{ pool: Pool }> = ({ pool }) => {
   const { chainId } = useActiveWeb3React()
@@ -19,7 +21,7 @@ const InfoContent: React.FC<{ pool: Pool }> = ({ pool }) => {
   const tokenContractLink = `${explorerLink}/address/${pool?.rewardToken?.address[chainId]}`
   return (
     <>
-      <Flex flexDirection="column">
+      <Flex flexDirection="column" sx={{ width: '250px' }}>
         {pool?.endBlock > 0 && pool?.rewardToken?.symbol !== 'BANANA' && (
           <Flex alignItems="space-between" justifyContent="space-between" style={{ width: '100%' }}>
             <Text style={{ fontSize: '14px' }}>{pool?.startBlock > currentBlock ? t('Starts in') : t('Ends in')}</Text>
@@ -31,12 +33,13 @@ const InfoContent: React.FC<{ pool: Pool }> = ({ pool }) => {
           </Flex>
         )}
       </Flex>
-      <Flex justifyContent="space-between">
+      <Flex sx={{ justifyContent: 'space-between' }}>
         <Flex alignItems="center" justifyContent="center" mt="10px">
           <LinkExternal href={pool?.projectLink} style={{ fontSize: '14px' }}>
             {t('Website')}
           </LinkExternal>
         </Flex>
+
         <Flex alignItems="center" justifyContent="center" mt="10px">
           <LinkExternal href={pool?.twitter} style={{ fontSize: '14px' }}>
             {t('Twitter')}

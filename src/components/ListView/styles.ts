@@ -1,12 +1,14 @@
 import { ThemeUIStyleObject } from 'theme-ui'
-import { ArrowDropDownIcon, Flex, Text } from '@ape.swap/uikit'
 import styled, { keyframes } from 'styled-components'
+import { ArrowDropDownIcon } from 'components/Svg'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
 
 export const styles: Record<string, ThemeUIStyleObject> = {
   titleContainer: {
     alignItems: 'center',
     height: '100%',
-    maxWidth: '290px',
+    maxWidth: '250px',
     width: '100%',
   },
 }
@@ -30,12 +32,12 @@ export const ListExpandedContainer = styled(Flex)<{ size?: number; justifyConten
   overflow: hidden;
   margin: 0px 10px 0px 10px;
   padding: 10px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.bgSecondary};
   max-width: 500px;
   min-width: 300px;
   width: 100%;
   ${({ theme }) => theme.mediaQueries.md} {
-    padding: 0px 30px 0px 30px;
+    padding: 10px 30px 10px 30px;
     animation: ${ExpandLargeAnimation} 0.3s ease;
     height: 100px;
     max-width: 100%;
@@ -49,7 +51,7 @@ export const ListCardContainer = styled(Flex)`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.bgSecondary};
   border-bottom: 1px solid rgba(226, 226, 226, 0.2);
   padding: 10px;
   margin: 0px 10px 0px 10px;
@@ -59,7 +61,7 @@ export const ListCardContainer = styled(Flex)`
   ${({ theme }) => theme.mediaQueries.md} {
     flex-direction: row;
     height: 86px;
-    padding: 0px 30px 0px 30px;
+    padding: 10px 30px 10px 30px;
     max-width: 100%;
   }
 `
@@ -83,6 +85,7 @@ export const DropDownIcon = styled(ArrowDropDownIcon)<{ open: boolean }>`
   transition: transform 0.3s ease;
   right: 0;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.textPrimary};
 `
 
 export const TagContainer = styled(Flex)<{ backgroundColor: string }>`
@@ -90,7 +93,7 @@ export const TagContainer = styled(Flex)<{ backgroundColor: string }>`
   justify-content: center;
   height: 15px;
   border-radius: 7px;
-  color: white;
+  color: textPrimary;
   font-weight: 800;
   line-height: 0px;
   font-size: 10px;

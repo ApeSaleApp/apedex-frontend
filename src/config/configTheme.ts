@@ -61,7 +61,7 @@ export const configTheme: Theme = {
       borderRadius: 'normal',
       border: 'none',
       fontWeight: 'normal',
-      background: 'lvl1',
+      background: 'mediumGray',
       resize: 'none',
       color: 'textareaColor',
       '&:focus': {
@@ -69,11 +69,11 @@ export const configTheme: Theme = {
       },
     },
     checkbox: {
-      background: 'lvl1',
+      background: 'mediumGray',
       borderRadius: '5px',
       borderWidth: '2px',
       borderStyle: 'solid',
-      borderColor: 'lvl2',
+      borderColor: 'mediumGray',
       boxShadow: 'none',
       outline: 'none',
       appearance: 'none',
@@ -92,8 +92,8 @@ export const configTheme: Theme = {
         margin: 'auto',
       },
       '&:checked ': {
-        background: 'yellow',
-        borderColor: 'yellow',
+        background: 'secondary',
+        borderColor: 'secondary',
         '& + svg': {
           display: 'block',
         },
@@ -107,16 +107,16 @@ export const configTheme: Theme = {
         boxShadow: '0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)',
       },
       '&:hover:not(:disabled):not(:checked)': {
-        borderColor: 'yellow',
+        borderColor: 'secondary',
         boxShadow: '0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)',
       },
     },
     radio: {
-      background: 'lvl1',
+      background: 'mediumGray',
       borderRadius: '50px',
       borderWidth: '2px',
       borderStyle: 'solid',
-      borderColor: 'lvl2',
+      borderColor: 'mediumGray',
       boxShadow: 'none',
       outline: 'none',
       appearance: 'none',
@@ -137,8 +137,8 @@ export const configTheme: Theme = {
         borderRadius: '50px',
       },
       '&:checked ': {
-        background: 'yellow',
-        borderColor: 'yellow',
+        background: 'secondary',
+        borderColor: 'secondary',
         '& + span': {
           display: 'block',
         },
@@ -148,7 +148,7 @@ export const configTheme: Theme = {
         boxShadow: '0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .2)',
       },
       '&:hover:not(:disabled):not(:checked)': {
-        borderColor: 'yellow',
+        borderColor: 'secondary',
       },
     },
     label: {

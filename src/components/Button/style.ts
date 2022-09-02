@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from 'theme-ui'
+import { Flex, ThemeUIStyleObject } from 'theme-ui'
 
 export const ButtonWrapperStyled = styled.div`
   background: ${({ theme }) => (theme.isDark ? '#3b3e46' : '#ffffff')};
@@ -50,3 +50,36 @@ export const SwapSwitchContainer = styled(Flex)`
   align-items: center;
   justify-content: center;
 `
+
+const defaultStyle = {
+  cursor: 'pointer',
+  color: 'textPrimary',
+  fontWeight: 600,
+  fontSize: '16px',
+  padding: '10px',
+  border: 'none',
+  transition: 'all .3s linear',
+  '&:hover': {
+    filter: 'brightness(115%)',
+  },
+  '&:active': {
+    transform: 'scale(0.9)',
+  },
+}
+
+export const styles: Record<string, ThemeUIStyleObject> = {
+  primary: {
+    ...defaultStyle,
+  },
+  transparent: {
+    ...defaultStyle,
+    backgroundColor: 'transparent',
+    backgroundRepeat: 'no-repeat',
+    padding: '0px',
+    border: 'none',
+    cursor: 'pointer',
+    svg: {
+      background: 'transparent',
+    },
+  },
+}
