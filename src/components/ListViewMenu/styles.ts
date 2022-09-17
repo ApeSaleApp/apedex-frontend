@@ -8,22 +8,26 @@ export const ControlContainer = styled(Flex)`
   align-items: space-around;
   justify-content: space-between;
   flex-direction: row;
-  padding: 15px;
   z-index: 1;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   min-width: 300px;
   max-width: 500px;
   width: 100%;
+  margin: 20px 0px;
+  align-self: center;
+  padding: 10px 30px;
+
   ${({ theme }) => theme.mediaQueries.md} {
     flex-direction: row;
     min-height: 59px;
     height: 100%;
-    padding: 20px 150px 20px 20px;
+    padding: 10px 50px 10px 30px;
     align-items: center;
     max-width: 100%;
+    height: auto;
   }
   ${({ theme }) => theme.mediaQueries.xl} {
-    padding: 0px 130px 0px 30px;
+    padding: 10px 30px 10px 30px;
   }
 `
 
@@ -92,11 +96,6 @@ export const Header = styled.div`
   padding-top: 36px;
   padding-left: 10px;
   padding-right: 10px;
-  background-image: ${({ theme }) => (theme.isDark ? 'url(/images/farm-night.svg)' : 'url(/images/farm-day.svg)')};
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 250px;
-  background-position: center;
 
   ${({ theme }) => theme.mediaQueries.md} {
     padding-left: 24px;
@@ -116,7 +115,7 @@ export const StyledText = styled(Text)`
 export const StyledCheckbox = styled(Checkbox)<{ checked?: boolean }>`
   height: 21px;
   width: 21px;
-  margin-left: 20px;
+  margin-right: 10px;
 `
 
 export const StyledImage = styled.img`

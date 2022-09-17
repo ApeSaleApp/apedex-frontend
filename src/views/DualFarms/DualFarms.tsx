@@ -146,29 +146,22 @@ const DualFarms: React.FC = () => {
 
   return (
     <>
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        mb="100px"
-        style={{ position: 'relative', top: '30px', width: '100%' }}
-      >
-        <ListViewLayout>
-        
-          <Flex alignItems="center" justifyContent="center" mt="20px">
-            <ListViewMenu
-              onHandleQueryChange={handleChangeQuery}
-              onSetSortOption={setSortOption}
-              onSetStake={setStakedOnly}
-              harvestAll={<HarvestAllAction pids={hasHarvestPids} disabled={hasHarvestPids.length === 0} />}
-              stakedOnly={stakedOnly}
-              query={query}
-              activeOption={sortOption}
-              showMonkeyImage
-            />
-          </Flex>
+      <ListViewLayout>
+        <Flex style={{ maxWidth: '1130px', width: '100%', flexDirection: 'column' }}>
+          <ListViewMenu
+            onHandleQueryChange={handleChangeQuery}
+            onSetSortOption={setSortOption}
+            onSetStake={setStakedOnly}
+            harvestAll={<HarvestAllAction pids={hasHarvestPids} disabled={hasHarvestPids.length === 0} />}
+            stakedOnly={stakedOnly}
+            query={query}
+            activeOption={sortOption}
+            showMonkeyImage
+          />
           <DisplayFarms farms={renderFarms()} openPid={urlSearchedFarm} dualFarmTags={farmTags} />
-        </ListViewLayout>
-      </Flex>
+        </Flex>
+      </ListViewLayout>
+
       <div ref={loadMoreRef} />
     </>
   )

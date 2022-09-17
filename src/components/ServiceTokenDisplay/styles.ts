@@ -1,10 +1,10 @@
 import { ArrowDropUpSmallIcon, Skeleton } from '@ape.swap/uikit'
+import Logo from 'components/Logo/Logo'
 import styled from 'styled-components'
 
-export const TokenContainer = styled.img<{
+export const TokenContainer = styled(Logo)<{
   size?: number
   image?: string
-  srcs?: string[] | string
   ml?: number
   mr?: number
   mt?: number

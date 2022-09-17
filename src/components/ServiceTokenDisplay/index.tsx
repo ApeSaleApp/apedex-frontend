@@ -41,7 +41,6 @@ const ServiceTokenDisplay: React.FC<ServiceTokenDisplayProps> = ({
   const token2Urls = token2 ? setUrls(token2) : []
   const token3Urls = token3 ? setUrls(token3) : []
   const token4Urls = token4 ? setUrls(token4) : []
-
   const LpToken = (
     <Flex alignItems="center">
       <TokenContainer zIndex={1} srcs={token1Urls} size={size} />

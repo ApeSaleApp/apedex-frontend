@@ -8,7 +8,7 @@ const ListViewLayout = styled(Flex)`
   max-width: 500px;
   min-width: 300px;
   width: 100%;
-  padding: 0px 10px;
+  margin: 20px auto;
 
   ${({ theme }) => theme.mediaQueries.md} {
     width: 100%;

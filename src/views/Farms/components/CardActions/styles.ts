@@ -1,4 +1,6 @@
-import {Tag,  Button, Flex } from '@ape.swap/uikit'
+import { Tag } from '@ape.swap/uikit'
+import Button from 'components/Button/Button'
+import { Flex } from 'components/Flex'
 import styled from 'styled-components'
 
 export const StyledButton = styled(Button)`
@@ -6,7 +8,7 @@ export const StyledButton = styled(Button)`
   font-size: 16px;
   font-weight: 700;
   padding: 10px 20px;
-  min-width: 227px;
+  min-width: 227px !important;
   height: 44px;
 `
 

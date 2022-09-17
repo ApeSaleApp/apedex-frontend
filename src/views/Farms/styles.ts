@@ -11,11 +11,6 @@ export const Header = styled.div`
   padding-top: 36px;
   padding-left: 10px;
   padding-right: 10px;
-  background-image: ${({ theme }) => (theme.isDark ? 'url(/images/farm-night.svg)' : 'url(/images/farm-day.svg)')};
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 250px;
-  background-position: center;
 
   ${({ theme }) => theme.mediaQueries.md} {
     padding-left: 24px;

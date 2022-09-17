@@ -8,7 +8,6 @@ export const ControlContainer = styled(Flex)`
   border-radius: 10px;
   justify-content: space-between;
   flex-direction: row;
-  padding: 15px;
   z-index: 1;
   gap: 5px;
   background-color: ${({ theme }) => theme.colors.bgSecondary};

@@ -1,5 +1,4 @@
 import React from 'react'
-import {TagVariants,  Flex, Text, LinkExternal, Svg, useModal } from '@ape.swap/uikit'
 import { Box } from 'theme-ui'
 import ListView from 'components/ListView'
 import { ExtendedListViewProps } from 'components/ListView/types'
@@ -14,10 +13,16 @@ import { useTranslation } from 'contexts/Localization'
 import useIsMobile from 'hooks/useIsMobile'
 import { Field, selectCurrency } from 'state/swap/actions'
 import { useAppDispatch } from 'state'
-import CardActions from './CardActions'
-import { Container, FarmButton, NextArrow } from './styles'
-import HarvestAction from './CardActions/HarvestAction'
+import { TagVariants } from '@ape.swap/uikit'
+import { Text } from 'components/Text'
+import { Flex } from 'components/Flex'
+import { LinkExternal } from 'components/Link'
+import { Svg } from 'components/Svg'
+import { useModal } from 'components/Modal'
 import { ActionContainer, StyledTag } from './CardActions/styles'
+import HarvestAction from './CardActions/HarvestAction'
+import { Container, FarmButton, NextArrow } from './styles'
+import CardActions from './CardActions'
 
 const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] }> = ({ farms, openPid, farmTags }) => {
   const { chainId } = useActiveWeb3React()
@@ -85,31 +90,31 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
       ),
       tokens: { token1: farm.pid === 184 ? 'NFTY2' : token1, token2, token3: 'BANANA' },
       stakeLp: true,
-      title: <Text bold>{farm.lpSymbol}</Text>,
+      title: <Text weight="bold">{farm.lpSymbol}</Text>,
       open: farm.pid === openPid,
       id: farm.pid,
       infoContent: (
         <>
-          <Flex flexDirection="column">
-            <Flex alignItems="space-between" justifyContent="space-between" style={{ width: '100%' }}>
-              <Text style={{ fontSize: '12px' }}>{t('Multiplier')}</Text>
-              <Text bold style={{ fontSize: '12px' }}>
+          <Flex sx={{ flexDirection: 'column' }}>
+            <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+              <Text sx={{ fontSize: '12px' }}>{t('Multiplier')}</Text>
+              <Text weight="bold" style={{ fontSize: '12px' }}>
                 {Math.round(parseFloat(farm.multiplier) * 1000) / 100}X
               </Text>
             </Flex>
-            <Flex alignItems="space-between" justifyContent="space-between" style={{ width: '100%' }}>
+            <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
               <Text style={{ fontSize: '12px' }}>{t('Stake')}</Text>
-              <Text bold style={{ fontSize: '12px' }}>
+              <Text weight="bold" style={{ fontSize: '12px' }}>
                 {farm.lpSymbol} {t('LP')}
               </Text>
             </Flex>
-            <Flex alignItems="center" justifyContent="center" mt="15px">
+            <Flex sx={{ alignItems: 'center', justifyContent: 'center', width: '100%' }} mt="15px">
               <LinkExternal href={bscScanUrl} style={{ fontSize: '14px' }}>
                 {t('View on BscScan')}
               </LinkExternal>
             </Flex>
             {projectLink && (
-              <Flex alignItems="center" justifyContent="center" mt="15px">
+              <Flex sx={{ alignItems: 'center', justifyContent: 'center', width: '100%' }} mt="15px">
                 <LinkExternal href={projectLink} style={{ fontSize: '14px' }}>
                   {t('Learn More')}
                 </LinkExternal>
@@ -118,7 +123,6 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
           </Flex>
         </>
       ),
-      infoContentPosition: 'translate(-81.5%, 32%)',
       cardContent: (
         <>
           <ListViewContent
@@ -130,7 +134,6 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
               'APY includes annualized BANANA rewards and rewards for providing liquidity (DEX swap fees), compounded daily.',
             )}
             toolTipPlacement="bottomLeft"
-            toolTipTransform="translate(0, 50%)"
           />
           <ListViewContent
             title={t('APR')}
@@ -151,7 +154,6 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
               'BANANA reward APRs are calculated in real time. DEX swap fee APRs are calculated based on previous 24 hours of trading volume. Note: APRs are provided for your convenience. APRs are constantly changing and do not represent guaranteed returns.',
             )}
             toolTipPlacement="bottomLeft"
-            toolTipTransform="translate(0, 38%)"
             aprCalculator={
               <ApyButton
                 lpLabel={farm.lpSymbol}
@@ -168,7 +170,6 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
             width={isMobile ? 100 : 180}
             toolTip={t('The total value of the LP tokens currently staked in this farm.')}
             toolTipPlacement={isMobile ? 'bottomRight' : 'bottomLeft'}
-            toolTipTransform={isMobile ? 'translate(-75%, 75%)' : 'translate(0%, 75%)'}
           />
           <ListViewContent title={t('Earned')} value={userEarnings} width={isMobile ? 65 : 120} />
         </>
@@ -212,7 +213,7 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
               />
             )}
           </ActionContainer>
-          {!isMobile && <NextArrow />}
+          {!isMobile && <NextArrow color="textPrimary" />}
           <CardActions
             allowance={userAllowance?.toString()}
             stakedBalance={farm?.userData?.stakedBalance?.toString()}
@@ -221,7 +222,7 @@ const DisplayFarms: React.FC<{ farms: Farm[]; openPid?: number; farmTags: Tag[] 
             lpValueUsd={farm.lpValueUsd}
             pid={farm.pid}
           />
-          {!isMobile && <NextArrow />}
+          {!isMobile && <NextArrow color="textPrimary" />}
           <HarvestAction pid={farm.pid} disabled={userEarnings === '0.00'} userEarningsUsd={userEarningsUsd} />
         </>
       ),

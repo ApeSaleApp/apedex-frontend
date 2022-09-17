@@ -1,7 +1,9 @@
 import React from 'react'
 import { useTheme } from 'styled-components'
-import { Flex, Select, SelectItem, Text } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
+import { Flex } from 'components/Flex'
+import { Select, SelectItem } from 'components/Select'
+import { Text } from 'components/Text'
 import { ListViewProps } from './types'
 import MenuTabButtons from './MenuTabButtons'
 import SearchInput from './SearchInput'
@@ -29,7 +31,6 @@ const ListViewMenu: React.FC<ListViewProps> = ({
   isJungle,
 }) => {
   const displayOptions = isJungle === true ? JUNGLE_OPTIONS : OPTIONS
-  const { isDark } = useTheme()
   const { t } = useTranslation()
   return (
     <ControlContainer>
@@ -64,11 +65,6 @@ const ListViewMenu: React.FC<ListViewProps> = ({
         </ToggleWrapper>
       </MobilePadding>
       <MobilePadding>{harvestAll && <HarvestAllWrapper> {harvestAll} </HarvestAllWrapper>}</MobilePadding>
-      {showMonkeyImage && isDark ? (
-        <StyledImage src="/images/farm-night-farmer.svg" alt="night-monkey" />
-      ) : (
-        <StyledImage src="/images/farm-day-farmer.svg" alt="day-monkey" />
-      )}
     </ControlContainer>
   )
 }

@@ -16,8 +16,8 @@ export const configTheme: Theme = {
     nav: '@media screen and (min-width: 968px)',
   },
   fontWeights: {
-    light: 400,
-    normal: 600,
+    light: 300,
+    normal: 400,
     bold: 700,
   },
   fonts: {

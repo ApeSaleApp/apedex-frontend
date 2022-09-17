@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 const StyledInput = styled(Input)`
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.mediumGray};
   height: 36px;
   width: 100%;
   font-weight: 800;

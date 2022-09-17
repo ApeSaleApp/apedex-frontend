@@ -54,7 +54,7 @@ const HarvestAction: React.FC<HarvestActionsProps> = ({ pid, disabled, userEarni
       >
         {t('HARVEST')}
       </FarmButton>
-      {!isMobile && <ListViewContent title={t('Earned')} value={userEarningsUsd} width={100} height={50} ml={10} />}
+      {!isMobile && <ListViewContent title={t('Earned')} value={userEarningsUsd} height={50} ml={5} />}
     </ActionContainer>
   )
 }

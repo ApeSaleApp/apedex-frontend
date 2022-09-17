@@ -9,7 +9,7 @@ export const StyledButton = styled(Button)`
   font-size: 16px;
   font-weight: 700;
   padding: 10px 20px;
-  min-width: 129px;
+  min-width: 129px !important;
   height: 44px;
 `
 
