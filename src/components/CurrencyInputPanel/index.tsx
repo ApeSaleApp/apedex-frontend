@@ -1,10 +1,15 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { Currency, Pair, Token } from '@apeswapfinance/sdk'
-import { Button, Text, useModal, Flex, ArrowDropDownIcon, useMatchBreakpoints } from '@ape.swap/uikit'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { getTokenUsdPrice } from 'utils/getTokenUsdPrice'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import { ArrowDropDownIcon } from 'components/Svg'
+import Button from 'components/Button/Button'
+import { useModal } from 'components/Modal'
+import { useMatchBreakpoints } from '@ape.swap/uikit'
 import { useCurrencyBalance } from '../../state/wallet/hooks'
 import CurrencySearchModal from '../SearchModal/CurrencySearchModal'
 import { registerToken } from '../../utils/wallet'
@@ -184,7 +189,6 @@ export default function CurrencyInputPanel({
           }}
         >
           <Flex alignItems="center" justifyContent="flex-start" style={{ width: '100%' }}>
-            
             {pair ? (
               <Text id="pair" bold fontSize="19px">
                 {pair?.token0.getSymbol(chainId)}-{pair?.token1.getSymbol(chainId)}

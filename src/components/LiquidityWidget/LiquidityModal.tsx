@@ -1,10 +1,13 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
 import { LiquidityWidget } from 'components/LiquidityWidget'
-import { Modal, ModalHeader, Heading, Link, ModalProvider, HelpIcon } from '@ape.swap/uikit'
 import { Flex } from 'theme-ui'
 import { merge } from 'lodash'
 import { useTranslation } from 'contexts/Localization'
+import { Modal, ModalHeader, ModalProvider } from 'components/Modal'
+import { Link } from 'components/Link'
+import { HelpIcon } from 'components/Svg'
+import { Heading } from 'components/Heading'
 
 interface LiquidityModalProps {
   widgetProps?: Record<string, any>

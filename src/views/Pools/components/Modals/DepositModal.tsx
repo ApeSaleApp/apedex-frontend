@@ -1,11 +1,13 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
-import { Button, Modal, AutoRenewIcon } from '@ape.swap/uikit'
 import ModalActions from 'components/ModalActions'
 import ModalInput from 'components/ModalInput'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import UnderlinedButton from 'components/UnderlinedButton'
 import { useTranslation } from 'contexts/Localization'
+import { Modal } from 'components/Modal'
+import Button from 'components/Button/Button'
+import { AutoRenewIcon } from 'components/Svg'
 
 interface DepositModalProps {
   max: string

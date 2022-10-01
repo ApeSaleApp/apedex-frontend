@@ -1,5 +1,6 @@
+import { Modal, ModalProps } from 'components/Modal'
+import { Text } from 'components/Text'
 import React from 'react'
-import { Modal, ModalProps, Text } from '@ape.swap/uikit'
 import MoonPayIframe from './MoonFrame'
 
 export default function MoonPayModal({ onDismiss }: ModalProps) {

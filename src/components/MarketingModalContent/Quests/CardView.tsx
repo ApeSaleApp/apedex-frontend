@@ -1,11 +1,15 @@
 /** @jsxImportSource theme-ui */
 import React, { useContext, useState } from 'react'
 import { Box, Flex } from 'theme-ui'
-import { Button, Heading, IconButton, Modal, Text } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { ThemeContext } from 'contexts/ThemeContext'
-import { Bubble, showApe, styles, subtitle } from './styles'
+import { Modal } from 'components/Modal'
+import IconButton from 'components/Button/IconButton'
+import { Heading } from 'components/Heading'
+import { Text } from 'components/Text'
+import Button from 'components/Button/Button'
 import { QuestSlides } from './slides'
+import { Bubble, showApe, styles, subtitle } from './styles'
 
 const CardView = ({ onDismiss }) => {
   const { t } = useTranslation()
@@ -36,7 +40,7 @@ const CardView = ({ onDismiss }) => {
     <Modal onDismiss={onDismiss} {...modalProps}>
       <Flex sx={styles.container}>
         <Box sx={{ position: 'absolute', top: '20px', right: '20px' }}>
-          <IconButton width="15px" icon="close" color="text" variant="transparent" onClick={onDismiss} />
+          <IconButton width="15px" icon="close" color="textPrimary" variant="transparent" onClick={onDismiss} />
         </Box>
         <Flex sx={styles.imagesWrapper}>
           <Box sx={showApe(activeSlide, isDark)} />

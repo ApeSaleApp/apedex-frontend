@@ -1,14 +1,5 @@
 import React, { useState } from 'react'
-import {
-  Flex,
-  AddIcon,
-  MinusIcon,
-  useModal,
-  AutoRenewIcon,
-  LinkExternal,
-  Text,
-  useMatchBreakpoints,
-} from '@ape.swap/uikit'
+import { Flex, AddIcon, MinusIcon, AutoRenewIcon, LinkExternal, Text, useMatchBreakpoints } from '@ape.swap/uikit'
 import BigNumber from 'bignumber.js'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useDualFarmStake } from 'hooks/useStake'
@@ -18,6 +9,7 @@ import { getEtherscanLink } from 'utils'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import ListViewContent from 'components/ListViewContent'
 import { useTranslation } from 'contexts/Localization'
+import { useModal } from 'components/Modal'
 import DepositModal from '../Modals/DepositModal'
 import WithdrawModal from '../Modals/WithdrawModal'
 import { ActionContainer, CenterContainer, SmallButton, StyledButton } from './styles'

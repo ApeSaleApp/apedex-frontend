@@ -1,7 +1,7 @@
 import React from 'react'
-import { useWalletModal } from '@ape.swap/uikit'
 import useAuth from 'hooks/useAuth'
 import { useTranslation } from 'contexts/Localization'
+import { useWalletModal } from 'components/Button/ConnectButton/WalletModal'
 import ModalContent from '../MarketingModalContent'
 import { StyledText, MiniHeaderText, MainHeaderText, MiniButton, RightContent, StyledFarmsM1Icon } from '../styles'
 

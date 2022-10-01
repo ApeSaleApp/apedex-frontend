@@ -1,10 +1,13 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Modal, Text, LinkExternal, Flex } from '@ape.swap/uikit'
 
 import { calculateBananaEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
 import { useTranslation } from 'contexts/Localization'
+import { Modal } from 'components/Modal'
+import { Text } from 'components/Text'
+import { Flex } from 'components/Flex'
+import { LinkExternal } from 'components/Link'
 
 interface ApyCalculatorModalProps {
   onDismiss?: () => void
@@ -70,17 +73,17 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
     <Modal onDismiss={onDismiss} title={t('CURRENT RATES')}>
       <Grid>
         <GridItem>
-          <Text fontSize="12px" color="gray" textTransform="uppercase" mb="20px">
+          <Text fontSize="12px" color="white" textTransform="uppercase" mb="20px">
             {t('Timeframe')}
           </Text>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" color="gray" textTransform="uppercase" mb="20px">
+          <Text fontSize="12px" color="white" textTransform="uppercase" mb="20px">
             {t('Return')}
           </Text>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" color="gray" textTransform="uppercase" mb="20px">
+          <Text fontSize="12px" color="white" textTransform="uppercase" mb="20px">
             {rewardTokenName}
             {t(' per $1000')}
           </Text>

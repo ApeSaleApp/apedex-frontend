@@ -7,6 +7,7 @@ export interface InputProps {
   placeholder?: string
   startAdornment?: React.ReactNode
   value: string
+  children?: any
 }
 
 const StyledInputWrapper = styled.div`

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Token } from '@apeswapfinance/sdk'
-import { Modal, ModalProps } from '@ape.swap/uikit'
 import ImportToken from 'components/SearchModal/ImportToken'
 import { useTranslation } from 'contexts/Localization'
+import { Modal, ModalProps } from 'components/Modal'
 
 interface Props extends ModalProps {
   tokens: Token[]

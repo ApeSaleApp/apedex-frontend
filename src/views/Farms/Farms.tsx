@@ -130,7 +130,7 @@ const Farms: React.FC = () => {
     <>
       <Flex mb="100px" style={{ maxWidth: '1130px', position: 'relative', width: '100%', flexDirection: 'column' }}>
         <ListViewLayout>
-          <Flex alignItems="center" justifyContent="center" mt="20px">
+          <Flex sx={{ alignItems: 'center', justifyContent: 'center' }} mt="20px">
             <ListViewMenu
               onHandleQueryChange={handleChangeQuery}
               onSetSortOption={setSortOption}

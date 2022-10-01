@@ -1,7 +1,8 @@
 import React from 'react'
-import { Modal, Button } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 
+import { Modal } from 'components/Modal'
+import Button from 'components/Button/Button'
 import { Description } from './styles'
 
 interface ApyCalculatorModalProps {

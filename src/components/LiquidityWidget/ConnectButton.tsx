@@ -1,8 +1,9 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
-import { Button, useWalletModal } from '@ape.swap/uikit'
 import useAuth from 'hooks/useAuth'
 import { useTranslation } from 'contexts/Localization'
+import { useWalletModal } from 'components/Button/ConnectButton/WalletModal'
+import Button from 'components/Button/Button'
 import styles from './styles'
 
 const ConnectButton = () => {

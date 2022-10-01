@@ -1,12 +1,12 @@
 import React from 'react'
 import { useLocation, useHistory } from 'react-router-dom'
-import { MarketingModal } from '@ape.swap/uikit'
 import { LendingBodies } from 'components/MarketingModalContent/Lending/'
 import { FarmsBodies } from 'components/MarketingModalContent/Farms/'
 import { PoolsBodies } from 'components/MarketingModalContent/Pools/'
 import { BillsBodies } from 'components/MarketingModalContent/Bills/'
 import { useTranslation } from 'contexts/Localization'
 import SwiperProvider from 'contexts/SwiperProvider'
+import { MarketingModal } from '@ape.swap/uikit'
 import QuestModal from '../MarketingModalContent/Quests/QuestModal'
 
 const MarketingModalCheck = () => {

@@ -1,14 +1,17 @@
 /** @jsxImportSource theme-ui */
-import { Modal, Button, Flex, Text } from '@ape.swap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import React from 'react'
 import { Field } from 'state/burn/actions'
 import { ConfirmationPendingContent, TransactionSubmittedContent } from 'components/TransactionConfirmationModal'
 import { useUserSlippageTolerance } from 'state/user/hooks'
-import { RemoveLiquidityModalProps } from './types'
-import { styles } from './styles'
+import { Modal } from 'components/Modal'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import Button from 'components/Button/Button'
 import PoolInfo from '../PoolInfo'
+import { styles } from './styles'
+import { RemoveLiquidityModalProps } from './types'
 
 const RemoveLiquidityModal: React.FC<RemoveLiquidityModalProps> = ({
   pair,

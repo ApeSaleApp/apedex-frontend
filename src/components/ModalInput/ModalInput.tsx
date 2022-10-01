@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Text, Button, Input, InputProps, Flex } from '@ape.swap/uikit'
+import { Flex } from 'components/Flex'
+import { Text } from 'components/Text'
+import Button from 'components/Button/Button'
+import { Input, InputProps } from '@ape.swap/uikit'
 import { useTranslation } from '../../contexts/Localization'
 
 interface ModalInputProps {
@@ -18,10 +21,10 @@ interface ModalInputProps {
 const StyledTokenInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.mediumGray};
   border-radius: 16px;
   color: ${({ theme }) => theme.colors.textSecondary};
-  padding: 8px 16px 8px 0;
+  padding: 8px 16px 8px 0px;
   width: 100%;
 `
 
@@ -32,7 +35,6 @@ const StyledInput = styled(Input)`
   margin: 0 8px;
   padding: 0 8px;
   font-weight: 800;
-  background-color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 80px;
@@ -67,10 +69,10 @@ const ModalInput: React.FC<ModalInputProps> = ({
 
   return (
     <div style={{ position: 'relative' }}>
-      <StyledTokenInput 
+      <StyledTokenInput
       // isWarning={isBalanceZero}
       >
-        <Flex justifyContent="space-between" pl="16px">
+        <Flex sx={{ justifyContent: 'space-between' }} pl="16px">
           <Text fontSize="14px" fontWeight={800}>
             {inputTitle}
           </Text>
@@ -78,7 +80,7 @@ const ModalInput: React.FC<ModalInputProps> = ({
             {t('Balance')}: {displayBalance.toLocaleString()}
           </Text>
         </Flex>
-        <Flex alignItems="flex-end" justifyContent="space-around">
+        <Flex sx={{ alignItems: 'flex-end', justifyContent: 'space-around' }}>
           <StyledInput onChange={onChange} placeholder="0" value={value} />
           <StyledButton size="sm" onClick={onSelectMax} mr="8px">
             {t('Max')}

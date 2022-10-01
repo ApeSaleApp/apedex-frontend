@@ -1,9 +1,9 @@
 /** @jsxImportSource theme-ui */
 import React from 'react'
-import { useWalletModal } from '@ape.swap/uikit'
 import useAuth from 'hooks/useAuth'
 import { useTranslation } from 'contexts/Localization'
 import Button from './Button/Button'
+import { useWalletModal } from './Button/ConnectButton/WalletModal'
 
 const UnlockButton = (props) => {
   const { t } = useTranslation()

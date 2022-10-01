@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import React, { useCallback, useState } from 'react'
-import { AddIcon, Button, useModal } from '@ape.swap/uikit'
 import { Box, Flex, Text } from 'theme-ui'
 import { BigNumber } from '@ethersproject/bignumber'
 import { Currency, ETHER, TokenAmount, ROUTER_ADDRESS, CurrencyAmount } from '@apeswapfinance/sdk'
@@ -18,6 +17,9 @@ import { useIsExpertMode, useUserSlippageTolerance } from 'state/user/hooks'
 import TransactionConfirmationModal, { ConfirmationModalContent } from 'components/TransactionConfirmationModal'
 import { useSwapState } from 'state/swap/hooks'
 import { useTranslation } from 'contexts/Localization'
+import Button from 'components/Button/Button'
+import { AddIcon } from 'components/Svg'
+import { useModal } from 'components/Modal'
 import { PairState } from '../../hooks/usePairs'
 import { useTransactionAdder } from '../../state/transactions/hooks'
 import Row, { RowBetween } from '../layout/Row'
@@ -240,7 +242,6 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
         <Text sx={{ fontSize: '24px', marginRight: '10px', fontWeight: '700', lineHeight: '1.5' }}>
           {`${currencies[Field.CURRENCY_A]?.getSymbol(chainId)}/${currencies[Field.CURRENCY_B]?.getSymbol(chainId)}`}
         </Text>
-        
       </Flex>
     ) : (
       <AutoColumn>
@@ -248,7 +249,6 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
           <Text sx={{ fontSize: '24px', marginRight: '10px', fontWeight: '700', lineHeight: '1.5' }}>
             {liquidityMinted?.toSignificant(6)}
           </Text>
-          
         </Flex>
         <Row>
           <Text sx={{ fontSize: '20px', fontWeight: '400', lineHeight: '1.5' }}>
@@ -389,7 +389,7 @@ const LiquidiyWidget: React.FC<ILiquidityWidgetProps> = ({ onCancel }) => {
             height: '29px',
           }}
         >
-          <AddIcon width="25px"  />
+          <AddIcon width="25px" />
         </Flex>
       </Flex>
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>

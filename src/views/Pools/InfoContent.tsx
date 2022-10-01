@@ -23,7 +23,7 @@ const InfoContent: React.FC<{ pool: Pool }> = ({ pool }) => {
     <>
       <Flex flexDirection="column" sx={{ width: '250px' }}>
         {pool?.endBlock > 0 && pool?.rewardToken?.symbol !== 'BANANA' && (
-          <Flex alignItems="space-between" justifyContent="space-between" style={{ width: '100%' }}>
+          <Flex sx={{ alignItems: 'space-between', justifyContent: 'space-between' }} style={{ width: '100%' }}>
             <Text style={{ fontSize: '14px' }}>{pool?.startBlock > currentBlock ? t('Starts in') : t('Ends in')}</Text>
             <Text style={{ fontSize: '16px' }} bold>
               {pool?.startBlock > currentBlock
@@ -34,24 +34,24 @@ const InfoContent: React.FC<{ pool: Pool }> = ({ pool }) => {
         )}
       </Flex>
       <Flex sx={{ justifyContent: 'space-between' }}>
-        <Flex alignItems="center" justifyContent="center" mt="10px">
+        <Flex sx={{ alignItems: 'center', justifyContent: 'center' }} mt="10px">
           <LinkExternal href={pool?.projectLink} style={{ fontSize: '14px' }}>
             {t('Website')}
           </LinkExternal>
         </Flex>
 
-        <Flex alignItems="center" justifyContent="center" mt="10px">
+        <Flex sx={{ alignItems: 'center', justifyContent: 'center' }} mt="10px">
           <LinkExternal href={pool?.twitter} style={{ fontSize: '14px' }}>
             {t('Twitter')}
           </LinkExternal>
         </Flex>
       </Flex>
-      <Flex alignItems="center" justifyContent="center" mt="20px">
+      <Flex sx={{ alignItems: 'center', justifyContent: 'center' }} mt="20px">
         <LinkExternal href={tokenContractLink} style={{ fontSize: '14px' }}>
           {t('View Token Contract')}
         </LinkExternal>
       </Flex>
-      <Flex alignItems="center" justifyContent="center" mt="15px">
+      <Flex sx={{ alignItems: 'center', justifyContent: 'center' }} mt="15px">
         <LinkExternal href={contractLink} style={{ fontSize: '14px' }}>
           {t('View Pool Contract')}
         </LinkExternal>
